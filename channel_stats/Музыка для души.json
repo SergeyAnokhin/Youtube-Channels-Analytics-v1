@@ -1,0 +1,563 @@
+{
+    "channel_name": "Музыка для души",
+    "channel_id": "UC_uUpovEcs_xXtN7ZqKk9rA",
+    "created_at": "2025-01-27T11:03:24.112964Z",
+    "total_views": 2186771,
+    "total_videos": 54,
+    "subscribers": 12900,
+    "style": "ДУШЕВНАЯ/ЖИЗНЕННАЯ ЛИРИКА / Душевный Шансон, Позитивная лирика",
+    "emojis": "💖🎤🛣️😊",
+    "description": "Добро пожаловать на канал «Музыка для души»! Здесь вы найдете мелодии, которые обнимают сердце и дарят надежду. Музыка — это не просто звуки, это настроение, которое сопровождает нас в каждый момент жизни, поддерживает в трудные времена и наполняет радостью.\n\nКаждая песня на нашем канале создана с заботой и любовью, чтобы согреть ваши души. Мы верим, что правильная мелодия может стать вашим верным спутником, придавая сил и вдохновения. У нас есть композиции на любой вкус: от нежных баллад до заводных ритмов — всё, чтобы вы могли найти именно то, что вам нужно.\n\nПесни созданы с использованием технологии Suno, а стихи для них — авторские, чтобы каждая мелодия была уникальной и трогала вас до глубины души. Присоединяйтесь к нам, и давайте вместе откроем мир музыки, которая всегда рядом!\n",
+    "videos": [
+        {
+            "video_id": "XkOmWiCtJ2o",
+            "title": "Красивейшая песня - Не зови меня назад - декабрь 2025",
+            "published_at": "2025-12-10T07:00:35Z",
+            "duration": "PT3M29S",
+            "views": 4076,
+            "likes": 210,
+            "comments": 14,
+            "url": "https://www.youtube.com/watch?v=XkOmWiCtJ2o"
+        },
+        {
+            "video_id": "xGtiUtEq8v8",
+            "title": "Лучший шансон 2025: Песни которые тронут за душу",
+            "published_at": "2025-12-09T07:00:53Z",
+            "duration": "PT1H24M39S",
+            "views": 14644,
+            "likes": 251,
+            "comments": 29,
+            "url": "https://www.youtube.com/watch?v=xGtiUtEq8v8"
+        },
+        {
+            "video_id": "QJwUXT9TcMA",
+            "title": "Сборник самого лучшего шансона 2025, музыка с душой и для души",
+            "published_at": "2025-12-04T07:00:22Z",
+            "duration": "PT1H1M8S",
+            "views": 58769,
+            "likes": 779,
+            "comments": 73,
+            "url": "https://www.youtube.com/watch?v=QJwUXT9TcMA"
+        },
+        {
+            "video_id": "OpReLFTAzOk",
+            "title": "Сборник лучшего новогоднего шансона 2026 который подарит праздничное настроение",
+            "published_at": "2025-12-01T07:00:22Z",
+            "duration": "PT21M40S",
+            "views": 86721,
+            "likes": 1695,
+            "comments": 96,
+            "url": "https://www.youtube.com/watch?v=OpReLFTAzOk"
+        },
+        {
+            "video_id": "QP7M5V31oqY",
+            "title": "Сборник лучшего шансона за 2025, только новые хиты - песни для души",
+            "published_at": "2025-11-27T07:00:32Z",
+            "duration": "PT1H1M23S",
+            "views": 154922,
+            "likes": 1814,
+            "comments": 271,
+            "url": "https://www.youtube.com/watch?v=QP7M5V31oqY"
+        },
+        {
+            "video_id": "ixnDHjWOD3c",
+            "title": "Ах, эти повороты - где старый друг стал враг - Хит ноябрь 2025, шансон для души",
+            "published_at": "2025-11-25T12:39:47Z",
+            "duration": "PT3M2S",
+            "views": 3317,
+            "likes": 92,
+            "comments": 8,
+            "url": "https://www.youtube.com/watch?v=ixnDHjWOD3c"
+        },
+        {
+            "video_id": "_aC6C-XKaUo",
+            "title": "Эх, судьба-злодейка - шансон который хочется слушать и слушать, хит  ноябрь 2025",
+            "published_at": "2025-11-23T08:00:54Z",
+            "duration": "PT3M26S",
+            "views": 10302,
+            "likes": 129,
+            "comments": 13,
+            "url": "https://www.youtube.com/watch?v=_aC6C-XKaUo"
+        },
+        {
+            "video_id": "TgrtaFzbTCc",
+            "title": "Лучшие хиты шансона 2025, песни которые берут за душу",
+            "published_at": "2025-11-21T08:00:42Z",
+            "duration": "PT1H52S",
+            "views": 99265,
+            "likes": 1206,
+            "comments": 123,
+            "url": "https://www.youtube.com/watch?v=TgrtaFzbTCc"
+        },
+        {
+            "video_id": "1qed63qpxLE",
+            "title": "Пыльный перрон, судьбы вокзал - хит шансона 2025",
+            "published_at": "2025-11-20T12:42:36Z",
+            "duration": "PT3M16S",
+            "views": 28435,
+            "likes": 417,
+            "comments": 39,
+            "url": "https://www.youtube.com/watch?v=1qed63qpxLE"
+        },
+        {
+            "video_id": "5B3pusPfiLo",
+            "title": "Осенние хиты шансона 2025, музыка для души",
+            "published_at": "2025-11-18T15:31:10Z",
+            "duration": "PT17M36S",
+            "views": 14969,
+            "likes": 205,
+            "comments": 23,
+            "url": "https://www.youtube.com/watch?v=5B3pusPfiLo"
+        },
+        {
+            "video_id": "CRcjqSuRz5I",
+            "title": "Лучшие песни о любви, сборник хиты 2025 - песни которые тронут до глубины души",
+            "published_at": "2025-11-15T08:00:27Z",
+            "duration": "PT1H3M21S",
+            "views": 2534,
+            "likes": 59,
+            "comments": 13,
+            "url": "https://www.youtube.com/watch?v=CRcjqSuRz5I"
+        },
+        {
+            "video_id": "EiHMwN9dddU",
+            "title": "Красивейшая песня на стихи Тютчева - Молчи, скрывайся и таи",
+            "published_at": "2025-11-14T09:00:21Z",
+            "duration": "PT2M11S",
+            "views": 2617,
+            "likes": 58,
+            "comments": 10,
+            "url": "https://www.youtube.com/watch?v=EiHMwN9dddU"
+        },
+        {
+            "video_id": "jBiGON5dH2A",
+            "title": "Осень без тебя - красивейшая песня, новинка ноябрь 2025 - песня тронет за душу",
+            "published_at": "2025-11-13T09:48:23Z",
+            "duration": "PT2M54S",
+            "views": 1823,
+            "likes": 71,
+            "comments": 6,
+            "url": "https://www.youtube.com/watch?v=jBiGON5dH2A"
+        },
+        {
+            "video_id": "jPRIZKq_WVI",
+            "title": "Душевный шансон на стихи Пушкина - я помню чудное мгновенье",
+            "published_at": "2025-11-12T13:30:02Z",
+            "duration": "PT3M37S",
+            "views": 2011,
+            "likes": 50,
+            "comments": 14,
+            "url": "https://www.youtube.com/watch?v=jPRIZKq_WVI"
+        },
+        {
+            "video_id": "mTRPAMAoPYA",
+            "title": "Лучшие хиты шансона 2025 год, песни на разрыв души, новинка ноябрь 2025",
+            "published_at": "2025-11-08T12:36:16Z",
+            "duration": "PT1H1S",
+            "views": 224670,
+            "likes": 2595,
+            "comments": 193,
+            "url": "https://www.youtube.com/watch?v=mTRPAMAoPYA"
+        },
+        {
+            "video_id": "JNeYddndF1A",
+            "title": "Жизнь как перекрёсток, новинка ноябрь 2025, душевная песня",
+            "published_at": "2025-11-07T15:49:56Z",
+            "duration": "PT3M13S",
+            "views": 1654,
+            "likes": 43,
+            "comments": 10,
+            "url": "https://www.youtube.com/watch?v=JNeYddndF1A"
+        },
+        {
+            "video_id": "s6K6uD2mybw",
+            "title": "Осень, осень - красивый русский шансон, октябрь 2025",
+            "published_at": "2025-10-17T14:12:33Z",
+            "duration": "PT3M8S",
+            "views": 21346,
+            "likes": 466,
+            "comments": 33,
+            "url": "https://www.youtube.com/watch?v=s6K6uD2mybw"
+        },
+        {
+            "video_id": "z2v69RR7--s",
+            "title": "Всё будет хорошо! Знаю точно, верь! - жизнеутверждающая душевная песня, remix. Октябрь 2025",
+            "published_at": "2025-10-15T08:08:31Z",
+            "duration": "PT2M56S",
+            "views": 3753,
+            "likes": 180,
+            "comments": 18,
+            "url": "https://www.youtube.com/watch?v=z2v69RR7--s"
+        },
+        {
+            "video_id": "-3nKBN-Ai9Y",
+            "title": "Осенний сон - новинка октябрь 2025, красивая осенняя песня для души",
+            "published_at": "2025-10-13T10:34:13Z",
+            "duration": "PT2M45S",
+            "views": 39562,
+            "likes": 692,
+            "comments": 33,
+            "url": "https://www.youtube.com/watch?v=-3nKBN-Ai9Y"
+        },
+        {
+            "video_id": "5EoWzgp8pq8",
+            "title": "Женщина мечты - хит 2025, прекрасная песня для души",
+            "published_at": "2025-10-10T08:35:26Z",
+            "duration": "PT3M2S",
+            "views": 3622,
+            "likes": 115,
+            "comments": 14,
+            "url": "https://www.youtube.com/watch?v=5EoWzgp8pq8"
+        },
+        {
+            "video_id": "6gM9ADdjRqU",
+            "title": "Ещё люблю - красивая песня о любви, октябрь 2025",
+            "published_at": "2025-10-08T14:18:46Z",
+            "duration": "PT3M10S",
+            "views": 1817,
+            "likes": 115,
+            "comments": 25,
+            "url": "https://www.youtube.com/watch?v=6gM9ADdjRqU"
+        },
+        {
+            "video_id": "LgQc3E5Hwso",
+            "title": "Осенний дождь - хит 2025, шансон для души",
+            "published_at": "2025-10-07T11:00:40Z",
+            "duration": "PT3M5S",
+            "views": 20918,
+            "likes": 406,
+            "comments": 26,
+            "url": "https://www.youtube.com/watch?v=LgQc3E5Hwso"
+        },
+        {
+            "video_id": "hFKPRODqt98",
+            "title": "Улыбнись - жизнь у нас одна! Красивая песня, октябрь 2025",
+            "published_at": "2025-10-06T13:39:52Z",
+            "duration": "PT3M50S",
+            "views": 104308,
+            "likes": 1601,
+            "comments": 103,
+            "url": "https://www.youtube.com/watch?v=hFKPRODqt98"
+        },
+        {
+            "video_id": "7WmqJynyvlY",
+            "title": "Осенняя любовь - песня октябрь 2025, новинка",
+            "published_at": "2025-10-03T11:45:28Z",
+            "duration": "PT2M38S",
+            "views": 11977,
+            "likes": 304,
+            "comments": 25,
+            "url": "https://www.youtube.com/watch?v=7WmqJynyvlY"
+        },
+        {
+            "video_id": "-hfs8rHptxg",
+            "title": "Ты моя любовь - Хит 2025, невероятно красивая песня",
+            "published_at": "2025-07-24T07:13:36Z",
+            "duration": "PT2M58S",
+            "views": 3078,
+            "likes": 135,
+            "comments": 42,
+            "url": "https://www.youtube.com/watch?v=-hfs8rHptxg"
+        },
+        {
+            "video_id": "O5E3niG74r4",
+            "title": "Я за тебя молюсь - красивая песня, в которой каждый найдет свой смысл",
+            "published_at": "2025-06-23T11:44:06Z",
+            "duration": "PT3M4S",
+            "views": 2307,
+            "likes": 115,
+            "comments": 35,
+            "url": "https://www.youtube.com/watch?v=O5E3niG74r4"
+        },
+        {
+            "video_id": "FMuhh5RO18Q",
+            "title": "Самая любимая - всем дорогим женщинам посвящается, красивейшая песня",
+            "published_at": "2025-05-11T20:33:03Z",
+            "duration": "PT2M59S",
+            "views": 5749,
+            "likes": 232,
+            "comments": 60,
+            "url": "https://www.youtube.com/watch?v=FMuhh5RO18Q"
+        },
+        {
+            "video_id": "8S6EH4eLMqg",
+            "title": "Всё готов тебе отдать, Хит апрель 2025",
+            "published_at": "2025-04-28T16:56:06Z",
+            "duration": "PT3M8S",
+            "views": 3253,
+            "likes": 189,
+            "comments": 60,
+            "url": "https://www.youtube.com/watch?v=8S6EH4eLMqg"
+        },
+        {
+            "video_id": "9QZ6QQZPSf8",
+            "title": "С праздником Светлой Пасхи! Мира и добра вашему дому! Песня заряженная на счастье",
+            "published_at": "2025-04-17T09:45:03Z",
+            "duration": "PT3M20S",
+            "views": 1118,
+            "likes": 57,
+            "comments": 11,
+            "url": "https://www.youtube.com/watch?v=9QZ6QQZPSf8"
+        },
+        {
+            "video_id": "6PUtQeNjsNE",
+            "title": "Хит 2025, хочется слушать и слушать - Дарите женщинам любовь",
+            "published_at": "2025-04-09T15:43:08Z",
+            "duration": "PT3M58S",
+            "views": 17325,
+            "likes": 503,
+            "comments": 71,
+            "url": "https://www.youtube.com/watch?v=6PUtQeNjsNE"
+        },
+        {
+            "video_id": "8-PBDy1oN7k",
+            "title": "Хочется слушать и слушать, песня на стихи Федора Тютчева \"Я встретил Вас\"",
+            "published_at": "2025-04-05T18:14:03Z",
+            "duration": "PT3M2S",
+            "views": 2070,
+            "likes": 124,
+            "comments": 28,
+            "url": "https://www.youtube.com/watch?v=8-PBDy1oN7k"
+        },
+        {
+            "video_id": "wnLdga6N1MY",
+            "title": "На стихи Пушкина - красивейшая песня \"Я Вас Любил\" Апрель 2025",
+            "published_at": "2025-04-03T15:10:21Z",
+            "duration": "PT3M18S",
+            "views": 3001,
+            "likes": 157,
+            "comments": 38,
+            "url": "https://www.youtube.com/watch?v=wnLdga6N1MY"
+        },
+        {
+            "video_id": "B1UL0SMJ9K8",
+            "title": "Лучшие песни 2025 - самые красивые песни для души",
+            "published_at": "2025-03-30T04:32:46Z",
+            "duration": "PT58M56S",
+            "views": 1070,
+            "likes": 75,
+            "comments": 20,
+            "url": "https://www.youtube.com/watch?v=B1UL0SMJ9K8"
+        },
+        {
+            "video_id": "BkL0IPfDKnI",
+            "title": "Лучшие песни 2025 - самые красивые песни для души",
+            "published_at": "2025-03-29T19:02:53Z",
+            "duration": "PT2H25M42S",
+            "views": 616,
+            "likes": 67,
+            "comments": 10,
+            "url": "https://www.youtube.com/watch?v=BkL0IPfDKnI"
+        },
+        {
+            "video_id": "yg2QBCqD8PU",
+            "title": "Лучшие песни 2025 - самые красивые песни для души",
+            "published_at": "2025-03-29T18:54:15Z",
+            "duration": "P0D",
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "url": "https://www.youtube.com/watch?v=yg2QBCqD8PU"
+        },
+        {
+            "video_id": "583kHq7mgDs",
+            "title": "Нет тебя прекрасней, нет тебя милей - нежная песня для любимой женщины",
+            "published_at": "2025-03-25T17:45:42Z",
+            "duration": "PT4M1S",
+            "views": 13007,
+            "likes": 543,
+            "comments": 131,
+            "url": "https://www.youtube.com/watch?v=583kHq7mgDs"
+        },
+        {
+            "video_id": "c9M22H67f9s",
+            "title": "В этом мире сложном, полном суеты, Просто рядом будь, и сбудутся мечты",
+            "published_at": "2025-03-20T10:57:40Z",
+            "duration": "PT2M19S",
+            "views": 2264,
+            "likes": 113,
+            "comments": 19,
+            "url": "https://www.youtube.com/watch?v=c9M22H67f9s"
+        },
+        {
+            "video_id": "7y9nZhaxUtQ",
+            "title": "Не могу без тебя — ни дышать, ни мечтать,  Словно сердце в плену, не умеет стучать...",
+            "published_at": "2025-03-17T08:53:29Z",
+            "duration": "PT3M52S",
+            "views": 11755,
+            "likes": 502,
+            "comments": 141,
+            "url": "https://www.youtube.com/watch?v=7y9nZhaxUtQ"
+        },
+        {
+            "video_id": "i6VKUdz_EXA",
+            "title": "Прости меня, любимая, за боль, что причинил тебе...Красивая песня извинение",
+            "published_at": "2025-03-15T07:57:16Z",
+            "duration": "PT3M6S",
+            "views": 21557,
+            "likes": 788,
+            "comments": 191,
+            "url": "https://www.youtube.com/watch?v=i6VKUdz_EXA"
+        },
+        {
+            "video_id": "9ZWYc7PwkRE",
+            "title": "Душевная песня о старых добрых временах",
+            "published_at": "2025-03-13T10:59:32Z",
+            "duration": "PT3M1S",
+            "views": 1362,
+            "likes": 66,
+            "comments": 0,
+            "url": "https://www.youtube.com/watch?v=9ZWYc7PwkRE"
+        },
+        {
+            "video_id": "eBrcECRgOk0",
+            "title": "Посвящается всем женщинам к 8 марта - вы лучше всех!",
+            "published_at": "2025-03-06T16:43:20Z",
+            "duration": "PT2M54S",
+            "views": 67208,
+            "likes": 1137,
+            "comments": 72,
+            "url": "https://www.youtube.com/watch?v=eBrcECRgOk0"
+        },
+        {
+            "video_id": "of6L27dtIQ0",
+            "title": "Любимой женщине моей, я посвящаю каждый вздох",
+            "published_at": "2025-03-04T10:00:54Z",
+            "duration": "PT3M24S",
+            "views": 268665,
+            "likes": 3477,
+            "comments": 678,
+            "url": "https://www.youtube.com/watch?v=of6L27dtIQ0"
+        },
+        {
+            "video_id": "BGom-t3ePWY",
+            "title": "Сборник самых красивых мелодий для исцеления души",
+            "published_at": "2025-02-27T12:33:18Z",
+            "duration": "PT30M8S",
+            "views": 2027,
+            "likes": 87,
+            "comments": 24,
+            "url": "https://www.youtube.com/watch?v=BGom-t3ePWY"
+        },
+        {
+            "video_id": "flhXa7rTwik",
+            "title": "Трогательная песня со смыслом - Минуты без тебя",
+            "published_at": "2025-02-26T10:20:26Z",
+            "duration": "PT3M20S",
+            "views": 50568,
+            "likes": 1401,
+            "comments": 215,
+            "url": "https://www.youtube.com/watch?v=flhXa7rTwik"
+        },
+        {
+            "video_id": "tTHzLrxahkE",
+            "title": "Ни о чем не жалей, с годами мы стали только сильней!",
+            "published_at": "2025-02-23T12:38:44Z",
+            "duration": "PT3M2S",
+            "views": 13258,
+            "likes": 434,
+            "comments": 60,
+            "url": "https://www.youtube.com/watch?v=tTHzLrxahkE"
+        },
+        {
+            "video_id": "VqWR-3G6aOw",
+            "title": "Песня для поднятия духа! У тебя всё будет хорошо!",
+            "published_at": "2025-02-21T15:18:52Z",
+            "duration": "PT3M18S",
+            "views": 27780,
+            "likes": 843,
+            "comments": 132,
+            "url": "https://www.youtube.com/watch?v=VqWR-3G6aOw"
+        },
+        {
+            "video_id": "bIxFZ60NaMA",
+            "title": "Красивая мелодичная песня, Я каждый день судьбе спасибо говорю. Февраль 2025",
+            "published_at": "2025-02-19T06:44:07Z",
+            "duration": "PT3M10S",
+            "views": 31952,
+            "likes": 681,
+            "comments": 113,
+            "url": "https://www.youtube.com/watch?v=bIxFZ60NaMA"
+        },
+        {
+            "video_id": "UykCdzgazEo",
+            "title": "Ты моя любовь, ты моя судьба - новинка февраль 2025, очень красивая песня",
+            "published_at": "2025-02-17T13:49:49Z",
+            "duration": "PT3M31S",
+            "views": 73104,
+            "likes": 1680,
+            "comments": 340,
+            "url": "https://www.youtube.com/watch?v=UykCdzgazEo"
+        },
+        {
+            "video_id": "Lr4iyRlbrVE",
+            "title": "Невероятно красивая песня, новинка февраль 2025",
+            "published_at": "2025-02-11T09:29:24Z",
+            "duration": "PT3M33S",
+            "views": 195942,
+            "likes": 3548,
+            "comments": 416,
+            "url": "https://www.youtube.com/watch?v=Lr4iyRlbrVE"
+        },
+        {
+            "video_id": "vKBIWk3sdF4",
+            "title": "Красивая, душевная песня \"Как долго я тебя искал\"",
+            "published_at": "2025-02-07T12:51:48Z",
+            "duration": "PT3M2S",
+            "views": 27410,
+            "likes": 581,
+            "comments": 100,
+            "url": "https://www.youtube.com/watch?v=vKBIWk3sdF4"
+        },
+        {
+            "video_id": "PkoKtzyU7PY",
+            "title": "Красивейшая музыка, нежные мелодии на скрипке как в сериале Великолепный век",
+            "published_at": "2025-02-04T13:00:36Z",
+            "duration": "PT17M30S",
+            "views": 1593,
+            "likes": 35,
+            "comments": 2,
+            "url": "https://www.youtube.com/watch?v=PkoKtzyU7PY"
+        },
+        {
+            "video_id": "fVzyFim0Qng",
+            "title": "Песня, на берегу в Анапе встреча нас ждала. Красивая песня про любовь",
+            "published_at": "2025-02-02T12:51:22Z",
+            "duration": "PT3M59S",
+            "views": 518,
+            "likes": 25,
+            "comments": 5,
+            "url": "https://www.youtube.com/watch?v=fVzyFim0Qng"
+        },
+        {
+            "video_id": "fBsCjjkSu-g",
+            "title": "Красивая и романтичная гитарная музыка, мелодии для души",
+            "published_at": "2025-01-31T12:01:02Z",
+            "duration": "PT32M8S",
+            "views": 841,
+            "likes": 32,
+            "comments": 8,
+            "url": "https://www.youtube.com/watch?v=fBsCjjkSu-g"
+        },
+        {
+            "video_id": "k0FF7LCRdw0",
+            "title": "Душевная песня для любимой женщины, песня для тебя!",
+            "published_at": "2025-01-28T12:11:29Z",
+            "duration": "PT3M13S",
+            "views": 441761,
+            "likes": 6324,
+            "comments": 1212,
+            "url": "https://www.youtube.com/watch?v=k0FF7LCRdw0"
+        },
+        {
+            "video_id": "zYTqQvUrBnU",
+            "title": "Красивая нежная песня - Доброе утро мир за окном. Душевная песня",
+            "published_at": "2025-01-27T12:01:21Z",
+            "duration": "PT3M10S",
+            "views": 4591,
+            "likes": 156,
+            "comments": 18,
+            "url": "https://www.youtube.com/watch?v=zYTqQvUrBnU"
+        }
+    ]
+}
