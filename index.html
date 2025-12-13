@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Channel Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">📊 Channel Analytics</h1>
+                <div class="header-controls">
+                    <div class="period-selector">
+                        <label>Analysis Period:</label>
+                        <div class="period-buttons">
+                            <button class="period-btn active" data-period="1">1 Month</button>
+                            <button class="period-btn" data-period="3">3 Months</button>
+                            <button class="period-btn" data-period="6">6 Months</button>
+                        </div>
+                    </div>
+                    <div class="loading-indicator" id="loadingIndicator">
+                        <span class="spinner"></span> Loading channels...
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Channels Table -->
+            <section class="channels-section">
+                <div class="section-header">
+                    <h2>Channel Performance</h2>
+                    <p class="section-subtitle">Compared to previous period of same length</p>
+                </div>
+                <div class="table-wrapper">
+                    <table class="channels-table" id="channelsTable">
+                        <thead>
+                            <tr>
+                                <th class="col-channel">Channel</th>
+                                <th class="col-style">Style / Genre</th>
+                                <th class="col-subscribers">Subscribers</th>
+                                <th class="col-videos">Videos</th>
+                                <th class="col-views">Views (Period)</th>
+                                <th class="col-median">Median Views</th>
+                                <th class="col-frequency">Avg Videos/Week</th>
+                            </tr>
+                        </thead>
+                        <tbody id="channelsTableBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Global Summary -->
+            <section class="summary-section">
+                <div class="section-header">
+                    <h2>Global Summary</h2>
+                    <p class="section-subtitle">All channels aggregated</p>
+                </div>
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <div class="summary-label">Total Videos</div>
+                        <div class="summary-value" id="summaryTotalVideos">0</div>
+                        <div class="summary-change" id="summaryVideoChange"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label">Total Views</div>
+                        <div class="summary-value" id="summaryTotalViews">0</div>
+                        <div class="summary-change" id="summaryViewsChange"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label">Median Views/Video</div>
+                        <div class="summary-value" id="summaryMedianViews">0</div>
+                        <div class="summary-change" id="summaryMedianChange"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label">Average Views/Video</div>
+                        <div class="summary-value" id="summaryAverageViews">0</div>
+                        <div class="summary-change" id="summaryAverageChange"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visualizations -->
+            <section class="charts-section">
+                <div class="section-header">
+                    <h2>Analytics & Trends</h2>
+                </div>
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h3>Views Over Time (Top 5 Channels)</h3>
+                        <canvas id="viewsChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Publishing Frequency by Channel</h3>
+                        <canvas id="frequencyChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Top 10 Channels by Views</h3>
+                        <canvas id="topChannelsChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Subscriber Distribution</h3>
+                        <canvas id="subscribersChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Channel Detail Modal -->
+    <div class="modal" id="channelModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="channel-header">
+                    <h2 id="modalChannelName"></h2>
+                    <p id="modalChannelEmojis" class="emojis"></p>
+                    <p id="modalChannelId" class="channel-id"></p>
+                    <a id="modalChannelLink" href="#" target="_blank" class="youtube-link">
+                        <span>🔗 Visit on YouTube</span>
+                    </a>
+                </div>
+
+                <div class="modal-tabs">
+                    <button class="tab-btn active" data-tab="overview">Overview</button>
+                    <button class="tab-btn" data-tab="videos">Videos</button>
+                    <button class="tab-btn" data-tab="analytics">Analytics</button>
+                </div>
+
+                <div class="modal-tabs-content">
+                    <!-- Overview Tab -->
+                    <div class="tab-content active" data-tab="overview">
+                        <div class="overview-section">
+                            <h3>Channel Description</h3>
+                            <p id="modalDescription"></p>
+                        </div>
+
+                        <div class="overview-section">
+                            <h3>Style / Genre</h3>
+                            <p id="modalStyle"></p>
+                        </div>
+
+                        <div class="overview-section">
+                            <h3>Key Metrics</h3>
+                            <div class="metrics-grid">
+                                <div class="metric">
+                                    <span class="metric-label">Subscribers</span>
+                                    <span class="metric-value" id="modalSubscribers"></span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Total Videos</span>
+                                    <span class="metric-value" id="modalTotalVideos"></span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Total Views</span>
+                                    <span class="metric-value" id="modalTotalViews"></span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Channel Created</span>
+                                    <span class="metric-value" id="modalCreatedAt"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overview-section">
+                            <h3>Period Comparison</h3>
+                            <div class="periods-comparison" id="periodsComparison">
+                                <!-- Populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Videos Tab -->
+                    <div class="tab-content" data-tab="videos">
+                        <div class="videos-section">
+                            <div class="videos-subsection">
+                                <h3>Top Videos by Views</h3>
+                                <div class="videos-list" id="topVideosList"></div>
+                            </div>
+                            <div class="videos-subsection">
+                                <h3>Top Videos by Engagement</h3>
+                                <div class="videos-list" id="topEngagementList"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Tab -->
+                    <div class="tab-content" data-tab="analytics">
+                        <div class="analytics-section">
+                            <h3>Growth Trends</h3>
+                            <canvas id="modalTrendChart"></canvas>
+                        </div>
+                        <div class="analytics-section">
+                            <h3>Video Distribution by Month</h3>
+                            <canvas id="modalPublishingChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data-loader.js"></script>
+    <script src="analytics-engine.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
