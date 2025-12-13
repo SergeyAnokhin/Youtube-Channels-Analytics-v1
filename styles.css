@@ -107,6 +107,13 @@ body {
     gap: 0.5rem;
 }
 
+.period-date-label {
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    margin-left: 0.75rem;
+    align-self: center;
+}
+
 .period-btn {
     padding: 0.6rem 1.2rem;
     background: transparent;

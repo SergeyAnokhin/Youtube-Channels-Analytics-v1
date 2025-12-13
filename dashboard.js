@@ -30,6 +30,7 @@ class Dashboard {
 
             // Render dashboard
             this.renderDashboard();
+            this.updatePeriodDateLabel();
         } catch (error) {
             console.error('Failed to initialize dashboard:', error);
             this.updateLoadingStatus(false, 'Failed to load channels');
@@ -59,6 +60,7 @@ class Dashboard {
                 document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
                 e.target.classList.add('active');
                 this.currentPeriod = parseInt(e.target.dataset.period);
+                this.updatePeriodDateLabel();
                 this.renderDashboard();
             });
         });
@@ -266,6 +268,17 @@ class Dashboard {
     }
 
     /**
+     * Update period date label in header based on reference date
+     */
+    updatePeriodDateLabel() {
+        const el = document.getElementById('periodDateLabel');
+        if (!el) return;
+        const { startDate, endDate } = analyticsEngine.getPeriodDates(this.currentPeriod);
+        const fmt = (d) => d.toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: 'numeric' });
+        el.textContent = `${fmt(startDate)} - ${fmt(endDate)}`;
+    }
+
+    /**
      * Render channels comparison table
      */
     renderChannelsTable() {
@@ -312,7 +325,7 @@ class Dashboard {
                 <td class="col-videos">
                     <div class="kpi-cell">
                         <span class="kpi-value">${currentPeriod.videoCount}</span>
-                        ${this._renderChangeIndicator(comparison.videoCountChange, 'videos', isNewChannel)}
+                        ${this._renderChangeIndicator(comparison.videoCountChange, 'videos', isNewChannel, currentPeriod.videoCount, previousPeriod.videoCount)}
                     </div>
                 </td>
                 <td class="col-views">
@@ -321,13 +334,13 @@ class Dashboard {
                             ? `<span class="kpi-value">${analyticsEngine.formatNumber(currentPeriod.totalViews)}</span>`
                             : `<span class="kpi-value pause-icon">⏸</span>`
                         }
-                        ${this._renderChangeIndicator(comparison.viewsChange, 'views', isNewChannel)}
+                        ${this._renderChangeIndicator(comparison.viewsChange, 'views', isNewChannel, currentPeriod.totalViews, previousPeriod.totalViews)}
                     </div>
                 </td>
                 <td class="col-median">
                     <div class="kpi-cell">
                         <span class="kpi-value">${analyticsEngine.formatNumber(currentPeriod.medianViews)}</span>
-                        ${this._renderChangeIndicator(comparison.medianViewsChange, 'medianViews', isNewChannel)}
+                        ${this._renderChangeIndicator(comparison.medianViewsChange, 'medianViews', isNewChannel, currentPeriod.medianViews, previousPeriod.medianViews)}
                     </div>
                 </td>
                 <td class="col-frequency">
@@ -353,15 +366,18 @@ class Dashboard {
     /**
      * Render change indicator with color coding
      */
-    _renderChangeIndicator(change, kpiType, isNewChannel) {
+    _renderChangeIndicator(change, kpiType, isNewChannel, currentValue, previousValue) {
         if (isNewChannel) {
-            return '<span class="kpi-change new">🆕 NEW</span>';
+            return '<span class="kpi-change new" title="Ранее данных не было">🆕 NEW</span>';
         }
 
         const status = analyticsEngine.getChangeStatus(change, kpiType);
         const changeText = analyticsEngine.formatChange(change);
+        const curr = analyticsEngine.formatNumber(currentValue || 0);
+        const prev = analyticsEngine.formatNumber(previousValue || 0);
+        const title = `Было: ${prev} → Стало: ${curr}`;
 
-        return `<span class="kpi-change ${status}">${changeText}</span>`;
+        return `<span class="kpi-change ${status}" title="${title}">${changeText}</span>`;
     }
 
     /**
@@ -418,7 +434,6 @@ class Dashboard {
     renderViewsOverTimeChart() {
         const filteredChannels = this.getFilteredChannels();
         const topChannels = filteredChannels.slice(0, 5);
-        const labels = this._getMonthLabels(this.currentPeriod);
         const datasets = [];
 
         const colors = [
@@ -429,14 +444,15 @@ class Dashboard {
             'rgba(168, 85, 247, 1)'
         ];
 
+        // Build labels from analytics granularity
+        const channelSeries = topChannels.map(ch => analyticsEngine.getViewsOverTime(ch, this.currentPeriod));
+        const labelSet = new Set();
+        channelSeries.forEach(res => Object.keys(res.series).forEach(k => labelSet.add(k)));
+        const labels = Array.from(labelSet).sort((a,b)=> a.localeCompare(b));
+
         topChannels.forEach((channel, index) => {
-            const viewsData = analyticsEngine.getViewsOverTime(channel, this.currentPeriod);
-            const values = labels.map(label => {
-                // Convert label format to match viewsData keys
-                const date = new Date(label);
-                const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-                return viewsData[monthKey] || 0;
-            });
+            const res = analyticsEngine.getViewsOverTime(channel, this.currentPeriod);
+            const values = labels.map(l => res.series[l] || 0);
 
             datasets.push({
                 label: channel.channel_name,

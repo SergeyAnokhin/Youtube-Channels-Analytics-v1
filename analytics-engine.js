@@ -45,6 +45,16 @@ class AnalyticsEngine {
     }
 
     /**
+     * Get start and end dates for a given period (months) based on reference date
+     */
+    getPeriodDates(months) {
+        const endDate = new Date(this.getReferenceDate());
+        const startDate = new Date(endDate);
+        startDate.setMonth(startDate.getMonth() - months);
+        return { startDate, endDate };
+    }
+
+    /**
      * Set neutral threshold for a specific KPI
      */
     setNeutralThreshold(kpi, percentage) {
@@ -311,21 +321,41 @@ class AnalyticsEngine {
      * Get views over time for chart
      */
     getViewsOverTime(channel, months) {
-        const referenceDate = this.getReferenceDate();
-        const startDate = new Date(referenceDate);
-        startDate.setMonth(startDate.getMonth() - months);
+        const { startDate, endDate } = this.getPeriodDates(months);
+        const videos = this.getVideosInPeriod(channel, startDate, endDate);
 
-        const videos = this.getVideosInPeriod(channel, startDate, referenceDate);
-        
-        // Group by month
-        const monthlyViews = {};
+        // Decide granularity
+        let granularity = 'month';
+        if (months <= 1) granularity = 'week'; // ensure at least 4-5 points
+        else if (months <= 6) granularity = 'week';
+        else granularity = 'month';
+
+        const data = {};
+
+        const getISOWeek = (d) => {
+            const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+            const dayNum = date.getUTCDay() || 7;
+            date.setUTCDate(date.getUTCDate() + 4 - dayNum);
+            const yearStart = new Date(Date.UTC(date.getUTCFullYear(),0,1));
+            const weekNo = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+            return { year: date.getUTCFullYear(), week: weekNo };
+        };
+
         videos.forEach(video => {
             const date = new Date(video.published_at);
-            const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-            monthlyViews[monthKey] = (monthlyViews[monthKey] || 0) + (video.views || 0);
+            let key;
+            if (granularity === 'month') {
+                key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+            } else if (granularity === 'week') {
+                const { year, week } = getISOWeek(date);
+                key = `W${String(week).padStart(2,'0')} ${year}`;
+            } else {
+                key = date.toISOString().slice(0,10); // YYYY-MM-DD
+            }
+            data[key] = (data[key] || 0) + (video.views || 0);
         });
 
-        return monthlyViews;
+        return { granularity, series: data };
     }
 }
 
