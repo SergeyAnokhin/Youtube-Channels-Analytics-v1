@@ -219,6 +219,45 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* Sortable column headers */
+.channels-table th.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.channels-table th.sortable:hover {
+    color: var(--primary-color);
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.channels-table th.sortable .sort-indicator {
+    margin-left: 0.5rem;
+    color: var(--primary-color);
+    font-size: 0.7rem;
+}
+
+/* Checkbox column */
+.col-checkbox {
+    width: 40px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.col-checkbox input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+}
+
+.channel-checkbox {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+}
+
 .channels-table tbody tr {
     border-bottom: 1px solid var(--border-color);
     transition: all 0.2s ease;

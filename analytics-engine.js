@@ -12,6 +12,36 @@ class AnalyticsEngine {
             medianViews: 7,  // ±7%
             subscribers: 5   // ±5%
         };
+        
+        // Reference date (latest video date across all channels)
+        this.referenceDate = null;
+    }
+    
+    /**
+     * Set reference date from all channels
+     * This should be called after loading all channels
+     */
+    setReferenceDate(channels) {
+        let latestDate = null;
+        
+        channels.forEach(channel => {
+            channel.videos.forEach(video => {
+                const videoDate = new Date(video.published_at);
+                if (!latestDate || videoDate > latestDate) {
+                    latestDate = videoDate;
+                }
+            });
+        });
+        
+        this.referenceDate = latestDate || new Date();
+        console.log('Reference date set to:', this.referenceDate);
+    }
+    
+    /**
+     * Get the reference date (latest video date or current date)
+     */
+    getReferenceDate() {
+        return this.referenceDate || new Date();
     }
 
     /**
@@ -37,9 +67,9 @@ class AnalyticsEngine {
      * Calculate KPIs for a channel and period
      */
     calculateChannelKPIs(channel, months) {
-        const today = new Date();
-        const endDate = new Date(today);
-        const startDate = new Date(today);
+        const referenceDate = this.getReferenceDate();
+        const endDate = new Date(referenceDate);
+        const startDate = new Date(referenceDate);
         startDate.setMonth(startDate.getMonth() - months);
 
         const prevEndDate = new Date(startDate);
@@ -160,9 +190,9 @@ class AnalyticsEngine {
         const allCurrentVideos = [];
         const allPreviousVideos = [];
 
-        const today = new Date();
-        const endDate = new Date(today);
-        const startDate = new Date(today);
+        const referenceDate = this.getReferenceDate();
+        const endDate = new Date(referenceDate);
+        const startDate = new Date(referenceDate);
         startDate.setMonth(startDate.getMonth() - months);
 
         const prevEndDate = new Date(startDate);
@@ -197,9 +227,9 @@ class AnalyticsEngine {
      * Get top videos from a channel for a period
      */
     getTopVideosByMetric(channel, metric = 'views', months = 1, limit = 5) {
-        const today = new Date();
-        const endDate = new Date(today);
-        const startDate = new Date(today);
+        const referenceDate = this.getReferenceDate();
+        const endDate = new Date(referenceDate);
+        const startDate = new Date(referenceDate);
         startDate.setMonth(startDate.getMonth() - months);
 
         const videos = this.getVideosInPeriod(channel, startDate, endDate);
@@ -247,21 +277,24 @@ class AnalyticsEngine {
 
     /**
      * Calculate average videos per week
+     * Formula: videos / (months * 4.345)
+     * Rounded to 1 decimal place
      */
     calculateVideosPerWeek(videoCount, months) {
-        const weeks = (months * 365.25) / 7;
-        return (videoCount / weeks).toFixed(2);
+        const weeks = months * 4.345;
+        const result = videoCount / weeks;
+        return result.toFixed(1);
     }
 
     /**
      * Get publishing dates for chart data
      */
     getPublishingDates(channel, months) {
-        const today = new Date();
-        const startDate = new Date(today);
+        const referenceDate = this.getReferenceDate();
+        const startDate = new Date(referenceDate);
         startDate.setMonth(startDate.getMonth() - months);
 
-        const videos = this.getVideosInPeriod(channel, startDate, today);
+        const videos = this.getVideosInPeriod(channel, startDate, referenceDate);
         
         // Group by month
         const monthlyData = {};
@@ -278,11 +311,11 @@ class AnalyticsEngine {
      * Get views over time for chart
      */
     getViewsOverTime(channel, months) {
-        const today = new Date();
-        const startDate = new Date(today);
+        const referenceDate = this.getReferenceDate();
+        const startDate = new Date(referenceDate);
         startDate.setMonth(startDate.getMonth() - months);
 
-        const videos = this.getVideosInPeriod(channel, startDate, today);
+        const videos = this.getVideosInPeriod(channel, startDate, referenceDate);
         
         // Group by month
         const monthlyViews = {};

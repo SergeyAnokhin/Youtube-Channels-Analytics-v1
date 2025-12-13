@@ -8,6 +8,9 @@ class Dashboard {
         this.currentPeriod = 1; // months
         this.channels = [];
         this.charts = {};
+        this.selectedChannels = new Set(); // Track selected channel IDs
+        this.sortColumn = null;
+        this.sortDirection = 'desc';
         this.initializeEventListeners();
     }
 
@@ -18,6 +21,9 @@ class Dashboard {
 
             // Load data
             this.channels = await dataLoader.loadChannels();
+            
+            // Set reference date in analytics engine
+            analyticsEngine.setReferenceDate(this.channels);
 
             // Hide loading indicator
             this.updateLoadingStatus(false);
@@ -57,6 +63,22 @@ class Dashboard {
             });
         });
 
+        // Select All checkbox
+        const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+        if (selectAllCheckbox) {
+            selectAllCheckbox.addEventListener('change', (e) => {
+                this.handleSelectAll(e.target.checked);
+            });
+        }
+        
+        // Sortable column headers
+        document.querySelectorAll('.sortable').forEach(header => {
+            header.addEventListener('click', (e) => {
+                const sortColumn = e.currentTarget.dataset.sort;
+                this.handleSort(sortColumn);
+            });
+        });
+
         // Modal close button
         const modalClose = document.getElementById('modalClose');
         if (modalClose) {
@@ -79,6 +101,158 @@ class Dashboard {
                 const tabName = e.target.dataset.tab;
                 this.switchTab(tabName);
             });
+        });
+    }
+    
+    /**
+     * Handle select all checkbox
+     */
+    handleSelectAll(checked) {
+        if (checked) {
+            this.channels.forEach(ch => this.selectedChannels.add(ch.channel_id));
+        } else {
+            this.selectedChannels.clear();
+        }
+        
+        // Update individual checkboxes
+        document.querySelectorAll('.channel-checkbox').forEach(cb => {
+            cb.checked = checked;
+        });
+        
+        // Update summary and charts
+        this.renderGlobalSummary();
+        this.renderCharts();
+    }
+    
+    /**
+     * Handle individual checkbox change
+     */
+    handleChannelCheckbox(channelId, checked) {
+        if (checked) {
+            this.selectedChannels.add(channelId);
+        } else {
+            this.selectedChannels.delete(channelId);
+        }
+        
+        // Update select all checkbox state
+        const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+        if (selectAllCheckbox) {
+            selectAllCheckbox.checked = this.selectedChannels.size === this.channels.length;
+            selectAllCheckbox.indeterminate = this.selectedChannels.size > 0 && this.selectedChannels.size < this.channels.length;
+        }
+        
+        // Update summary and charts
+        this.renderGlobalSummary();
+        this.renderCharts();
+    }
+    
+    /**
+     * Get filtered channels based on selection
+     */
+    getFilteredChannels() {
+        if (this.selectedChannels.size === 0) {
+            // If nothing selected, return all channels
+            return this.channels;
+        }
+        return this.channels.filter(ch => this.selectedChannels.has(ch.channel_id));
+    }
+    
+    /**
+     * Handle column sorting
+     */
+    handleSort(column) {
+        if (this.sortColumn === column) {
+            // Toggle direction
+            this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+        } else {
+            this.sortColumn = column;
+            this.sortDirection = 'desc';
+        }
+        
+        // Sort channels array
+        this.sortChannels();
+        
+        // Re-render table
+        this.renderChannelsTable();
+        
+        // Update sort indicators
+        this.updateSortIndicators();
+    }
+    
+    /**
+     * Sort channels array
+     */
+    sortChannels() {
+        this.channels.sort((a, b) => {
+            let valA, valB;
+            
+            switch (this.sortColumn) {
+                case 'channel':
+                    valA = a.channel_name.toLowerCase();
+                    valB = b.channel_name.toLowerCase();
+                    return this.sortDirection === 'asc' 
+                        ? valA.localeCompare(valB)
+                        : valB.localeCompare(valA);
+                
+                case 'style':
+                    valA = a.style.toLowerCase();
+                    valB = b.style.toLowerCase();
+                    return this.sortDirection === 'asc'
+                        ? valA.localeCompare(valB)
+                        : valB.localeCompare(valA);
+                
+                case 'subscribers':
+                    valA = a.subscribers || 0;
+                    valB = b.subscribers || 0;
+                    return this.sortDirection === 'asc' ? valA - valB : valB - valA;
+                
+                case 'videos':
+                    const kpisA = analyticsEngine.calculateChannelKPIs(a, this.currentPeriod);
+                    const kpisB = analyticsEngine.calculateChannelKPIs(b, this.currentPeriod);
+                    valA = kpisA.currentPeriod.videoCount;
+                    valB = kpisB.currentPeriod.videoCount;
+                    return this.sortDirection === 'asc' ? valA - valB : valB - valA;
+                
+                case 'views':
+                    const viewsKpisA = analyticsEngine.calculateChannelKPIs(a, this.currentPeriod);
+                    const viewsKpisB = analyticsEngine.calculateChannelKPIs(b, this.currentPeriod);
+                    valA = viewsKpisA.currentPeriod.totalViews;
+                    valB = viewsKpisB.currentPeriod.totalViews;
+                    return this.sortDirection === 'asc' ? valA - valB : valB - valA;
+                
+                case 'median':
+                    const medianKpisA = analyticsEngine.calculateChannelKPIs(a, this.currentPeriod);
+                    const medianKpisB = analyticsEngine.calculateChannelKPIs(b, this.currentPeriod);
+                    valA = medianKpisA.currentPeriod.medianViews;
+                    valB = medianKpisB.currentPeriod.medianViews;
+                    return this.sortDirection === 'asc' ? valA - valB : valB - valA;
+                
+                case 'frequency':
+                    const freqKpisA = analyticsEngine.calculateChannelKPIs(a, this.currentPeriod);
+                    const freqKpisB = analyticsEngine.calculateChannelKPIs(b, this.currentPeriod);
+                    valA = parseFloat(analyticsEngine.calculateVideosPerWeek(freqKpisA.currentPeriod.videoCount, this.currentPeriod));
+                    valB = parseFloat(analyticsEngine.calculateVideosPerWeek(freqKpisB.currentPeriod.videoCount, this.currentPeriod));
+                    return this.sortDirection === 'asc' ? valA - valB : valB - valA;
+                
+                default:
+                    return 0;
+            }
+        });
+    }
+    
+    /**
+     * Update sort indicators in table headers
+     */
+    updateSortIndicators() {
+        document.querySelectorAll('.sortable').forEach(header => {
+            const indicator = header.querySelector('.sort-indicator');
+            const column = header.dataset.sort;
+            
+            if (column === this.sortColumn) {
+                indicator.textContent = this.sortDirection === 'asc' ? ' ▲' : ' ▼';
+            } else {
+                indicator.textContent = '';
+            }
         });
     }
 
@@ -106,10 +280,17 @@ class Dashboard {
 
             // Check for new channel
             const isNewChannel = !previousPeriod.hasData && currentPeriod.hasData;
+            const isChecked = this.selectedChannels.has(channel.channel_id);
 
             // Build row
             const row = document.createElement('tr');
             row.innerHTML = `
+                <td class="col-checkbox">
+                    <input type="checkbox" 
+                           class="channel-checkbox" 
+                           data-channel-id="${channel.channel_id}"
+                           ${isChecked ? 'checked' : ''}>
+                </td>
                 <td class="col-channel">
                     <span class="channel-name-cell" onclick="dashboard.openChannelModal('${channel.channel_id}')">
                         <span class="channel-emoji">${channel.emojis.split('')[0] || '🎵'}</span>
@@ -159,6 +340,14 @@ class Dashboard {
 
             tbody.appendChild(row);
         });
+        
+        // Add checkbox event listeners
+        document.querySelectorAll('.channel-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+                const channelId = e.target.dataset.channelId;
+                this.handleChannelCheckbox(channelId, e.target.checked);
+            });
+        });
     }
 
     /**
@@ -179,7 +368,8 @@ class Dashboard {
      * Render global summary cards
      */
     renderGlobalSummary() {
-        const summary = analyticsEngine.calculateGlobalSummary(this.channels, this.currentPeriod);
+        const channelsToSummarize = this.getFilteredChannels();
+        const summary = analyticsEngine.calculateGlobalSummary(channelsToSummarize, this.currentPeriod);
         const current = summary.currentPeriod;
         const comparison = summary.comparison;
 
@@ -223,10 +413,11 @@ class Dashboard {
     }
 
     /**
-     * Render views over time chart for top 5 channels
+     * Render views over time chart for top 5 channels or selected channels
      */
     renderViewsOverTimeChart() {
-        const topChannels = this.channels.slice(0, 5);
+        const filteredChannels = this.getFilteredChannels();
+        const topChannels = filteredChannels.slice(0, 5);
         const labels = this._getMonthLabels(this.currentPeriod);
         const datasets = [];
 
@@ -240,7 +431,12 @@ class Dashboard {
 
         topChannels.forEach((channel, index) => {
             const viewsData = analyticsEngine.getViewsOverTime(channel, this.currentPeriod);
-            const values = labels.map(label => viewsData[label] || 0);
+            const values = labels.map(label => {
+                // Convert label format to match viewsData keys
+                const date = new Date(label);
+                const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+                return viewsData[monthKey] || 0;
+            });
 
             datasets.push({
                 label: channel.channel_name,
@@ -249,7 +445,8 @@ class Dashboard {
                 backgroundColor: colors[index].replace('1)', '0.1)'),
                 borderWidth: 2,
                 tension: 0.4,
-                fill: true
+                fill: true,
+                channelId: channel.channel_id // Store for click handling
             });
         });
 
@@ -265,10 +462,26 @@ class Dashboard {
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
+                onClick: (event, activeElements) => {
+                    if (activeElements.length > 0) {
+                        const datasetIndex = activeElements[0].datasetIndex;
+                        const channelId = datasets[datasetIndex].channelId;
+                        this.openChannelModal(channelId);
+                    }
+                },
                 plugins: {
                     legend: {
                         display: true,
-                        labels: { color: '#cbd5e1', font: { size: 12 } }
+                        labels: { 
+                            color: '#cbd5e1', 
+                            font: { size: 12 },
+                            cursor: 'pointer'
+                        },
+                        onClick: (e, legendItem, legend) => {
+                            const index = legendItem.datasetIndex;
+                            const channelId = datasets[index].channelId;
+                            this.openChannelModal(channelId);
+                        }
                     }
                 },
                 scales: {
@@ -285,16 +498,36 @@ class Dashboard {
             }
         });
     }
+    
+    /**
+     * Get month labels for the given period in YYYY-MM format
+     */
+    _getMonthLabels(months) {
+        const labels = [];
+        const referenceDate = analyticsEngine.getReferenceDate();
+
+        for (let i = months - 1; i >= 0; i--) {
+            const date = new Date(referenceDate);
+            date.setMonth(date.getMonth() - i);
+            const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+            labels.push(monthKey);
+        }
+
+        return labels;
+    }
 
     /**
      * Render publishing frequency chart
      */
     renderFrequencyChart() {
-        const channelLabels = this.channels.map(ch => ch.channel_name.substring(0, 15)).slice(0, 15);
-        const videoCounts = this.channels.map(ch => {
+        const filteredChannels = this.getFilteredChannels();
+        const channelsToShow = filteredChannels.slice(0, 15);
+        const channelLabels = channelsToShow.map(ch => ch.channel_name.substring(0, 15));
+        const videoCounts = channelsToShow.map(ch => {
             const kpis = analyticsEngine.calculateChannelKPIs(ch, this.currentPeriod);
             return kpis.currentPeriod.videoCount;
-        }).slice(0, 15);
+        });
+        const channelIds = channelsToShow.map(ch => ch.channel_id);
 
         const ctx = document.getElementById('frequencyChart').getContext('2d');
         
@@ -318,6 +551,13 @@ class Dashboard {
                 responsive: true,
                 maintainAspectRatio: true,
                 indexAxis: 'y',
+                onClick: (event, activeElements) => {
+                    if (activeElements.length > 0) {
+                        const index = activeElements[0].index;
+                        const channelId = channelIds[index];
+                        this.openChannelModal(channelId);
+                    }
+                },
                 plugins: {
                     legend: { display: false }
                 },
@@ -340,9 +580,11 @@ class Dashboard {
      * Render top 10 channels by views
      */
     renderTopChannelsChart() {
-        const topChannels = this.channels.slice(0, 10);
+        const filteredChannels = this.getFilteredChannels();
+        const topChannels = filteredChannels.slice(0, 10);
         const labels = topChannels.map(ch => ch.channel_name.substring(0, 12));
         const data = topChannels.map(ch => ch.total_views);
+        const channelIds = topChannels.map(ch => ch.channel_id);
 
         const ctx = document.getElementById('topChannelsChart').getContext('2d');
         
@@ -375,11 +617,27 @@ class Dashboard {
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
+                onClick: (event, activeElements) => {
+                    if (activeElements.length > 0) {
+                        const index = activeElements[0].index;
+                        const channelId = channelIds[index];
+                        this.openChannelModal(channelId);
+                    }
+                },
                 plugins: {
                     legend: {
                         display: true,
                         position: 'right',
-                        labels: { color: '#cbd5e1', font: { size: 11 }, padding: 15 }
+                        labels: { 
+                            color: '#cbd5e1', 
+                            font: { size: 11 }, 
+                            padding: 15
+                        },
+                        onClick: (e, legendItem, legend) => {
+                            const index = legendItem.index;
+                            const channelId = channelIds[index];
+                            this.openChannelModal(channelId);
+                        }
                     }
                 }
             }
@@ -387,12 +645,14 @@ class Dashboard {
     }
 
     /**
-     * Render subscribers distribution
+     * Render subscribers distribution with logarithmic scale
      */
     renderSubscribersChart() {
-        const topChannels = this.channels.slice(0, 10);
+        const filteredChannels = this.getFilteredChannels();
+        const topChannels = filteredChannels.slice(0, 10);
         const labels = topChannels.map(ch => ch.channel_name.substring(0, 15));
         const data = topChannels.map(ch => ch.subscribers);
+        const channelIds = topChannels.map(ch => ch.channel_id);
 
         const ctx = document.getElementById('subscribersChart').getContext('2d');
         
@@ -415,11 +675,26 @@ class Dashboard {
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
-                plugins: { legend: { display: false } },
+                onClick: (event, activeElements) => {
+                    if (activeElements.length > 0) {
+                        const index = activeElements[0].index;
+                        const channelId = channelIds[index];
+                        this.openChannelModal(channelId);
+                    }
+                },
+                plugins: { 
+                    legend: { display: false }
+                },
                 scales: {
                     y: {
-                        beginAtZero: true,
-                        ticks: { color: '#94a3b8' },
+                        type: 'logarithmic',
+                        beginAtZero: false,
+                        ticks: { 
+                            color: '#94a3b8',
+                            callback: function(value) {
+                                return analyticsEngine.formatNumber(value);
+                            }
+                        },
                         grid: { color: 'rgba(148, 163, 184, 0.1)' }
                     },
                     x: {
@@ -429,23 +704,6 @@ class Dashboard {
                 }
             }
         });
-    }
-
-    /**
-     * Get month labels for the given period
-     */
-    _getMonthLabels(months) {
-        const labels = [];
-        const today = new Date();
-
-        for (let i = months - 1; i >= 0; i--) {
-            const date = new Date(today);
-            date.setMonth(date.getMonth() - i);
-            const monthYear = date.toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
-            labels.push(monthYear);
-        }
-
-        return labels;
     }
 
     /**
@@ -575,11 +833,12 @@ class Dashboard {
         const labels = this._getMonthLabels(6);
         const viewsData = [];
         const videoData = [];
+        
+        const referenceDate = analyticsEngine.getReferenceDate();
 
         labels.forEach((label, index) => {
             const monthsBack = 6 - index - 1;
-            const today = new Date();
-            const endDate = new Date(today);
+            const endDate = new Date(referenceDate);
             endDate.setMonth(endDate.getMonth() - monthsBack);
             const startDate = new Date(endDate);
             startDate.setMonth(startDate.getMonth() - 1);
