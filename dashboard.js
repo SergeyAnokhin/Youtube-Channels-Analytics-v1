@@ -196,26 +196,13 @@ class Dashboard {
                         ? valA.localeCompare(valB)
                         : valB.localeCompare(valA);
                 
-                case 'style':
-                    valA = a.style.toLowerCase();
-                    valB = b.style.toLowerCase();
+                case 'genre':
+                    // Sort by main genre only
+                    const mainGenreA = (a.style || '').split('/')[0].trim().toLowerCase();
+                    const mainGenreB = (b.style || '').split('/')[0].trim().toLowerCase();
                     return this.sortDirection === 'asc'
-                        ? valA.localeCompare(valB)
-                        : valB.localeCompare(valA);
-                
-                case 'main-style':
-                    const mainStyleA = (a.style || '').split('/')[0].trim().toLowerCase();
-                    const mainStyleB = (b.style || '').split('/')[0].trim().toLowerCase();
-                    return this.sortDirection === 'asc'
-                        ? mainStyleA.localeCompare(mainStyleB)
-                        : mainStyleB.localeCompare(mainStyleA);
-                
-                case 'sub-style':
-                    const subStyleA = (a.style || '').split('/').slice(1).join('/').trim().toLowerCase();
-                    const subStyleB = (b.style || '').split('/').slice(1).join('/').trim().toLowerCase();
-                    return this.sortDirection === 'asc'
-                        ? subStyleA.localeCompare(subStyleB)
-                        : subStyleB.localeCompare(subStyleA);
+                        ? mainGenreA.localeCompare(mainGenreB)
+                        : mainGenreB.localeCompare(mainGenreA);
                 
                 case 'subscribers':
                     valA = a.subscribers || 0;
@@ -309,22 +296,32 @@ class Dashboard {
             const isNewChannel = !previousPeriod.hasData && currentPeriod.hasData;
             const isChecked = this.selectedChannels.has(channel.channel_id);
 
-            // Разделение стиля на эмодзи, основной жанр и поджанр
+            // Split style into main genre and sub-genre
             const rawStyle = channel.style || '';
             const parts = rawStyle.split('/');
-            const mainStyle = parts[0] ? parts[0].trim() : '';
-            const subStyle = parts.slice(1).join('/').trim();
+            const mainGenre = parts[0] ? parts[0].trim() : '';
+            const subGenre = parts.slice(1).join(' / ').trim();
             
-            // Извлечение эмодзи из emojis или style
+            // Extract icon from emojis or style (only first emoji)
             const styleIcon = (channel.emojis && channel.emojis.split('')[0]) || '🎵';
 
-            // Цветовая логика для подписчиков (золотой для 1M+, синий для остальных)
+            // Clean channel name - remove emojis
+            const cleanChannelName = this.removeEmojis(channel.channel_name);
+
+            // Color coding for Subscribers
             const subCount = channel.subscribers || 0;
-            let subColor = '#60a5fa'; // Синий по умолчанию
-            if (subCount >= 1000000) {
-                subColor = '#fbbf24'; // Золотой для >= 1M
-            }
-            const subStyleStr = `font-size: 1.5rem; font-weight: 700; color: ${subColor};`;
+            const subColor = this.getValueColor(subCount);
+            const subStyleStr = `font-size: 1.1em; font-weight: 700; color: ${subColor};`;
+
+            // Color coding for Views
+            const viewsCount = currentPeriod.totalViews || 0;
+            const viewsColor = this.getValueColor(viewsCount);
+            const viewsStyleStr = `font-size: 1.1em; font-weight: 700; color: ${viewsColor};`;
+
+            // Color coding for Median
+            const medianCount = currentPeriod.medianViews || 0;
+            const medianColor = this.getValueColor(medianCount);
+            const medianStyleStr = `font-size: 1.1em; font-weight: 700; color: ${medianColor};`;
 
             // Build row
             const row = document.createElement('tr');
@@ -337,45 +334,47 @@ class Dashboard {
                 </td>
                 <td class="col-channel">
                     <span class="channel-name-cell" onclick="dashboard.openChannelModal('${channel.channel_id}')">
-                        <span class="channel-emoji">${channel.emojis.split('')[0] || '🎵'}</span>
-                        <span>${this.escapeHtml(channel.channel_name)}</span>
+                        <span>${this.escapeHtml(cleanChannelName)}</span>
                     </span>
                 </td>
                 <td class="col-icon" style="text-align: center; font-size: 1.8rem;">
                     ${styleIcon}
                 </td>
-                <td class="col-main-style" style="font-weight: 700; color: var(--text-primary);">
-                    ${this.escapeHtml(mainStyle)}
-                </td>
-                <td class="col-sub-style" style="color: #94a3b8; font-size: 0.9rem;">
-                    ${this.escapeHtml(subStyle)}
+                <td class="col-genre">
+                    <div class="genre-cell">
+                        <div class="main-genre" data-genre="${this.escapeHtml(mainGenre)}" style="font-weight: 700; color: var(--text-primary); cursor: pointer;">
+                            ${this.escapeHtml(mainGenre)}
+                        </div>
+                        ${subGenre ? `<div class="sub-genre" style="color: #94a3b8; font-size: 0.85rem; margin-top: 2px;">${this.escapeHtml(subGenre)}</div>` : ''}
+                    </div>
                 </td>
                 <td class="col-subscribers">
                     <div class="kpi-cell-subscribers">
                         <span class="kpi-value-large" style="${subStyleStr}">${analyticsEngine.formatNumber(channel.subscribers)}</span>
                     </div>
                 </td>
-                <td class="col-videos">
+                <td class="col-videos" data-tooltip="videos">
                     <div class="kpi-cell">
                         <span class="kpi-value">${currentPeriod.videoCount} 🎬</span>
+                        ${this._renderChangeIndicator(comparison.videoCountChange, 'videos', isNewChannel, currentPeriod.videoCount, previousPeriod.videoCount)}
                     </div>
                 </td>
-                <td class="col-views">
+                <td class="col-views" data-tooltip="views">
                     <div class="kpi-cell">
                         ${currentPeriod.hasData 
-                            ? `<span class="kpi-value">${analyticsEngine.formatNumber(currentPeriod.totalViews)}</span>`
+                            ? `<span class="kpi-value" style="${viewsStyleStr}">${analyticsEngine.formatNumber(currentPeriod.totalViews)}</span>`
                             : `<span class="kpi-value pause-icon">⏸</span>`
                         }
                         ${this._renderChangeIndicator(comparison.viewsChange, 'views', isNewChannel, currentPeriod.totalViews, previousPeriod.totalViews)}
                     </div>
                 </td>
-                <td class="col-median">
+                <td class="col-median" data-tooltip="median">
                     <div class="kpi-cell">
-                        <span class="kpi-value">${analyticsEngine.formatNumber(currentPeriod.medianViews)}</span>
+                        <span class="kpi-value" style="${medianStyleStr}">${analyticsEngine.formatNumber(currentPeriod.medianViews)}</span>
                         ${this._renderChangeIndicator(comparison.medianViewsChange, 'medianViews', isNewChannel, currentPeriod.medianViews, previousPeriod.medianViews)}
                     </div>
                 </td>
-                <td class="col-frequency">
+                <td class="col-frequency" data-tooltip="frequency">
                     <div class="kpi-cell">
                         <span class="kpi-value">${analyticsEngine.calculateVideosPerWeek(currentPeriod.videoCount, this.currentPeriod)}</span>
                         <span class="kpi-change neutral">per week</span>
@@ -392,6 +391,45 @@ class Dashboard {
                 const channelId = e.target.dataset.channelId;
                 this.handleChannelCheckbox(channelId, e.target.checked);
             });
+        });
+
+        // Add genre filter click handlers
+        document.querySelectorAll('.main-genre').forEach(genreElement => {
+            genreElement.addEventListener('click', (e) => {
+                const genre = e.target.dataset.genre;
+                if (genre) {
+                    this.filterByGenre(genre);
+                }
+            });
+        });
+
+        // Add tooltip handlers for KPI columns
+        document.querySelectorAll('[data-tooltip="videos"]').forEach((cell, index) => {
+            const channel = this.channels[index];
+            if (channel) {
+                tooltipManager.attachTooltipHandlers(cell, 'videos', channel, this.currentPeriod);
+            }
+        });
+
+        document.querySelectorAll('[data-tooltip="views"]').forEach((cell, index) => {
+            const channel = this.channels[index];
+            if (channel) {
+                tooltipManager.attachTooltipHandlers(cell, 'views', channel, this.currentPeriod);
+            }
+        });
+
+        document.querySelectorAll('[data-tooltip="median"]').forEach((cell, index) => {
+            const channel = this.channels[index];
+            if (channel) {
+                tooltipManager.attachTooltipHandlers(cell, 'median', channel, this.currentPeriod);
+            }
+        });
+
+        document.querySelectorAll('[data-tooltip="frequency"]').forEach((cell, index) => {
+            const channel = this.channels[index];
+            if (channel) {
+                tooltipManager.attachTooltipHandlers(cell, 'frequency', channel, this.currentPeriod);
+            }
         });
     }
 
@@ -1111,6 +1149,57 @@ class Dashboard {
     closeModal() {
         const modal = document.getElementById('channelModal');
         modal.classList.remove('active');
+    }
+
+    /**
+     * Remove emojis from text
+     */
+    removeEmojis(text) {
+        // Remove emoji characters (Unicode ranges)
+        return text.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F900}-\u{1F9FF}\u{1F018}-\u{1F270}\u{238C}-\u{2454}\u{20D0}-\u{20FF}\u{FE00}-\u{FE0F}\u{1F004}\u{1F0CF}\u{1F170}-\u{1F251}]/gu, '').trim();
+    }
+
+    /**
+     * Get color for numeric value based on threshold
+     */
+    getValueColor(value) {
+        if (value >= 1000000) {
+            return '#fbbf24'; // Gold/Orange for >= 1M
+        }
+        return '#60a5fa'; // Blue for < 1M
+    }
+
+    /**
+     * Filter channels by main genre
+     */
+    filterByGenre(mainGenre) {
+        // Clear all selections
+        this.selectedChannels.clear();
+        
+        // Select only channels with matching main genre
+        this.channels.forEach(channel => {
+            const channelMainGenre = (channel.style || '').split('/')[0].trim();
+            if (channelMainGenre.toLowerCase() === mainGenre.toLowerCase()) {
+                this.selectedChannels.add(channel.channel_id);
+            }
+        });
+        
+        // Update checkboxes
+        document.querySelectorAll('.channel-checkbox').forEach(cb => {
+            const channelId = cb.dataset.channelId;
+            cb.checked = this.selectedChannels.has(channelId);
+        });
+        
+        // Update select all checkbox
+        const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+        if (selectAllCheckbox) {
+            selectAllCheckbox.checked = this.selectedChannels.size === this.channels.length;
+            selectAllCheckbox.indeterminate = this.selectedChannels.size > 0 && this.selectedChannels.size < this.channels.length;
+        }
+        
+        // Update summary and charts
+        this.renderGlobalSummary();
+        this.renderCharts();
     }
 
     /**

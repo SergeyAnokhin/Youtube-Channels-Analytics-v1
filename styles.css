@@ -272,6 +272,35 @@ body {
     text-align: center;
 }
 
+/* New combined Genre column */
+.col-genre {
+    min-width: 180px;
+}
+
+.genre-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.main-genre {
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.main-genre:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.sub-genre {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* Old style columns (keep for compatibility) */
 .col-main-style {
     min-width: 140px;
 }
@@ -355,6 +384,13 @@ body {
 .kpi-cell {
     font-family: 'Courier New', monospace;
     font-weight: 500;
+    cursor: help; /* Show that tooltips are available */
+    position: relative;
+}
+
+.kpi-cell:hover {
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 4px;
 }
 
 .kpi-value {
