@@ -314,21 +314,23 @@ class Dashboard {
             const mainGenre = parts[0] ? parts[0].trim() : '';
             const subGenre = parts.slice(1).join(' / ').trim();
             
-            // Extract icon from emojis or style (only first emoji)
-            let styleIcon;
-            const emojis = channel.emojis;
-            if (emojis) {
-                const firstEmoji = Array.from(emojis)[0];
-                if (firstEmoji && !firstEmoji.includes('\uFFFD') && !firstEmoji.includes('?')) {
-                    styleIcon = firstEmoji;
-                }
+            // Extract icon from emoji field (single emoji for Icon column)
+            let styleIcon = channel.emoji || '';
+            // Apply encoding fix for broken characters
+            if (styleIcon && (styleIcon.includes('\uFFFD') || styleIcon.includes('?'))) {
+                styleIcon = '';
             }
+            // Fallback to genre mapping if no valid emoji
             if (!styleIcon) {
                 styleIcon = genreMapping[mainGenre] || '🎵'; // Default icon
             }
 
             // Clean channel name - remove emojis
             const cleanChannelName = this.removeEmojis(channel.channel_name);
+            
+            // Build display name with emojis prefix (multiple emojis for Channel column)
+            const channelEmojis = channel.emojis || '';
+            const displayChannelName = channelEmojis ? `${channelEmojis} ${cleanChannelName}` : cleanChannelName;
 
             // Subscribers: Dynamic font size and weight, single color
             const subCount = channel.subscribers || 0;
@@ -366,7 +368,7 @@ class Dashboard {
                 </td>
                 <td class="col-channel">
                     <span class="channel-name-cell" onclick="dashboard.openChannelModal('${channel.channel_id}')">
-                        <span>${this.escapeHtml(cleanChannelName)}</span>
+                        <span>${this.escapeHtml(displayChannelName)}</span>
                     </span>
                 </td>
                 <td class="col-icon" style="text-align: center; font-size: 1.8rem;">

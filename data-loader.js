@@ -61,7 +61,8 @@ class DataLoader {
             channel_id: rawData.channel_id || '',
             description: rawData.description || '',
             style: rawData.style || '',
-            emojis: rawData.emojis || '',
+            emoji: rawData.emoji || '', // Single emoji for Icon column
+            emojis: rawData.emojis || '', // Multiple emojis for channel name prefix
             subscribers: this._parseNumber(rawData.subscribers),
             total_views: this._parseNumber(rawData.total_views),
             total_videos: this._parseNumber(rawData.total_videos),
