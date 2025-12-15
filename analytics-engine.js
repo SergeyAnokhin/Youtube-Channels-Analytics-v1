@@ -357,6 +357,83 @@ class AnalyticsEngine {
 
         return { granularity, series: data };
     }
+
+    /**
+     * Calculate monthly statistics for the last 12 months
+     * Returns: { labels: [], totalViews: [], videoCount: [], medianViews: [] }
+     * Используется для годовых графиков в модальном окне канала
+     */
+    getMonthlyStatistics(channel) {
+        const referenceDate = this.getReferenceDate();
+        const endDate = new Date(referenceDate);
+        
+        // Получаем данные за последние 12 месяцев
+        const startDate = new Date(endDate);
+        startDate.setMonth(startDate.getMonth() - 12);
+
+        const videos = this.getVideosInPeriod(channel, startDate, endDate);
+
+        // Группировка видео по месяцам
+        const monthlyData = {};
+        
+        videos.forEach(video => {
+            const date = new Date(video.published_at);
+            const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+            
+            if (!monthlyData[monthKey]) {
+                monthlyData[monthKey] = {
+                    videos: [],
+                    totalViews: 0
+                };
+            }
+            
+            monthlyData[monthKey].videos.push(video);
+            monthlyData[monthKey].totalViews += (video.views || 0);
+        });
+
+        // Создаем массивы для всех 12 месяцев (включая месяцы без видео)
+        const labels = [];
+        const totalViews = [];
+        const videoCount = [];
+        const medianViews = [];
+
+        // Генерируем 12 месяцев назад от referenceDate
+        for (let i = 11; i >= 0; i--) {
+            const date = new Date(endDate);
+            date.setMonth(date.getMonth() - i);
+            const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+            
+            // Форматируем label как "Окт 2024"
+            const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+                               'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const monthNamesRu = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 
+                                  'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
+            const label = `${monthNamesRu[date.getMonth()]} ${date.getFullYear()}`;
+            labels.push(label);
+
+            if (monthlyData[monthKey]) {
+                const data = monthlyData[monthKey];
+                totalViews.push(data.totalViews);
+                videoCount.push(data.videos.length);
+                
+                // Рассчитываем медиану просмотров для месяца
+                const views = data.videos.map(v => v.views || 0);
+                medianViews.push(this._calculateMedian(views));
+            } else {
+                // Месяц без видео
+                totalViews.push(0);
+                videoCount.push(0);
+                medianViews.push(0);
+            }
+        }
+
+        return {
+            labels,
+            totalViews,
+            videoCount,
+            medianViews
+        };
+    }
 }
 
 // Export for use

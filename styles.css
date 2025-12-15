@@ -265,6 +265,21 @@ body {
     accent-color: var(--primary-color);
 }
 
+/* Style columns - Icon, Main Genre, Sub-genre */
+.col-icon {
+    width: 60px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.col-main-style {
+    min-width: 140px;
+}
+
+.col-sub-style {
+    min-width: 140px;
+}
+
 .channels-table tbody tr {
     border-bottom: 1px solid var(--border-color);
     transition: all 0.2s ease;
@@ -345,6 +360,18 @@ body {
 .kpi-value {
     display: block;
     margin-bottom: 0.3rem;
+}
+
+/* Специальная ячейка для подписчиков без процентов изменения */
+.kpi-cell-subscribers {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+}
+
+.kpi-value-large {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .kpi-change {
@@ -508,7 +535,7 @@ body {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    max-width: 900px;
+    max-width: 90%;
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;

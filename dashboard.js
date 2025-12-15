@@ -309,21 +309,22 @@ class Dashboard {
             const isNewChannel = !previousPeriod.hasData && currentPeriod.hasData;
             const isChecked = this.selectedChannels.has(channel.channel_id);
 
-            // Разделение стиля на основной и поджанр
+            // Разделение стиля на эмодзи, основной жанр и поджанр
             const rawStyle = channel.style || '';
             const parts = rawStyle.split('/');
             const mainStyle = parts[0] ? parts[0].trim() : '';
             const subStyle = parts.slice(1).join('/').trim();
+            
+            // Извлечение эмодзи из emojis или style
+            const styleIcon = (channel.emojis && channel.emojis.split('')[0]) || '🎵';
 
-            // Цветовая логика для подписчиков
+            // Цветовая логика для подписчиков (золотой для 1M+, синий для остальных)
             const subCount = channel.subscribers || 0;
-            let subColor = '#e2e8f0'; // Дефолтный
+            let subColor = '#60a5fa'; // Синий по умолчанию
             if (subCount >= 1000000) {
-                subColor = '#fbbf24'; // Золотой (>= 1M)
-            } else if (subCount >= 1000) {
-                subColor = '#60a5fa'; // Голубой (>= 1K)
+                subColor = '#fbbf24'; // Золотой для >= 1M
             }
-            const subStyleStr = `font-size: 1.2rem; font-weight: bold; color: ${subColor};`;
+            const subStyleStr = `font-size: 1.5rem; font-weight: 700; color: ${subColor};`;
 
             // Build row
             const row = document.createElement('tr');
@@ -340,24 +341,23 @@ class Dashboard {
                         <span>${this.escapeHtml(channel.channel_name)}</span>
                     </span>
                 </td>
-                <td class="col-icon" style="text-align: center; font-size: 1.5rem;">
-                    ${channel.emojis.split('')[0] || '🎵'}
+                <td class="col-icon" style="text-align: center; font-size: 1.8rem;">
+                    ${styleIcon}
                 </td>
-                <td class="col-main-style" style="font-weight: 600;">
+                <td class="col-main-style" style="font-weight: 700; color: var(--text-primary);">
                     ${this.escapeHtml(mainStyle)}
                 </td>
-                <td class="col-sub-style" style="color: #94a3b8;">
+                <td class="col-sub-style" style="color: #94a3b8; font-size: 0.9rem;">
                     ${this.escapeHtml(subStyle)}
                 </td>
                 <td class="col-subscribers">
-                    <div class="kpi-cell">
-                        <span class="kpi-value" style="${subStyleStr}">${analyticsEngine.formatNumber(channel.subscribers)}</span>
+                    <div class="kpi-cell-subscribers">
+                        <span class="kpi-value-large" style="${subStyleStr}">${analyticsEngine.formatNumber(channel.subscribers)}</span>
                     </div>
                 </td>
                 <td class="col-videos">
                     <div class="kpi-cell">
                         <span class="kpi-value">${currentPeriod.videoCount} 🎬</span>
-                        ${this._renderChangeIndicator(comparison.videoCountChange, 'videos', isNewChannel, currentPeriod.videoCount, previousPeriod.videoCount)}
                     </div>
                 </td>
                 <td class="col-views">
@@ -870,72 +870,79 @@ class Dashboard {
      * Render channel analytics in modal
      */
     renderChannelAnalytics(channel) {
-        this.renderModalTrendChart(channel);
-        this.renderModalPublishingChart(channel);
+        this.renderModalVolumeActivityChart(channel);
+        this.renderModalContentQualityChart(channel);
     }
 
     /**
-     * Render trend chart in modal
+     * Render "Объем и Активность" chart (Combo: bars + line) за 12 месяцев
      */
-    renderModalTrendChart(channel) {
-        const labels = this._getMonthLabels(6);
-        const viewsData = [];
-        const videoData = [];
+    renderModalVolumeActivityChart(channel) {
+        const monthlyStats = analyticsEngine.getMonthlyStatistics(channel);
         
-        const referenceDate = analyticsEngine.getReferenceDate();
-
-        labels.forEach((label, index) => {
-            const monthsBack = 6 - index - 1;
-            const endDate = new Date(referenceDate);
-            endDate.setMonth(endDate.getMonth() - monthsBack);
-            const startDate = new Date(endDate);
-            startDate.setMonth(startDate.getMonth() - 1);
-
-            const videos = analyticsEngine.getVideosInPeriod(channel, startDate, endDate);
-            const totalViews = videos.reduce((a, b) => a + (b.views || 0), 0);
-            viewsData.push(totalViews);
-            videoData.push(videos.length);
-        });
-
-        const ctx = document.getElementById('modalTrendChart').getContext('2d');
+        const ctx = document.getElementById('modalVolumeActivityChart').getContext('2d');
         
-        if (this.charts.modalTrendChart) {
-            this.charts.modalTrendChart.destroy();
+        if (this.charts.modalVolumeActivityChart) {
+            this.charts.modalVolumeActivityChart.destroy();
         }
 
-        this.charts.modalTrendChart = new Chart(ctx, {
-            type: 'line',
+        this.charts.modalVolumeActivityChart = new Chart(ctx, {
+            type: 'bar',
             data: {
-                labels,
+                labels: monthlyStats.labels,
                 datasets: [
                     {
-                        label: 'Views',
-                        data: viewsData,
-                        borderColor: 'rgba(102, 126, 234, 1)',
-                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        label: 'Количество видео',
+                        data: monthlyStats.videoCount,
+                        backgroundColor: 'rgba(168, 85, 247, 0.7)',
+                        borderColor: 'rgba(168, 85, 247, 1)',
                         borderWidth: 2,
-                        tension: 0.4,
-                        yAxisID: 'y'
+                        yAxisID: 'y',
+                        type: 'bar'
                     },
                     {
-                        label: 'Videos',
-                        data: videoData,
-                        borderColor: 'rgba(245, 87, 108, 1)',
-                        backgroundColor: 'rgba(245, 87, 108, 0.1)',
-                        borderWidth: 2,
+                        label: 'Общее количество просмотров',
+                        data: monthlyStats.totalViews,
+                        borderColor: 'rgba(102, 126, 234, 1)',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        borderWidth: 3,
                         tension: 0.4,
-                        yAxisID: 'y1'
+                        yAxisID: 'y1',
+                        type: 'line',
+                        fill: false
                     }
                 ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
-                interaction: { mode: 'index', intersect: false },
+                interaction: { 
+                    mode: 'index', 
+                    intersect: false 
+                },
                 plugins: {
                     legend: {
                         display: true,
-                        labels: { color: '#cbd5e1', font: { size: 12 } }
+                        position: 'top',
+                        labels: { 
+                            color: '#cbd5e1', 
+                            font: { size: 13 },
+                            padding: 15
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += analyticsEngine.formatNumber(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
                     }
                 },
                 scales: {
@@ -943,18 +950,45 @@ class Dashboard {
                         type: 'linear',
                         display: true,
                         position: 'left',
-                        ticks: { color: '#94a3b8' },
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Количество видео',
+                            color: '#a78bfa',
+                            font: { size: 12 }
+                        },
+                        ticks: { 
+                            color: '#94a3b8',
+                            precision: 0
+                        },
                         grid: { color: 'rgba(148, 163, 184, 0.1)' }
                     },
                     y1: {
                         type: 'linear',
                         display: true,
                         position: 'right',
-                        ticks: { color: '#94a3b8' },
-                        grid: { drawOnChartArea: false }
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Просмотры',
+                            color: '#667eea',
+                            font: { size: 12 }
+                        },
+                        ticks: { 
+                            color: '#94a3b8',
+                            callback: function(value) {
+                                return analyticsEngine.formatNumber(value);
+                            }
+                        },
+                        grid: { 
+                            drawOnChartArea: false 
+                        }
                     },
                     x: {
-                        ticks: { color: '#94a3b8' },
+                        ticks: { 
+                            color: '#94a3b8',
+                            font: { size: 11 }
+                        },
                         grid: { color: 'rgba(148, 163, 184, 0.1)' }
                     }
                 }
@@ -963,44 +997,93 @@ class Dashboard {
     }
 
     /**
-     * Render publishing frequency chart in modal
+     * Render "Качество Контента" chart (Line: median views) за 12 месяцев
      */
-    renderModalPublishingChart(channel) {
-        const monthlyPublishing = analyticsEngine.getPublishingDates(channel, 6);
-        const months = Object.keys(monthlyPublishing).sort();
-        const counts = months.map(m => monthlyPublishing[m]);
-
-        const ctx = document.getElementById('modalPublishingChart').getContext('2d');
+    renderModalContentQualityChart(channel) {
+        const monthlyStats = analyticsEngine.getMonthlyStatistics(channel);
         
-        if (this.charts.modalPublishingChart) {
-            this.charts.modalPublishingChart.destroy();
+        const ctx = document.getElementById('modalContentQualityChart').getContext('2d');
+        
+        if (this.charts.modalContentQualityChart) {
+            this.charts.modalContentQualityChart.destroy();
         }
 
-        this.charts.modalPublishingChart = new Chart(ctx, {
-            type: 'bar',
+        this.charts.modalContentQualityChart = new Chart(ctx, {
+            type: 'line',
             data: {
-                labels: months,
-                datasets: [{
-                    label: 'Videos Published',
-                    data: counts,
-                    backgroundColor: 'rgba(168, 85, 247, 0.7)',
-                    borderColor: 'rgba(168, 85, 247, 1)',
-                    borderWidth: 1
-                }]
+                labels: monthlyStats.labels,
+                datasets: [
+                    {
+                        label: 'Медианные просмотры',
+                        data: monthlyStats.medianViews,
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                        pointBackgroundColor: 'rgba(16, 185, 129, 1)',
+                        pointBorderColor: '#1e293b',
+                        pointBorderWidth: 2
+                    }
+                ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
-                plugins: { legend: { display: false } },
+                interaction: { 
+                    mode: 'index', 
+                    intersect: false 
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: { 
+                            color: '#cbd5e1', 
+                            font: { size: 13 },
+                            padding: 15
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += analyticsEngine.formatNumber(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        ticks: { color: '#94a3b8' },
+                        title: {
+                            display: true,
+                            text: 'Медианные просмотры на видео',
+                            color: '#10b981',
+                            font: { size: 12 }
+                        },
+                        ticks: { 
+                            color: '#94a3b8',
+                            callback: function(value) {
+                                return analyticsEngine.formatNumber(value);
+                            }
+                        },
                         grid: { color: 'rgba(148, 163, 184, 0.1)' }
                     },
                     x: {
-                        ticks: { color: '#94a3b8' },
-                        grid: { display: false }
+                        ticks: { 
+                            color: '#94a3b8',
+                            font: { size: 11 }
+                        },
+                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
                     }
                 }
             }

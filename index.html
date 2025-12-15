@@ -46,8 +46,8 @@
                                     <input type="checkbox" id="selectAllCheckbox" title="Select All">
                                 </th>
                                 <th class="col-channel sortable" data-sort="channel">Channel <span class="sort-indicator"></span></th>
-                                <th class="col-icon">🎵</th>
-                                <th class="col-main-style sortable" data-sort="main-style">Genre <span class="sort-indicator"></span></th>
+                                <th class="col-icon">Icon</th>
+                                <th class="col-main-style sortable" data-sort="main-style">Main Genre <span class="sort-indicator"></span></th>
                                 <th class="col-sub-style sortable" data-sort="sub-style">Sub-genre <span class="sort-indicator"></span></th>
                                 <th class="col-subscribers sortable" data-sort="subscribers">Subscribers <span class="sort-indicator"></span></th>
                                 <th class="col-videos sortable" data-sort="videos">Videos <span class="sort-indicator"></span></th>
@@ -200,12 +200,18 @@
                     <!-- Analytics Tab -->
                     <div class="tab-content" data-tab="analytics">
                         <div class="analytics-section">
-                            <h3>Growth Trends</h3>
-                            <canvas id="modalTrendChart"></canvas>
+                            <h3>📈 Объем и Активность (последние 12 месяцев)</h3>
+                            <p style="color: var(--text-tertiary); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Корреляция между частотой публикаций и общим трафиком
+                            </p>
+                            <canvas id="modalVolumeActivityChart" style="max-height: 350px;"></canvas>
                         </div>
                         <div class="analytics-section">
-                            <h3>Video Distribution by Month</h3>
-                            <canvas id="modalPublishingChart"></canvas>
+                            <h3>🎯 Качество Контента (последние 12 месяцев)</h3>
+                            <p style="color: var(--text-tertiary); font-size: 0.9rem; margin-bottom: 1rem;">
+                                Медианное количество просмотров на видео (исключает влияние вирусных роликов)
+                            </p>
+                            <canvas id="modalContentQualityChart" style="max-height: 350px;"></canvas>
                         </div>
                     </div>
                 </div>
