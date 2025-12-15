@@ -262,16 +262,20 @@ class AnalyticsEngine {
     }
 
     /**
-     * Format number for display (1.2M, 450K, etc.)
+     * Format number for display (K-notation only, no M)
+     * E.g., 4,400,000 -> 4400K, 2600 -> 2.6K
      */
     formatNumber(value) {
         if (value === null || value === undefined) return '0';
         
-        if (value >= 1000000) {
-            return (value / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
-        }
         if (value >= 1000) {
-            return (value / 1000).toFixed(0) + 'K';
+            const kValue = value / 1000;
+            // If value is >= 1000K (1M), show as integer (e.g., 4400K)
+            if (kValue >= 1000) {
+                return Math.round(kValue) + 'K';
+            }
+            // Otherwise show 1 decimal place (e.g., 2.6K)
+            return kValue.toFixed(1).replace(/\.0$/, '') + 'K';
         }
         return value.toString();
     }

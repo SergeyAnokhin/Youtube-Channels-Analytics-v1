@@ -339,6 +339,19 @@ body {
 .col-median,
 .col-frequency {
     min-width: 140px;
+    text-align: right; /* Right-align numeric columns */
+}
+
+/* Add padding adjustment for right-aligned numeric columns */
+.col-subscribers .kpi-cell-subscribers,
+.col-videos .kpi-cell,
+.col-views .kpi-cell,
+.col-median .kpi-cell,
+.col-frequency .kpi-cell {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 /* Channel Name Cell */
@@ -396,18 +409,28 @@ body {
 .kpi-value {
     display: block;
     margin-bottom: 0.3rem;
+    transition: color 0.3s ease;
 }
 
 /* Специальная ячейка для подписчиков без процентов изменения */
 .kpi-cell-subscribers {
     font-family: 'Courier New', monospace;
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .kpi-value-large {
     display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
+    line-height: 1.2;
+    transition: all 0.2s ease;
+}
+
+/* Table row adaptive height for large subscriber values */
+tbody tr {
+    transition: all 0.2s ease;
 }
 
 .kpi-change {

@@ -286,6 +286,9 @@ class Dashboard {
         const tbody = document.getElementById('channelsTableBody');
         tbody.innerHTML = '';
 
+        // Calculate heatmap ranges for all columns
+        const ranges = this.calculateHeatmapRanges();
+
         this.channels.forEach(channel => {
             const kpis = analyticsEngine.calculateChannelKPIs(channel, this.currentPeriod);
             const comparison = kpis.comparison;
@@ -308,20 +311,30 @@ class Dashboard {
             // Clean channel name - remove emojis
             const cleanChannelName = this.removeEmojis(channel.channel_name);
 
-            // Color coding for Subscribers
+            // Subscribers: Dynamic font size and weight, single color
             const subCount = channel.subscribers || 0;
-            const subColor = this.getValueColor(subCount);
-            const subStyleStr = `font-size: 1.1em; font-weight: 700; color: ${subColor};`;
+            const subFontStyle = this.getSubscriberFontStyle(subCount);
+            const subStyleStr = `font-size: ${subFontStyle.fontSize}; font-weight: ${subFontStyle.fontWeight}; opacity: ${subFontStyle.opacity}; color: var(--text-primary); line-height: 1.2;`;
 
-            // Color coding for Views
+            // Videos: Heatmap color
+            const videosCount = currentPeriod.videoCount || 0;
+            const videosColor = this.calculateHeatmapColor(videosCount, ranges.videos.min, ranges.videos.max);
+            const videosStyleStr = `color: ${videosColor}; font-weight: 600;`;
+
+            // Views: Heatmap color
             const viewsCount = currentPeriod.totalViews || 0;
-            const viewsColor = this.getValueColor(viewsCount);
-            const viewsStyleStr = `font-size: 1.1em; font-weight: 700; color: ${viewsColor};`;
+            const viewsColor = this.calculateHeatmapColor(viewsCount, ranges.views.min, ranges.views.max);
+            const viewsStyleStr = `color: ${viewsColor}; font-weight: 600;`;
 
-            // Color coding for Median
+            // Median: Heatmap color
             const medianCount = currentPeriod.medianViews || 0;
-            const medianColor = this.getValueColor(medianCount);
-            const medianStyleStr = `font-size: 1.1em; font-weight: 700; color: ${medianColor};`;
+            const medianColor = this.calculateHeatmapColor(medianCount, ranges.median.min, ranges.median.max);
+            const medianStyleStr = `color: ${medianColor}; font-weight: 600;`;
+
+            // Frequency: Heatmap color
+            const frequencyValue = parseFloat(analyticsEngine.calculateVideosPerWeek(currentPeriod.videoCount, this.currentPeriod));
+            const frequencyColor = this.calculateHeatmapColor(frequencyValue, ranges.frequency.min, ranges.frequency.max);
+            const frequencyStyleStr = `color: ${frequencyColor}; font-weight: 600;`;
 
             // Build row
             const row = document.createElement('tr');
@@ -355,7 +368,7 @@ class Dashboard {
                 </td>
                 <td class="col-videos" data-tooltip="videos">
                     <div class="kpi-cell">
-                        <span class="kpi-value">${currentPeriod.videoCount} 🎬</span>
+                        <span class="kpi-value" style="${videosStyleStr}">${currentPeriod.videoCount} 🎬</span>
                         ${this._renderChangeIndicator(comparison.videoCountChange, 'videos', isNewChannel, currentPeriod.videoCount, previousPeriod.videoCount)}
                     </div>
                 </td>
@@ -376,7 +389,7 @@ class Dashboard {
                 </td>
                 <td class="col-frequency" data-tooltip="frequency">
                     <div class="kpi-cell">
-                        <span class="kpi-value">${analyticsEngine.calculateVideosPerWeek(currentPeriod.videoCount, this.currentPeriod)}</span>
+                        <span class="kpi-value" style="${frequencyStyleStr}">${analyticsEngine.calculateVideosPerWeek(currentPeriod.videoCount, this.currentPeriod)}</span>
                         <span class="kpi-change neutral">per week</span>
                     </div>
                 </td>
@@ -1167,6 +1180,99 @@ class Dashboard {
             return '#fbbf24'; // Gold/Orange for >= 1M
         }
         return '#60a5fa'; // Blue for < 1M
+    }
+
+    /**
+     * Calculate heatmap color for a value based on min/max in dataset
+     * @param {number} value - Current value
+     * @param {number} min - Minimum value in dataset
+     * @param {number} max - Maximum value in dataset
+     * @returns {string} - RGB color string
+     */
+    calculateHeatmapColor(value, min, max) {
+        if (max === min) {
+            // If all values are the same, use middle color
+            return 'rgba(127, 156, 245, 0.85)';
+        }
+        
+        // Normalize value to 0-1 range
+        const normalized = (value - min) / (max - min);
+        
+        // Define color gradient (cold blue to warm yellow/gold)
+        const coldColor = { r: 96, g: 165, b: 250 };    // Blue rgba(96, 165, 250, 0.7)
+        const warmColor = { r: 251, g: 191, b: 36 };    // Gold/Yellow rgba(251, 191, 36, 1)
+        
+        // Interpolate between colors
+        const r = Math.round(coldColor.r + (warmColor.r - coldColor.r) * normalized);
+        const g = Math.round(coldColor.g + (warmColor.g - coldColor.g) * normalized);
+        const b = Math.round(coldColor.b + (warmColor.b - coldColor.b) * normalized);
+        const a = 0.7 + (0.3 * normalized); // Alpha from 0.7 to 1.0
+        
+        return `rgba(${r}, ${g}, ${b}, ${a})`;
+    }
+
+    /**
+     * Get font size and weight based on subscriber count
+     * @param {number} subscribers - Subscriber count
+     * @returns {object} - Style object with fontSize, fontWeight, opacity
+     */
+    getSubscriberFontStyle(subscribers) {
+        if (subscribers >= 10000000) {
+            // > 10M: Огромный
+            return { fontSize: '1.8rem', fontWeight: 800, opacity: 1 };
+        } else if (subscribers >= 1000000) {
+            // 1M - 10M: Крупный
+            return { fontSize: '1.5rem', fontWeight: 700, opacity: 1 };
+        } else if (subscribers >= 100000) {
+            // 100K - 1M: Средний
+            return { fontSize: '1.2rem', fontWeight: 600, opacity: 1 };
+        } else if (subscribers >= 10000) {
+            // 10K - 100K: Стандартный
+            return { fontSize: '1.0rem', fontWeight: 500, opacity: 1 };
+        } else {
+            // < 10K: Маленький
+            return { fontSize: '0.9rem', fontWeight: 400, opacity: 0.8 };
+        }
+    }
+
+    /**
+     * Calculate min/max values for heatmap columns
+     * @returns {object} - Object with min/max for each column
+     */
+    calculateHeatmapRanges() {
+        const ranges = {
+            videos: { min: Infinity, max: -Infinity },
+            views: { min: Infinity, max: -Infinity },
+            median: { min: Infinity, max: -Infinity },
+            frequency: { min: Infinity, max: -Infinity }
+        };
+
+        this.channels.forEach(channel => {
+            const kpis = analyticsEngine.calculateChannelKPIs(channel, this.currentPeriod);
+            const current = kpis.currentPeriod;
+            
+            // Videos
+            const videos = current.videoCount || 0;
+            ranges.videos.min = Math.min(ranges.videos.min, videos);
+            ranges.videos.max = Math.max(ranges.videos.max, videos);
+            
+            // Views
+            const views = current.totalViews || 0;
+            ranges.views.min = Math.min(ranges.views.min, views);
+            ranges.views.max = Math.max(ranges.views.max, views);
+            
+            // Median
+            const median = current.medianViews || 0;
+            ranges.median.min = Math.min(ranges.median.min, median);
+            ranges.median.max = Math.max(ranges.median.max, median);
+            
+            // Frequency
+            const frequency = parseFloat(analyticsEngine.calculateVideosPerWeek(current.videoCount, this.currentPeriod));
+            ranges.frequency.min = Math.min(ranges.frequency.min, frequency);
+            ranges.frequency.max = Math.max(ranges.frequency.max, frequency);
+        });
+
+        return ranges;
     }
 
     /**
