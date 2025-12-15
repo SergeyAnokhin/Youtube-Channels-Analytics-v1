@@ -7,6 +7,7 @@
     "subscribers": 652,
     "style": "Душевный Поп / AI Музыка",
     "emojis": "🤖🎵",
+    "emoji": "💖",
     "description": "",
     "videos": [
         {
@@ -64,7 +65,7 @@
             "published_at": "2025-11-26T15:36:06Z",
             "duration": "0:04:33",
             "duration_sec": 273,
-            "views": 1513,
+            "views": 1514,
             "likes": 63,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=uFsmeRzFBnk"
@@ -572,162 +573,6 @@
             "likes": 46,
             "comments": 2,
             "url": "https://www.youtube.com/watch?v=Jw4H-SRqxQA"
-        },
-        {
-            "video_id": "xjshXas2z8w",
-            "title": "ML - Я вижу свет",
-            "type": "video",
-            "published_at": "2024-12-01T13:30:38Z",
-            "duration": "0:03:38",
-            "duration_sec": 218,
-            "views": 66,
-            "likes": 3,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=xjshXas2z8w"
-        },
-        {
-            "video_id": "FcIrhQZe3gc",
-            "title": "ML - Небо",
-            "type": "video",
-            "published_at": "2024-11-28T16:53:00Z",
-            "duration": "0:03:13",
-            "duration_sec": 193,
-            "views": 59,
-            "likes": 2,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=FcIrhQZe3gc"
-        },
-        {
-            "video_id": "5o1_pTBbb2s",
-            "title": "ML - Секрет",
-            "type": "video",
-            "published_at": "2024-11-24T11:32:35Z",
-            "duration": "0:03:08",
-            "duration_sec": 188,
-            "views": 86,
-            "likes": 4,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=5o1_pTBbb2s"
-        },
-        {
-            "video_id": "gf-7uB5g6dI",
-            "title": "ML - Любовь, запреты нарушая",
-            "type": "video",
-            "published_at": "2024-11-02T19:13:44Z",
-            "duration": "0:02:15",
-            "duration_sec": 135,
-            "views": 518,
-            "likes": 21,
-            "comments": 4,
-            "url": "https://www.youtube.com/watch?v=gf-7uB5g6dI"
-        },
-        {
-            "video_id": "ZAifdjzsOTE",
-            "title": "ML - Моя любовь",
-            "type": "video",
-            "published_at": "2024-10-27T12:53:57Z",
-            "duration": "0:02:40",
-            "duration_sec": 160,
-            "views": 7788,
-            "likes": 149,
-            "comments": 11,
-            "url": "https://www.youtube.com/watch?v=ZAifdjzsOTE"
-        },
-        {
-            "video_id": "YbG1Lv8D_eU",
-            "title": "ML - Высоко или низко",
-            "type": "video",
-            "published_at": "2024-10-13T01:55:12Z",
-            "duration": "0:02:01",
-            "duration_sec": 121,
-            "views": 195,
-            "likes": 5,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=YbG1Lv8D_eU"
-        },
-        {
-            "video_id": "J80Ha_Q6Zks",
-            "title": "ML - Уйди печаль",
-            "type": "video",
-            "published_at": "2024-10-08T01:24:57Z",
-            "duration": "0:03:14",
-            "duration_sec": 194,
-            "views": 126,
-            "likes": 4,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=J80Ha_Q6Zks"
-        },
-        {
-            "video_id": "_1RUN2qLkzI",
-            "title": "ML - Не пиши мне больше, не звони",
-            "type": "video",
-            "published_at": "2024-10-05T02:26:46Z",
-            "duration": "0:03:28",
-            "duration_sec": 208,
-            "views": 655,
-            "likes": 22,
-            "comments": 2,
-            "url": "https://www.youtube.com/watch?v=_1RUN2qLkzI"
-        },
-        {
-            "video_id": "Id2EfPZaaiw",
-            "title": "ML- Скучаю по тебе",
-            "type": "video",
-            "published_at": "2024-09-24T01:17:26Z",
-            "duration": "0:03:13",
-            "duration_sec": 193,
-            "views": 110,
-            "likes": 10,
-            "comments": 2,
-            "url": "https://www.youtube.com/watch?v=Id2EfPZaaiw"
-        },
-        {
-            "video_id": "UrOQ7_PZCms",
-            "title": "ML - Лишь во сне",
-            "type": "video",
-            "published_at": "2024-09-14T22:06:45Z",
-            "duration": "0:02:54",
-            "duration_sec": 174,
-            "views": 156,
-            "likes": 5,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=UrOQ7_PZCms"
-        },
-        {
-            "video_id": "LM4wfIUK1tM",
-            "title": "ML - Нельзя любить",
-            "type": "video",
-            "published_at": "2024-09-14T21:58:47Z",
-            "duration": "0:02:41",
-            "duration_sec": 161,
-            "views": 307,
-            "likes": 8,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=LM4wfIUK1tM"
-        },
-        {
-            "video_id": "6ziX7dHAB9Q",
-            "title": "ML - Не такая",
-            "type": "video",
-            "published_at": "2024-09-14T19:34:09Z",
-            "duration": "0:02:35",
-            "duration_sec": 155,
-            "views": 121,
-            "likes": 3,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=6ziX7dHAB9Q"
-        },
-        {
-            "video_id": "GPRWnMe3dOw",
-            "title": "ML - Уходи",
-            "type": "video",
-            "published_at": "2024-07-24T12:53:11Z",
-            "duration": "0:02:14",
-            "duration_sec": 134,
-            "views": 1246,
-            "likes": 17,
-            "comments": 1,
-            "url": "https://www.youtube.com/watch?v=GPRWnMe3dOw"
         }
     ]
 }
