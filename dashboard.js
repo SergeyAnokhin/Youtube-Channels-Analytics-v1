@@ -203,6 +203,20 @@ class Dashboard {
                         ? valA.localeCompare(valB)
                         : valB.localeCompare(valA);
                 
+                case 'main-style':
+                    const mainStyleA = (a.style || '').split('/')[0].trim().toLowerCase();
+                    const mainStyleB = (b.style || '').split('/')[0].trim().toLowerCase();
+                    return this.sortDirection === 'asc'
+                        ? mainStyleA.localeCompare(mainStyleB)
+                        : mainStyleB.localeCompare(mainStyleA);
+                
+                case 'sub-style':
+                    const subStyleA = (a.style || '').split('/').slice(1).join('/').trim().toLowerCase();
+                    const subStyleB = (b.style || '').split('/').slice(1).join('/').trim().toLowerCase();
+                    return this.sortDirection === 'asc'
+                        ? subStyleA.localeCompare(subStyleB)
+                        : subStyleB.localeCompare(subStyleA);
+                
                 case 'subscribers':
                     valA = a.subscribers || 0;
                     valB = b.subscribers || 0;
@@ -295,6 +309,22 @@ class Dashboard {
             const isNewChannel = !previousPeriod.hasData && currentPeriod.hasData;
             const isChecked = this.selectedChannels.has(channel.channel_id);
 
+            // Разделение стиля на основной и поджанр
+            const rawStyle = channel.style || '';
+            const parts = rawStyle.split('/');
+            const mainStyle = parts[0] ? parts[0].trim() : '';
+            const subStyle = parts.slice(1).join('/').trim();
+
+            // Цветовая логика для подписчиков
+            const subCount = channel.subscribers || 0;
+            let subColor = '#e2e8f0'; // Дефолтный
+            if (subCount >= 1000000) {
+                subColor = '#fbbf24'; // Золотой (>= 1M)
+            } else if (subCount >= 1000) {
+                subColor = '#60a5fa'; // Голубой (>= 1K)
+            }
+            const subStyleStr = `font-size: 1.2rem; font-weight: bold; color: ${subColor};`;
+
             // Build row
             const row = document.createElement('tr');
             row.innerHTML = `
@@ -310,21 +340,23 @@ class Dashboard {
                         <span>${this.escapeHtml(channel.channel_name)}</span>
                     </span>
                 </td>
-                <td class="col-style">
-                    <div class="style-cell" title="${this.escapeHtml(channel.style)}">
-                        <span class="style-emoji">${channel.emojis || '🎵'}</span>
-                        <span class="style-text">${this.escapeHtml(channel.style.substring(0, 60))}</span>
-                    </div>
+                <td class="col-icon" style="text-align: center; font-size: 1.5rem;">
+                    ${channel.emojis.split('')[0] || '🎵'}
+                </td>
+                <td class="col-main-style" style="font-weight: 600;">
+                    ${this.escapeHtml(mainStyle)}
+                </td>
+                <td class="col-sub-style" style="color: #94a3b8;">
+                    ${this.escapeHtml(subStyle)}
                 </td>
                 <td class="col-subscribers">
                     <div class="kpi-cell">
-                        <span class="kpi-value">${analyticsEngine.formatNumber(channel.subscribers)}</span>
-                        <span class="kpi-change neutral">—</span>
+                        <span class="kpi-value" style="${subStyleStr}">${analyticsEngine.formatNumber(channel.subscribers)}</span>
                     </div>
                 </td>
                 <td class="col-videos">
                     <div class="kpi-cell">
-                        <span class="kpi-value">${currentPeriod.videoCount}</span>
+                        <span class="kpi-value">${currentPeriod.videoCount} 🎬</span>
                         ${this._renderChangeIndicator(comparison.videoCountChange, 'videos', isNewChannel, currentPeriod.videoCount, previousPeriod.videoCount)}
                     </div>
                 </td>
