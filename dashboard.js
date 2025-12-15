@@ -283,6 +283,15 @@ class Dashboard {
      * Render channels comparison table
      */
     renderChannelsTable() {
+        const genreMapping = {
+            'Auto': '🚗',
+            'Dance': '💃',
+            'News': '📰',
+            'Retro': '📻',
+            'Chanson': '🎸',
+            // ...additional genres...
+        };
+
         const tbody = document.getElementById('channelsTableBody');
         tbody.innerHTML = '';
 
@@ -306,7 +315,17 @@ class Dashboard {
             const subGenre = parts.slice(1).join(' / ').trim();
             
             // Extract icon from emojis or style (only first emoji)
-            const styleIcon = (channel.emojis && channel.emojis.split('')[0]) || '🎵';
+            let styleIcon;
+            const emojis = channel.emojis;
+            if (emojis) {
+                const firstEmoji = Array.from(emojis)[0];
+                if (firstEmoji && !firstEmoji.includes('\uFFFD') && !firstEmoji.includes('?')) {
+                    styleIcon = firstEmoji;
+                }
+            }
+            if (!styleIcon) {
+                styleIcon = genreMapping[mainGenre] || '🎵'; // Default icon
+            }
 
             // Clean channel name - remove emojis
             const cleanChannelName = this.removeEmojis(channel.channel_name);

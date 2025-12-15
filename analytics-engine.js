@@ -266,18 +266,9 @@ class AnalyticsEngine {
      * E.g., 4,400,000 -> 4400K, 2600 -> 2.6K
      */
     formatNumber(value) {
-        if (value === null || value === undefined) return '0';
-        
-        if (value >= 1000) {
-            const kValue = value / 1000;
-            // If value is >= 1000K (1M), show as integer (e.g., 4400K)
-            if (kValue >= 1000) {
-                return Math.round(kValue) + 'K';
-            }
-            // Otherwise show 1 decimal place (e.g., 2.6K)
-            return kValue.toFixed(1).replace(/\.0$/, '') + 'K';
-        }
-        return value.toString();
+        if (value == null) return '0'; // or '-' based on context
+        const roundedValue = Math.round(value / 1000);
+        return `${roundedValue}K`;
     }
 
     /**

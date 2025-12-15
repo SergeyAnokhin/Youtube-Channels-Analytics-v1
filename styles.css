@@ -209,6 +209,7 @@ body {
 .channels-table {
     width: 100%;
     border-collapse: collapse;
+    font-family: monospace;
 }
 
 .channels-table thead {
@@ -218,7 +219,7 @@ body {
 
 .channels-table th {
     padding: 1.2rem 1rem;
-    text-align: left;
+    text-align: right;
     font-weight: 600;
     color: var(--text-secondary);
     font-size: 0.85rem;
@@ -323,6 +324,7 @@ body {
     padding: 1rem;
     color: var(--text-primary);
     font-size: 0.95rem;
+    text-align: right;
 }
 
 .col-channel {
