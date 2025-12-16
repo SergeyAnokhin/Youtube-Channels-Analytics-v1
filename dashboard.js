@@ -367,8 +367,10 @@ class Dashboard {
                            ${isChecked ? 'checked' : ''}>
                 </td>
                 <td class="col-channel">
-                    <span class="channel-name-cell" onclick="dashboard.openChannelModal('${channel.channel_id}')">
-                        <span>${this.escapeHtml(displayChannelName)}</span>
+                    <span class="channel-name-cell" onclick="dashboard.openChannelModal('${channel.channel_id}')" style="display: flex; align-items: center; gap: 8px;">
+                        ${channel.thumbnail_url ? `<img src="${this.escapeHtml(channel.thumbnail_url)}" alt="" style="width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); flex-shrink: 0;">` : ''}
+                        ${channelEmojis ? `<span style="font-size: 1rem;">${channelEmojis}</span>` : ''}
+                        <span style="font-weight: 600; color: var(--text-primary);">${this.escapeHtml(cleanChannelName)}</span>
                     </span>
                 </td>
                 <td class="col-icon" style="text-align: center; font-size: 1.8rem;">

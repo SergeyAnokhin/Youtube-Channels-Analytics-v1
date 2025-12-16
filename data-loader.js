@@ -56,6 +56,12 @@ class DataLoader {
      * Normalize channel data structure
      */
     _normalizeChannelData(rawData) {
+        // Extract thumbnail URL from nested structure
+        let thumbnailUrl = '';
+        if (rawData.thumbnails && rawData.thumbnails.default && rawData.thumbnails.default.url) {
+            thumbnailUrl = rawData.thumbnails.default.url;
+        }
+
         return {
             channel_name: rawData.channel_name || 'Unknown',
             channel_id: rawData.channel_id || '',
@@ -63,6 +69,7 @@ class DataLoader {
             style: rawData.style || '',
             emoji: rawData.emoji || '', // Single emoji for Icon column
             emojis: rawData.emojis || '', // Multiple emojis for channel name prefix
+            thumbnail_url: thumbnailUrl, // Channel logo/avatar
             subscribers: this._parseNumber(rawData.subscribers),
             total_views: this._parseNumber(rawData.total_views),
             total_videos: this._parseNumber(rawData.total_videos),
