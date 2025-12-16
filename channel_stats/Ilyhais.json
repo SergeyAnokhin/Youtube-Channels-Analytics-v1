@@ -9,6 +9,23 @@
     "emojis": "🎵🎲",
     "emoji": "🎲",
     "description": "🎼 Пишем и создаем персонализированные песни на заказ\n💝 Превращаем ваши истории в музыку\n🎯 Песни о любви, дружбе, семье, важных моментах\n✨ Каждая композиция уникальна\n📩 Заказы принимаем в Телеграм (ссылка в описании)\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/ijeYKjfd6L8ll6bVcdBH_ug-xloj5K61CoJc8B4NSNjh5Joo_8guPcxdjesTAvyYoTZv0wn0ZA=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/ijeYKjfd6L8ll6bVcdBH_ug-xloj5K61CoJc8B4NSNjh5Joo_8guPcxdjesTAvyYoTZv0wn0ZA=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/ijeYKjfd6L8ll6bVcdBH_ug-xloj5K61CoJc8B4NSNjh5Joo_8guPcxdjesTAvyYoTZv0wn0ZA=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "HhJI2TOkDcQ",
@@ -101,7 +118,7 @@
             "published_at": "2025-09-17T17:53:03Z",
             "duration": "0:04:34",
             "duration_sec": 274,
-            "views": 7111,
+            "views": 7113,
             "likes": 217,
             "comments": 17,
             "url": "https://www.youtube.com/watch?v=Q511a6iFZjs"
@@ -197,7 +214,7 @@
             "published_at": "2025-08-26T19:04:36Z",
             "duration": "0:04:46",
             "duration_sec": 286,
-            "views": 37166,
+            "views": 37193,
             "likes": 588,
             "comments": 43,
             "url": "https://www.youtube.com/watch?v=g7LB_UZFCwI"
@@ -233,8 +250,8 @@
             "published_at": "2025-08-19T18:45:56Z",
             "duration": "0:05:19",
             "duration_sec": 319,
-            "views": 176122,
-            "likes": 2214,
+            "views": 176126,
+            "likes": 2215,
             "comments": 132,
             "url": "https://www.youtube.com/watch?v=lpEpdwDTDMQ"
         },
@@ -281,7 +298,7 @@
             "published_at": "2025-08-05T20:38:05Z",
             "duration": "0:04:51",
             "duration_sec": 291,
-            "views": 673980,
+            "views": 674005,
             "likes": 6466,
             "comments": 279,
             "url": "https://www.youtube.com/watch?v=Jfgt80UA-24"
@@ -305,8 +322,8 @@
             "published_at": "2025-07-30T17:15:03Z",
             "duration": "0:05:57",
             "duration_sec": 357,
-            "views": 769293,
-            "likes": 6847,
+            "views": 769311,
+            "likes": 6848,
             "comments": 347,
             "url": "https://www.youtube.com/watch?v=YbwwyY9n2PI"
         },

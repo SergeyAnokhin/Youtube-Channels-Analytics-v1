@@ -9,6 +9,23 @@
     "emojis": "🎩💃",
     "emoji": "🎷",
     "description": "Frezee Grand — автор стихов и исполнитель. Музыка и поэзия в стиле свинг и jazz-pop, визуалы с помощью AI — уникальные истории в каждом клипе. Подпишись и окунись в новое звучание искусства! Каждое видео — глубоко продуманная авторская работа . #FrezeeGrand #ЭлектроСвинг #ДжазПоп\n\n130e01f6-3081-4b54-8c27-d7b4c0a98a89\n\nTelegram: https://t.me/FrezeeGrand_TM\n\nНейросети в которых мы работаем. \nЕсть шикарный продукт в телеграмм - Syntx AI .\n80% своей работы мы делаем в Syntx AI. ДОСТУП К 90+ AI ИНСТРУМЕНТАМ! Базис стоит около 8$ в месяц, получаете доступ к всем нужным нейросетям одновременно.\n\nРеферальная ссылка телеграмм : \nhttps://t.me/syntxaibot?start=aff_1838539916\nПортал : https://syntx.ai/welcome/xXK34FrC\n\n👉Spotify : https://open.spotify.com/album/14XJTH7PByZLlyymgYMQDU?si=pnf0cx7NTEGP3cvzTJdwiA\n👉 https://frezeegrand.bandcamp.com/album/debut\n\n\nE-mail : frezeegrand@gmail.com",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/h0UlNaewVEVGCAGXLZy-8vvs5D-hTGuahVagPZ0aIKRlh-d1Tb4jYrMK0fK6iRkS6FlAFpdb=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/h0UlNaewVEVGCAGXLZy-8vvs5D-hTGuahVagPZ0aIKRlh-d1Tb4jYrMK0fK6iRkS6FlAFpdb=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/h0UlNaewVEVGCAGXLZy-8vvs5D-hTGuahVagPZ0aIKRlh-d1Tb4jYrMK0fK6iRkS6FlAFpdb=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "T9ySS4alFlw",
@@ -137,7 +154,7 @@
             "published_at": "2025-11-27T14:29:01Z",
             "duration": "0:02:37",
             "duration_sec": 157,
-            "views": 3614,
+            "views": 3621,
             "likes": 172,
             "comments": 61,
             "url": "https://www.youtube.com/watch?v=Vh76l932SAk"
@@ -149,7 +166,7 @@
             "published_at": "2025-11-24T14:49:42Z",
             "duration": "0:02:55",
             "duration_sec": 175,
-            "views": 2319,
+            "views": 2324,
             "likes": 158,
             "comments": 29,
             "url": "https://www.youtube.com/watch?v=Ba6svhJJ9cY"
@@ -221,7 +238,7 @@
             "published_at": "2025-11-10T18:56:17Z",
             "duration": "0:01:10",
             "duration_sec": 70,
-            "views": 2540,
+            "views": 2541,
             "likes": 139,
             "comments": 36,
             "url": "https://www.youtube.com/watch?v=vN5zHlXtWJM"
@@ -593,7 +610,7 @@
             "published_at": "2025-08-16T14:57:57Z",
             "duration": "0:03:17",
             "duration_sec": 197,
-            "views": 7138,
+            "views": 7139,
             "likes": 299,
             "comments": 77,
             "url": "https://www.youtube.com/watch?v=QjUDq7a7W9g"
@@ -653,7 +670,7 @@
             "published_at": "2025-08-02T08:22:51Z",
             "duration": "0:03:58",
             "duration_sec": 238,
-            "views": 10361,
+            "views": 10362,
             "likes": 397,
             "comments": 174,
             "url": "https://www.youtube.com/watch?v=Y2MvDnjG4pQ"
@@ -905,7 +922,7 @@
             "published_at": "2025-06-02T06:37:06Z",
             "duration": "0:03:06",
             "duration_sec": 186,
-            "views": 360482,
+            "views": 360500,
             "likes": 4035,
             "comments": 363,
             "url": "https://www.youtube.com/watch?v=EdIovMuLAC8"
@@ -1001,7 +1018,7 @@
             "published_at": "2025-05-17T07:25:31Z",
             "duration": "0:03:16",
             "duration_sec": 196,
-            "views": 39053,
+            "views": 39062,
             "likes": 960,
             "comments": 259,
             "url": "https://www.youtube.com/watch?v=3s8b2gyMO0k"
@@ -1037,8 +1054,8 @@
             "published_at": "2025-04-28T17:45:25Z",
             "duration": "0:02:53",
             "duration_sec": 173,
-            "views": 706189,
-            "likes": 10035,
+            "views": 706202,
+            "likes": 10036,
             "comments": 924,
             "url": "https://www.youtube.com/watch?v=f5xflmxSENw"
         },

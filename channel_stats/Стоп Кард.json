@@ -9,6 +9,23 @@
     "emojis": "🎉🥂",
     "emoji": "🌟",
     "description": "Группа СТОП КАРД — это современная шоу-группа с ироничным и провокационным репертуаром. Их песни — микс попа, сатиры и мемной культуры, отражающий молодёжные тренды. Они делают ставку на яркую подачу, визуал и актуальные темы, вызывая улыбку и резонанс в соцсетях.\nЯркими примерами являются песни: \"Иду в эскорт\", \"АЙТИ\", \"Разве это законно\", \"Это конец\" и другие.\nКонтакт: bardakmuz@gmail.com  или  hitzonemuz@gmail.com\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/Lei1hB5i_XuHqaFcEkhjTQecZk-UbFyZ60Z_exotUaMhIYSr-On7FWsgQp2K_YvIJldC9e5qBg0=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/Lei1hB5i_XuHqaFcEkhjTQecZk-UbFyZ60Z_exotUaMhIYSr-On7FWsgQp2K_YvIJldC9e5qBg0=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/Lei1hB5i_XuHqaFcEkhjTQecZk-UbFyZ60Z_exotUaMhIYSr-On7FWsgQp2K_YvIJldC9e5qBg0=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "QKgXqvemLao",
@@ -17,7 +34,7 @@
             "published_at": "2025-12-15T11:41:28Z",
             "duration": "0:03:00",
             "duration_sec": 180,
-            "views": 3168,
+            "views": 3195,
             "likes": 28,
             "comments": 1,
             "url": "https://www.youtube.com/watch?v=QKgXqvemLao"
@@ -41,7 +58,7 @@
             "published_at": "2025-12-12T13:46:10Z",
             "duration": "0:03:01",
             "duration_sec": 181,
-            "views": 11047,
+            "views": 11092,
             "likes": 75,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=yX0ca55d7Rg"
@@ -53,7 +70,7 @@
             "published_at": "2025-12-12T13:25:36Z",
             "duration": "0:03:55",
             "duration_sec": 235,
-            "views": 8262,
+            "views": 8298,
             "likes": 283,
             "comments": 46,
             "url": "https://www.youtube.com/watch?v=eHM4a0sj3TI"
@@ -341,7 +358,7 @@
             "published_at": "2025-09-12T16:34:20Z",
             "duration": "0:03:37",
             "duration_sec": 217,
-            "views": 90591,
+            "views": 90632,
             "likes": 1143,
             "comments": 82,
             "url": "https://www.youtube.com/watch?v=ZwhCUwge6yU"
@@ -533,7 +550,7 @@
             "published_at": "2025-07-18T16:49:29Z",
             "duration": "0:03:27",
             "duration_sec": 207,
-            "views": 7660,
+            "views": 7667,
             "likes": 134,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=CG4_7ph-BlA"
@@ -893,7 +910,7 @@
             "published_at": "2025-04-10T09:21:40Z",
             "duration": "0:03:37",
             "duration_sec": 217,
-            "views": 2999,
+            "views": 3001,
             "likes": 26,
             "comments": 1,
             "url": "https://www.youtube.com/watch?v=J_jR-coR218"

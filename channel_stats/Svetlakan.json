@@ -9,6 +9,23 @@
     "emojis": "🌅🎞️",
     "emoji": "💖",
     "description": "Дорогие подписчики и гости канала, я немного обновляю оформление канала, чтобы он ещё лучше отражал нашу душевную атмосферу и музыку. Надеюсь, вам понравятся эти небольшие изменения.\n Спасибо, что остаётесь рядом! 💛\nРада приветствовать подписчиков и гостей канала. Здесь вы можете просмотреть  видео, послушать классическую и популярную музыку. Любители баяна могут прослушать концерт для баяна с фортепиано в авторском исполнении.  Можете в комментариях  писать о том, что хотелось бы послушать и посмотреть. Я постараюсь, по мере своих возможностей, исполнять ваши  просьбы. Жду на канале новых подписчиков и благодарю подписавшихся за поддержку.",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/eU3xq5jF-I4mFB9l4WtbKvQCuUHS2wNUrOmC6LZPjDZNdg4UyPpdfhCuDKJOMtcs_vK0ajWrtDU=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/eU3xq5jF-I4mFB9l4WtbKvQCuUHS2wNUrOmC6LZPjDZNdg4UyPpdfhCuDKJOMtcs_vK0ajWrtDU=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/eU3xq5jF-I4mFB9l4WtbKvQCuUHS2wNUrOmC6LZPjDZNdg4UyPpdfhCuDKJOMtcs_vK0ajWrtDU=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "9yIKeahSL2Q",
@@ -29,7 +46,7 @@
             "published_at": "2025-12-15T10:35:13Z",
             "duration": "0:02:45",
             "duration_sec": 165,
-            "views": 22,
+            "views": 25,
             "likes": 2,
             "comments": 2,
             "url": "https://www.youtube.com/watch?v=zY83Yk4AhxM"
@@ -137,7 +154,7 @@
             "published_at": "2025-12-13T03:00:28Z",
             "duration": "0:01:55",
             "duration_sec": 115,
-            "views": 14,
+            "views": 15,
             "likes": 2,
             "comments": 1,
             "url": "https://www.youtube.com/watch?v=RYb3MxA2wGk"
@@ -149,7 +166,7 @@
             "published_at": "2025-12-12T21:38:05Z",
             "duration": "0:03:16",
             "duration_sec": 196,
-            "views": 34,
+            "views": 38,
             "likes": 4,
             "comments": 1,
             "url": "https://www.youtube.com/watch?v=H3v37AtiXd4"
@@ -197,7 +214,7 @@
             "published_at": "2025-12-11T13:26:49Z",
             "duration": "0:03:55",
             "duration_sec": 235,
-            "views": 227,
+            "views": 229,
             "likes": 10,
             "comments": 1,
             "url": "https://www.youtube.com/watch?v=Grnj_rkXXP8"
@@ -2261,7 +2278,7 @@
             "published_at": "2025-10-07T18:52:45Z",
             "duration": "0:02:55",
             "duration_sec": 175,
-            "views": 30277,
+            "views": 30278,
             "likes": 1376,
             "comments": 72,
             "url": "https://www.youtube.com/watch?v=eIRWX30tPic"

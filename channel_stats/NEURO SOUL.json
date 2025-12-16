@@ -9,6 +9,23 @@
     "emojis": "🌧️💤",
     "emoji": "🍃",
     "description": "Искусство, рожденное на стыке технологий и души.\n\nДобро пожаловать. Здесь я создаю музыку и визуальные миры, которых не существует в реальности, но которые живут в наших мечтах.\nКаждое видео на этом канале — это:\n👁 Визуальный гипноз: Эстетика цифрового гиперреализма и высокой моды.\n🎧 Музыка для души: Уникальные треки, созданные нейросетью, чтобы вы могли расслабиться, вдохновиться или просто помолчать.\n«Мы придумали этот мир» — чтобы вам было куда сбежать от суеты.\nПодписывайтесь, чтобы видеть сны наяву\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/BA-DzdeA4Z7PaZoFPvttvqDp9nnlkByRyQ3VTjXoteseBwJSPiDhuRlFAO7uIyJyI_DwWthW=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/BA-DzdeA4Z7PaZoFPvttvqDp9nnlkByRyQ3VTjXoteseBwJSPiDhuRlFAO7uIyJyI_DwWthW=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/BA-DzdeA4Z7PaZoFPvttvqDp9nnlkByRyQ3VTjXoteseBwJSPiDhuRlFAO7uIyJyI_DwWthW=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "J09UjFDPAkE",
@@ -29,7 +46,7 @@
             "published_at": "2025-12-13T10:52:23Z",
             "duration": "0:05:00",
             "duration_sec": 300,
-            "views": 211,
+            "views": 215,
             "likes": 16,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=U6qfzIQr7jw"
@@ -125,7 +142,7 @@
             "published_at": "2025-12-04T05:49:10Z",
             "duration": "0:03:47",
             "duration_sec": 227,
-            "views": 806,
+            "views": 807,
             "likes": 16,
             "comments": 1,
             "url": "https://www.youtube.com/watch?v=8S4-GDsfnLk"
@@ -149,7 +166,7 @@
             "published_at": "2025-12-02T18:11:24Z",
             "duration": "0:03:36",
             "duration_sec": 216,
-            "views": 600,
+            "views": 602,
             "likes": 19,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=hK3hTg9XQ9g"
@@ -341,7 +358,7 @@
             "published_at": "2025-11-23T14:20:46Z",
             "duration": "0:03:52",
             "duration_sec": 232,
-            "views": 457,
+            "views": 458,
             "likes": 16,
             "comments": 1,
             "url": "https://www.youtube.com/watch?v=RO6EkhpvSr4"

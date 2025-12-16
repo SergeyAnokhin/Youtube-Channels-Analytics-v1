@@ -9,6 +9,23 @@
     "emojis": "📻🕰️",
     "emoji": "🌟",
     "description": "Добро пожаловать на канал «Вечерний патефон»!\n\nЭто уютный уголок в сети, где время замедляет свой бег. Здесь под мягкий треск старой пластинки звучат душевные народные песни, городские романсы и баллады, которые говорят прямо с вашим сердцем.\n\nКаждая мелодия — это маленькая история о любви, жизни и о том, что по-настоящему важно. Этот канал создан для тех, кто ценит искренность и хочет найти музыкальную отдушину в суете дней.\n\nЗаварите чашку ароматного чая, устраивайтесь поудобнее и позвольте музыке согреть вашу душу.\n\nНовая песня — каждый день! Подписывайтесь, ставьте лайки и делитесь своими историями в комментариях. Для нас это очень важно!\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/IpEZjrPtaLlOZG9CkxzGCEDXuZdUaQuB1xTGalopigz1YqMdCBgGHC5SaC3K6XzL4SCemkZpaQU=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/IpEZjrPtaLlOZG9CkxzGCEDXuZdUaQuB1xTGalopigz1YqMdCBgGHC5SaC3K6XzL4SCemkZpaQU=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/IpEZjrPtaLlOZG9CkxzGCEDXuZdUaQuB1xTGalopigz1YqMdCBgGHC5SaC3K6XzL4SCemkZpaQU=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "HLPTK8H5GzU",
@@ -29,7 +46,7 @@
             "published_at": "2025-12-13T08:00:51Z",
             "duration": "0:04:30",
             "duration_sec": 270,
-            "views": 3058,
+            "views": 3059,
             "likes": 92,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=elggBP92vwk"
@@ -65,8 +82,8 @@
             "published_at": "2025-12-10T08:01:16Z",
             "duration": "0:04:29",
             "duration_sec": 269,
-            "views": 25422,
-            "likes": 783,
+            "views": 25439,
+            "likes": 784,
             "comments": 27,
             "url": "https://www.youtube.com/watch?v=s9uoTHMOybk"
         },
@@ -77,7 +94,7 @@
             "published_at": "2025-12-09T08:00:22Z",
             "duration": "0:03:31",
             "duration_sec": 211,
-            "views": 11603,
+            "views": 11636,
             "likes": 347,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=IZjQXPZreeQ"
@@ -125,7 +142,7 @@
             "published_at": "2025-12-05T08:00:33Z",
             "duration": "0:03:19",
             "duration_sec": 199,
-            "views": 21512,
+            "views": 21522,
             "likes": 510,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=KqkEtTtGpr8"
@@ -161,7 +178,7 @@
             "published_at": "2025-12-02T10:00:04Z",
             "duration": "0:04:17",
             "duration_sec": 257,
-            "views": 114553,
+            "views": 114582,
             "likes": 2832,
             "comments": 110,
             "url": "https://www.youtube.com/watch?v=hnILPhuetM8"
@@ -185,7 +202,7 @@
             "published_at": "2025-11-30T08:01:05Z",
             "duration": "0:04:58",
             "duration_sec": 298,
-            "views": 35328,
+            "views": 35338,
             "likes": 877,
             "comments": 21,
             "url": "https://www.youtube.com/watch?v=on8FcUBsbp0"
@@ -197,8 +214,8 @@
             "published_at": "2025-11-25T09:16:01Z",
             "duration": "0:05:28",
             "duration_sec": 328,
-            "views": 171623,
-            "likes": 3140,
+            "views": 171676,
+            "likes": 3141,
             "comments": 110,
             "url": "https://www.youtube.com/watch?v=8vrLk37KKfI"
         },
@@ -221,7 +238,7 @@
             "published_at": "2025-11-04T16:16:49Z",
             "duration": "0:05:02",
             "duration_sec": 302,
-            "views": 1784,
+            "views": 1789,
             "likes": 49,
             "comments": 2,
             "url": "https://www.youtube.com/watch?v=fwn1zu1y3ts"

@@ -9,6 +9,23 @@
     "emojis": "🎼🗣️",
     "emoji": "🖋️",
     "description": "На этом канале стихи великих русских поэтов оживают в музыке. Мы соединяем поэзию и современные технологии, превращая строки Пушкина, Лермонтова, Блока, Цветаевой, Ахматовой и других авторов в песни. Здесь слова становятся голосами, а ритм превращается в мелодию. Наши композиции сохраняют глубину и красоту классической литературы, открывая её по-новому для современного слушателя. Это пространство для тех, кто любит поэзию, ценит искусство и ищет вдохновение в музыке. Слушайте, чувствуйте и открывайте вечные стихи в новом звучании.\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/R6DQsJy-CTJsdUfiyEjvry9rbq78jDRmSlDFnI6TRzkRdRJVuLiTYO5VPUU1ArfeK1mwGCyI=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/R6DQsJy-CTJsdUfiyEjvry9rbq78jDRmSlDFnI6TRzkRdRJVuLiTYO5VPUU1ArfeK1mwGCyI=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/R6DQsJy-CTJsdUfiyEjvry9rbq78jDRmSlDFnI6TRzkRdRJVuLiTYO5VPUU1ArfeK1mwGCyI=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "nxjL_u5-5Vc",
@@ -17,7 +34,7 @@
             "published_at": "2025-12-15T03:01:02Z",
             "duration": "0:02:08",
             "duration_sec": 128,
-            "views": 676,
+            "views": 688,
             "likes": 59,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=nxjL_u5-5Vc"
@@ -41,8 +58,8 @@
             "published_at": "2025-12-14T03:00:09Z",
             "duration": "0:02:37",
             "duration_sec": 157,
-            "views": 1606,
-            "likes": 111,
+            "views": 1623,
+            "likes": 112,
             "comments": 11,
             "url": "https://www.youtube.com/watch?v=2nLzaFaocA8"
         },
@@ -65,7 +82,7 @@
             "published_at": "2025-12-12T09:00:31Z",
             "duration": "0:02:02",
             "duration_sec": 122,
-            "views": 1082,
+            "views": 1088,
             "likes": 104,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=D-kPLIR4ig4"
@@ -77,8 +94,8 @@
             "published_at": "2025-12-11T03:00:51Z",
             "duration": "0:02:36",
             "duration_sec": 156,
-            "views": 4805,
-            "likes": 283,
+            "views": 4827,
+            "likes": 284,
             "comments": 29,
             "url": "https://www.youtube.com/watch?v=ZhV-XwLG-Dw"
         },
@@ -137,7 +154,7 @@
             "published_at": "2025-12-06T12:30:05Z",
             "duration": "0:03:15",
             "duration_sec": 195,
-            "views": 10259,
+            "views": 10272,
             "likes": 454,
             "comments": 73,
             "url": "https://www.youtube.com/watch?v=2c5TSQvoWQs"
@@ -173,8 +190,8 @@
             "published_at": "2025-12-04T03:00:06Z",
             "duration": "0:03:10",
             "duration_sec": 190,
-            "views": 1080,
-            "likes": 73,
+            "views": 1089,
+            "likes": 74,
             "comments": 36,
             "url": "https://www.youtube.com/watch?v=2JYy9YBzQNA"
         },
@@ -221,7 +238,7 @@
             "published_at": "2025-11-30T03:00:45Z",
             "duration": "0:01:30",
             "duration_sec": 90,
-            "views": 1648,
+            "views": 1657,
             "likes": 68,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=_xh2icu2ccY"
@@ -233,7 +250,7 @@
             "published_at": "2025-11-29T03:01:19Z",
             "duration": "0:02:39",
             "duration_sec": 159,
-            "views": 1932,
+            "views": 1933,
             "likes": 90,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=uudXNmDLVx8"
@@ -245,7 +262,7 @@
             "published_at": "2025-11-28T03:00:40Z",
             "duration": "0:03:23",
             "duration_sec": 203,
-            "views": 13799,
+            "views": 13804,
             "likes": 495,
             "comments": 48,
             "url": "https://www.youtube.com/watch?v=WHTriKwKEKY"
@@ -269,9 +286,9 @@
             "published_at": "2025-11-26T03:00:20Z",
             "duration": "0:04:47",
             "duration_sec": 287,
-            "views": 105486,
-            "likes": 4023,
-            "comments": 339,
+            "views": 105627,
+            "likes": 4021,
+            "comments": 340,
             "url": "https://www.youtube.com/watch?v=JW8HpDb_uqs"
         },
         {
@@ -317,8 +334,8 @@
             "published_at": "2025-11-22T03:45:02Z",
             "duration": "0:02:35",
             "duration_sec": 155,
-            "views": 14134,
-            "likes": 451,
+            "views": 14146,
+            "likes": 452,
             "comments": 32,
             "url": "https://www.youtube.com/watch?v=e9NLuiq0rqw"
         },
@@ -401,7 +418,7 @@
             "published_at": "2025-11-16T02:30:32Z",
             "duration": "0:39:49",
             "duration_sec": 2389,
-            "views": 58447,
+            "views": 58458,
             "likes": 2309,
             "comments": 418,
             "url": "https://www.youtube.com/watch?v=O5FPoOR6PX8"
@@ -533,8 +550,8 @@
             "published_at": "2025-11-05T11:00:25Z",
             "duration": "0:02:15",
             "duration_sec": 135,
-            "views": 1878,
-            "likes": 101,
+            "views": 1882,
+            "likes": 102,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=Dd2UN_eO2E8"
         },
@@ -881,7 +898,7 @@
             "published_at": "2025-10-08T05:30:06Z",
             "duration": "0:03:22",
             "duration_sec": 202,
-            "views": 4637,
+            "views": 4639,
             "likes": 103,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=GYAMvGIOxxY"
@@ -989,7 +1006,7 @@
             "published_at": "2025-09-30T22:14:58Z",
             "duration": "0:02:41",
             "duration_sec": 161,
-            "views": 318470,
+            "views": 318479,
             "likes": 6828,
             "comments": 788,
             "url": "https://www.youtube.com/watch?v=2zv1xd9k4Do"

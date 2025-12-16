@@ -9,6 +9,23 @@
     "emojis": "🎷😌",
     "emoji": "💖",
     "description": "Мой канал посвящён песням о любви, которые, надеюсь, согревают ваши сердца и дарят вдохновение. Хотя иногда я затрагиваю и другие темы, любовь остаётся главным источником вдохновения для моего творчества. Все тексты песен я пишу сам, а их озвучку доверяю нейросети SUNO AI, которая помогает оживить мои идеи.\n\nzxnqpdgd\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/xM9lDowGwQpLpFooWOPnuUsmEuT3gDAxAlyVYsynL6bjP4M5lHYJJlJ_yVl-ycdyt_HPKUivkgs=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/xM9lDowGwQpLpFooWOPnuUsmEuT3gDAxAlyVYsynL6bjP4M5lHYJJlJ_yVl-ycdyt_HPKUivkgs=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/xM9lDowGwQpLpFooWOPnuUsmEuT3gDAxAlyVYsynL6bjP4M5lHYJJlJ_yVl-ycdyt_HPKUivkgs=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "lkDThf2DMmI",
@@ -89,7 +106,7 @@
             "published_at": "2025-05-06T04:13:47Z",
             "duration": "0:12:07",
             "duration_sec": 727,
-            "views": 4507,
+            "views": 4508,
             "likes": 158,
             "comments": 71,
             "url": "https://www.youtube.com/watch?v=rL3l_HeWyV4"
@@ -137,7 +154,7 @@
             "published_at": "2025-03-15T07:37:01Z",
             "duration": "0:12:15",
             "duration_sec": 735,
-            "views": 28295,
+            "views": 28296,
             "likes": 517,
             "comments": 139,
             "url": "https://www.youtube.com/watch?v=GVWJmjmvDnQ"
@@ -197,7 +214,7 @@
             "published_at": "2025-02-12T03:42:26Z",
             "duration": "0:12:28",
             "duration_sec": 748,
-            "views": 16817,
+            "views": 16818,
             "likes": 333,
             "comments": 103,
             "url": "https://www.youtube.com/watch?v=vx35HvFR_XY"
@@ -221,7 +238,7 @@
             "published_at": "2025-01-25T07:42:10Z",
             "duration": "0:12:57",
             "duration_sec": 777,
-            "views": 20435,
+            "views": 20437,
             "likes": 462,
             "comments": 122,
             "url": "https://www.youtube.com/watch?v=HLzCuupLqJQ"

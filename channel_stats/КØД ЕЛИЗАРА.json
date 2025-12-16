@@ -9,6 +9,23 @@
     "emojis": "🚬🧱",
     "emoji": "🌑",
     "description": "\n\npost punk, doomer playlist, russian doomer music, doomer music, post-punk, doomer, russian doomer playlist, joy division, kino, the smiths, postpunk, suicidal doomer, russian music, the cure, jazzmaster, fender, guitar, australian rock, australian music, new order, australian post punk, molchat doma, post-punk / lo-fi / dreampop / shoegaze / indie compilation, doomer music vol, doomer playlist russian, doomer radio, doomer music russian, doomer mixtape, doomer meme, doomer mix, doomer russian, doomer song, Цой, ремикс, кино, нейросеть, ai cover, ai цой darksynth / synthwave / cyberwave, darkwave",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/BRapos1efs9YO8R-0h0kx19RjEAkHZAIhj6zr8tAbQzuvcgBJLZAL6JBBgaWv_q4NS6OMaAcTA=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/BRapos1efs9YO8R-0h0kx19RjEAkHZAIhj6zr8tAbQzuvcgBJLZAL6JBBgaWv_q4NS6OMaAcTA=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/BRapos1efs9YO8R-0h0kx19RjEAkHZAIhj6zr8tAbQzuvcgBJLZAL6JBBgaWv_q4NS6OMaAcTA=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "Oy9oJBLkc_Y",
@@ -29,9 +46,9 @@
             "published_at": "2025-11-16T15:35:48Z",
             "duration": "0:03:12",
             "duration_sec": 192,
-            "views": 584,
+            "views": 587,
             "likes": 35,
-            "comments": 10,
+            "comments": 11,
             "url": "https://www.youtube.com/watch?v=VTGXqE06mmo"
         },
         {
@@ -317,7 +334,7 @@
             "published_at": "2025-01-20T18:34:55Z",
             "duration": "0:03:41",
             "duration_sec": 221,
-            "views": 472793,
+            "views": 472813,
             "likes": 4574,
             "comments": 522,
             "url": "https://www.youtube.com/watch?v=PHqOs0-XELE"

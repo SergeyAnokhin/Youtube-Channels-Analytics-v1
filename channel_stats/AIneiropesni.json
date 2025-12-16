@@ -9,6 +9,23 @@
     "emojis": "🤖🎤",
     "emoji": "💖",
     "description": "Песни, клипы и другой контент, созданный с помощью нейросетей.\nЯ не профессиональный режиссер, монтажер или сценарист - это просто мое хобби.\n\n📩 По вопросам сотрудничества: пишите на email или в Telegram:  t.me/AIneiropesni_Official\n\n⚠️ Любые другие аккаунты, группы и чаты под моим именем в Telegram, VK и других сетях - не мои.\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/EgdDDOhVXKn74wOCOXaWXJkvFDBUT_sIQn85R0TVRFACnl0o5fDh8aXAclsPc81THZUia3hr=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/EgdDDOhVXKn74wOCOXaWXJkvFDBUT_sIQn85R0TVRFACnl0o5fDh8aXAclsPc81THZUia3hr=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/EgdDDOhVXKn74wOCOXaWXJkvFDBUT_sIQn85R0TVRFACnl0o5fDh8aXAclsPc81THZUia3hr=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "pGM_PvLDg8o",
@@ -17,8 +34,8 @@
             "published_at": "2025-12-06T17:27:41Z",
             "duration": "0:02:55",
             "duration_sec": 175,
-            "views": 245145,
-            "likes": 16237,
+            "views": 245313,
+            "likes": 16244,
             "comments": 1612,
             "url": "https://www.youtube.com/watch?v=pGM_PvLDg8o"
         },
@@ -101,8 +118,8 @@
             "published_at": "2025-10-03T14:30:25Z",
             "duration": "0:03:14",
             "duration_sec": 194,
-            "views": 80526,
-            "likes": 1689,
+            "views": 80568,
+            "likes": 1690,
             "comments": 155,
             "url": "https://www.youtube.com/watch?v=Y9IdUhAO50s"
         },
@@ -197,7 +214,7 @@
             "published_at": "2025-05-20T16:34:19Z",
             "duration": "0:03:12",
             "duration_sec": 192,
-            "views": 67080,
+            "views": 67106,
             "likes": 1294,
             "comments": 176,
             "url": "https://www.youtube.com/watch?v=nUXBNWyUqvs"
@@ -341,7 +358,7 @@
             "published_at": "2025-01-26T20:03:07Z",
             "duration": "0:03:30",
             "duration_sec": 210,
-            "views": 680112,
+            "views": 680198,
             "likes": 8938,
             "comments": 734,
             "url": "https://www.youtube.com/watch?v=eDNyQy1iNME"
@@ -353,7 +370,7 @@
             "published_at": "2025-01-17T15:42:33Z",
             "duration": "0:03:06",
             "duration_sec": 186,
-            "views": 26391,
+            "views": 26395,
             "likes": 483,
             "comments": 48,
             "url": "https://www.youtube.com/watch?v=dzzctzT35LI"
@@ -389,7 +406,7 @@
             "published_at": "2025-01-12T01:33:22Z",
             "duration": "0:02:29",
             "duration_sec": 149,
-            "views": 4739469,
+            "views": 4739568,
             "likes": 48020,
             "comments": 3407,
             "url": "https://www.youtube.com/watch?v=1ly2vAGo9b4"
@@ -413,7 +430,7 @@
             "published_at": "2025-01-02T01:32:07Z",
             "duration": "0:01:25",
             "duration_sec": 85,
-            "views": 10974,
+            "views": 10975,
             "likes": 173,
             "comments": 22,
             "url": "https://www.youtube.com/watch?v=nxdVyCubfWc"
@@ -425,7 +442,7 @@
             "published_at": "2024-12-30T12:57:51Z",
             "duration": "0:06:40",
             "duration_sec": 400,
-            "views": 318200,
+            "views": 318205,
             "likes": 7024,
             "comments": 1101,
             "url": "https://www.youtube.com/watch?v=7UsobOA08dA"
@@ -461,7 +478,7 @@
             "published_at": "2024-12-22T10:48:07Z",
             "duration": "0:03:33",
             "duration_sec": 213,
-            "views": 55230,
+            "views": 55241,
             "likes": 977,
             "comments": 112,
             "url": "https://www.youtube.com/watch?v=8Invdm1G-3w"

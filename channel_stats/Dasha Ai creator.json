@@ -9,6 +9,23 @@
     "emojis": "🎸🤟",
     "emoji": "🖋️",
     "description": "Мы - Даша и Артём (ARTESS).\nПрофессионально работаем с нейросетями и создаём визуальный контент - от коротких видео и клипов до авторских проектов и коммерческих коллабораций.\n\nИспользуем искусственный интеллект как инструмент режиссуры, дизайна и пост-продакшна.\nКаждый проект для нас - это сочетание идеи, точности и технологии, которая помогает увидеть привычное по-новому.\n\nНа канале - наши AI-видео, творческие эксперименты и примеры того, как нейросети становятся частью современного продакшна.\n\n📩 Сотрудничество — Telegram (ссылка ниже)\n💛 Поддержать проект можно на Boosty (ссылка ниже)\n\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/30tpSZxWF5ymqnKzkyeEd2TZb3AdIy4zYDXwg9UVEx-y4sify0_ELDavM98rn20dhbXF852fTG8=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/30tpSZxWF5ymqnKzkyeEd2TZb3AdIy4zYDXwg9UVEx-y4sify0_ELDavM98rn20dhbXF852fTG8=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/30tpSZxWF5ymqnKzkyeEd2TZb3AdIy4zYDXwg9UVEx-y4sify0_ELDavM98rn20dhbXF852fTG8=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "fVk0lwlby0g",
@@ -29,7 +46,7 @@
             "published_at": "2025-12-05T16:18:24Z",
             "duration": "0:03:49",
             "duration_sec": 229,
-            "views": 10095,
+            "views": 10105,
             "likes": 605,
             "comments": 154,
             "url": "https://www.youtube.com/watch?v=VbUbx_GIVJg"
@@ -137,8 +154,8 @@
             "published_at": "2025-09-20T16:00:31Z",
             "duration": "0:04:49",
             "duration_sec": 289,
-            "views": 538555,
-            "likes": 8764,
+            "views": 538608,
+            "likes": 8765,
             "comments": 1731,
             "url": "https://www.youtube.com/watch?v=xUs6Mz37fEg"
         },
@@ -197,7 +214,7 @@
             "published_at": "2025-07-18T11:39:29Z",
             "duration": "0:02:28",
             "duration_sec": 148,
-            "views": 46270,
+            "views": 46281,
             "likes": 1093,
             "comments": 176,
             "url": "https://www.youtube.com/watch?v=4PEcH4ZK8e4"
@@ -257,7 +274,7 @@
             "published_at": "2025-06-26T18:47:54Z",
             "duration": "0:02:19",
             "duration_sec": 139,
-            "views": 889098,
+            "views": 889111,
             "likes": 14775,
             "comments": 1852,
             "url": "https://www.youtube.com/watch?v=m_vV5eXdiW0"
@@ -365,7 +382,7 @@
             "published_at": "2025-05-27T14:20:57Z",
             "duration": "0:03:27",
             "duration_sec": 207,
-            "views": 1081523,
+            "views": 1081527,
             "likes": 19444,
             "comments": 2686,
             "url": "https://www.youtube.com/watch?v=lO1RKc-6urU"

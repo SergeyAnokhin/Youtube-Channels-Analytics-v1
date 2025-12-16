@@ -9,6 +9,23 @@
     "emojis": "💿🏛️",
     "emoji": "🖋️",
     "description": "Превращаю стихи классиков в музыку.\n\nС 2020 года я пишу электронную музыку в жанрах progressive house, melodic house & techno. Мои треки выходили на различных международных лейблах под именем Timmy Tune.\n\nВ 2025-м я сделал трек на стихи Цветаевой, выложил на этом канале и получил мощный позитивный отклик от зрителей. С тех пор я создаю музыку в любимом стиле на стихи классиков.\n\nПодпишись и включи 🔔, чтобы не пропустить премьеры.\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/PSxXb7LT-smytsQpHM0up_wR-SW14npD2LPVJu2MNL3BZ2DqBDLoMAOM6Yvgddf8x085mRsN6A=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/PSxXb7LT-smytsQpHM0up_wR-SW14npD2LPVJu2MNL3BZ2DqBDLoMAOM6Yvgddf8x085mRsN6A=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/PSxXb7LT-smytsQpHM0up_wR-SW14npD2LPVJu2MNL3BZ2DqBDLoMAOM6Yvgddf8x085mRsN6A=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": [
         {
             "video_id": "8tPVnrni-lk",
@@ -41,7 +58,7 @@
             "published_at": "2025-11-07T14:00:42Z",
             "duration": "0:55:45",
             "duration_sec": 3345,
-            "views": 30025,
+            "views": 30030,
             "likes": 1174,
             "comments": 139,
             "url": "https://www.youtube.com/watch?v=LrJLdTvDthk"
@@ -221,7 +238,7 @@
             "published_at": "2025-09-10T14:01:22Z",
             "duration": "0:02:07",
             "duration_sec": 127,
-            "views": 63129,
+            "views": 63146,
             "likes": 2170,
             "comments": 236,
             "url": "https://www.youtube.com/watch?v=nZ5RX6cVXB0"
@@ -233,7 +250,7 @@
             "published_at": "2025-09-06T13:01:52Z",
             "duration": "0:04:42",
             "duration_sec": 282,
-            "views": 296863,
+            "views": 296881,
             "likes": 6213,
             "comments": 810,
             "url": "https://www.youtube.com/watch?v=zf8gzmqCxes"

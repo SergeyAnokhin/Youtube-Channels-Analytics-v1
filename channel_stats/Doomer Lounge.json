@@ -9,5 +9,22 @@
     "emojis": "🌃🎧",
     "emoji": "🌑",
     "description": "",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/uqglRVaiP7pSP9FMQnfZC1xGF0AEA68Xv9-b75LncfqtAF9f13DNudp7MZqHSl5MQu2tPWBpBA=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/uqglRVaiP7pSP9FMQnfZC1xGF0AEA68Xv9-b75LncfqtAF9f13DNudp7MZqHSl5MQu2tPWBpBA=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/uqglRVaiP7pSP9FMQnfZC1xGF0AEA68Xv9-b75LncfqtAF9f13DNudp7MZqHSl5MQu2tPWBpBA=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
     "videos": []
 }
