@@ -703,10 +703,23 @@ class Dashboard {
      */
     renderTopChannelsChart() {
         const filteredChannels = this.getFilteredChannels();
-        const topChannels = filteredChannels.slice(0, 10);
-        const labels = topChannels.map(ch => ch.channel_name.substring(0, 12));
-        const data = topChannels.map(ch => ch.total_views);
-        const channelIds = topChannels.map(ch => ch.channel_id);
+        
+        // Calculate views for the selected period and sort by period views
+        const channelsWithPeriodViews = filteredChannels.map(ch => {
+            const kpis = analyticsEngine.calculateChannelKPIs(ch, this.currentPeriod);
+            return {
+                channel: ch,
+                periodViews: kpis.currentPeriod.totalViews
+            };
+        });
+        
+        // Sort by period views and take top 10
+        channelsWithPeriodViews.sort((a, b) => b.periodViews - a.periodViews);
+        const topChannels = channelsWithPeriodViews.slice(0, 10);
+        
+        const labels = topChannels.map(item => item.channel.channel_name.substring(0, 12));
+        const data = topChannels.map(item => item.periodViews);
+        const channelIds = topChannels.map(item => item.channel.channel_id);
 
         const ctx = document.getElementById('topChannelsChart').getContext('2d');
         
@@ -1012,7 +1025,12 @@ class Dashboard {
                                     label += ': ';
                                 }
                                 if (context.parsed.y !== null) {
-                                    label += analyticsEngine.formatNumber(context.parsed.y);
+                                    // Show raw integer for video count, formatted number for views
+                                    if (context.dataset.label === 'Количество видео') {
+                                        label += Math.round(context.parsed.y);
+                                    } else {
+                                        label += analyticsEngine.formatNumber(context.parsed.y);
+                                    }
                                 }
                                 return label;
                             }
@@ -1033,7 +1051,11 @@ class Dashboard {
                         },
                         ticks: { 
                             color: '#94a3b8',
-                            precision: 0
+                            precision: 0,
+                            callback: function(value) {
+                                // Show raw integers without K formatting
+                                return Math.round(value);
+                            }
                         },
                         grid: { color: 'rgba(148, 163, 184, 0.1)' }
                     },
