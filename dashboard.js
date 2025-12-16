@@ -425,15 +425,8 @@ class Dashboard {
                 </td>
                 <td class="col-engagement" data-tooltip="engagement">
                     <div class="kpi-cell">
-                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px;">
-                            <div style="display: flex; align-items: center; gap: 4px;">
-                                <span style="font-size: 0.75rem; color: #94a3b8;">❤️</span>
-                                <span class="kpi-value" style="${engagementStyleStr}">${analyticsEngine.formatNumber(engagementMedian)}</span>
-                            </div>
-                            <div style="font-size: 0.8rem; color: #94a3b8;">
-                                Max: ${analyticsEngine.formatNumber(engagementMax)}
-                            </div>
-                        </div>
+                        <span class="kpi-value" style="${engagementStyleStr}">${engagementMedian.toLocaleString()}</span>
+                        <small style="color: #888; margin-left: 4px;">(Max: ${engagementMax.toLocaleString()})</small>
                         ${this._renderChangeIndicator(comparison.medianEngagementChange, 'engagement', isNewChannel, currentPeriod.medianEngagement, previousPeriod.medianEngagement)}
                     </div>
                 </td>
@@ -514,11 +507,11 @@ class Dashboard {
         const status = analyticsEngine.getChangeStatus(change, kpiType);
         const changeText = analyticsEngine.formatChange(change);
         
-        // For videos, show exact numbers in tooltip
+        // For videos and engagement, show exact numbers in tooltip
         let curr, prev;
-        if (kpiType === 'videos') {
-            curr = currentValue || 0;
-            prev = previousValue || 0;
+        if (kpiType === 'videos' || kpiType === 'engagement') {
+            curr = (currentValue || 0).toLocaleString();
+            prev = (previousValue || 0).toLocaleString();
         } else {
             curr = analyticsEngine.formatNumber(currentValue || 0);
             prev = analyticsEngine.formatNumber(previousValue || 0);
@@ -575,6 +568,8 @@ class Dashboard {
         this.renderFrequencyChart();
         this.renderTopChannelsChart();
         this.renderSubscribersChart();
+        this.renderMaxEngagementChart();
+        this.renderMedianEngagementChart();
     }
 
     /**
@@ -876,6 +871,170 @@ class Dashboard {
                         grid: { color: 'rgba(148, 163, 184, 0.1)' }
                     },
                     x: {
+                        ticks: { color: '#94a3b8' },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    }
+
+    /**
+     * Render Max Engagement Chart - Top 10 channels by max engagement per video
+     */
+    renderMaxEngagementChart() {
+        const filteredChannels = this.getFilteredChannels();
+        
+        // Calculate engagement metrics for each channel
+        const channelsWithEngagement = filteredChannels.map(ch => {
+            const kpis = analyticsEngine.calculateChannelKPIs(ch, this.currentPeriod);
+            return {
+                channel: ch,
+                maxEngagement: kpis.currentPeriod.maxEngagement || 0
+            };
+        });
+        
+        // Sort by max engagement and take top 10
+        channelsWithEngagement.sort((a, b) => b.maxEngagement - a.maxEngagement);
+        const topChannels = channelsWithEngagement.slice(0, 10);
+        
+        const labels = topChannels.map(item => item.channel.channel_name.substring(0, 20));
+        const data = topChannels.map(item => item.maxEngagement);
+        const channelIds = topChannels.map(item => item.channel.channel_id);
+
+        const ctx = document.getElementById('maxEngagementChart').getContext('2d');
+        
+        if (this.charts.maxEngagementChart) {
+            this.charts.maxEngagementChart.destroy();
+        }
+
+        this.charts.maxEngagementChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Max Engagement',
+                    data,
+                    backgroundColor: 'rgba(168, 85, 247, 0.7)',
+                    borderColor: 'rgba(168, 85, 247, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: true,
+                onClick: (event, activeElements) => {
+                    if (activeElements.length > 0) {
+                        const index = activeElements[0].index;
+                        const channelId = channelIds[index];
+                        this.openChannelModal(channelId);
+                    }
+                },
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return 'Max Engagement: ' + context.parsed.x.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: { 
+                            color: '#94a3b8',
+                            callback: function(value) {
+                                return value.toLocaleString();
+                            }
+                        },
+                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
+                    },
+                    y: {
+                        ticks: { color: '#94a3b8' },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    }
+
+    /**
+     * Render Median Engagement Chart - Top 10 channels by median engagement
+     */
+    renderMedianEngagementChart() {
+        const filteredChannels = this.getFilteredChannels();
+        
+        // Calculate engagement metrics for each channel
+        const channelsWithEngagement = filteredChannels.map(ch => {
+            const kpis = analyticsEngine.calculateChannelKPIs(ch, this.currentPeriod);
+            return {
+                channel: ch,
+                medianEngagement: kpis.currentPeriod.medianEngagement || 0
+            };
+        });
+        
+        // Sort by median engagement and take top 10
+        channelsWithEngagement.sort((a, b) => b.medianEngagement - a.medianEngagement);
+        const topChannels = channelsWithEngagement.slice(0, 10);
+        
+        const labels = topChannels.map(item => item.channel.channel_name.substring(0, 20));
+        const data = topChannels.map(item => item.medianEngagement);
+        const channelIds = topChannels.map(item => item.channel.channel_id);
+
+        const ctx = document.getElementById('medianEngagementChart').getContext('2d');
+        
+        if (this.charts.medianEngagementChart) {
+            this.charts.medianEngagementChart.destroy();
+        }
+
+        this.charts.medianEngagementChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Median Engagement',
+                    data,
+                    backgroundColor: 'rgba(236, 72, 153, 0.7)',
+                    borderColor: 'rgba(236, 72, 153, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: true,
+                onClick: (event, activeElements) => {
+                    if (activeElements.length > 0) {
+                        const index = activeElements[0].index;
+                        const channelId = channelIds[index];
+                        this.openChannelModal(channelId);
+                    }
+                },
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return 'Median Engagement: ' + context.parsed.x.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: { 
+                            color: '#94a3b8',
+                            callback: function(value) {
+                                return value.toLocaleString();
+                            }
+                        },
+                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
+                    },
+                    y: {
                         ticks: { color: '#94a3b8' },
                         grid: { display: false }
                     }
