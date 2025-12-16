@@ -124,7 +124,9 @@ class AnalyticsEngine {
                 totalComments: 0,
                 medianViews: 0,
                 averageViews: 0,
-                engagementRate: 0
+                engagementRate: 0,
+                medianEngagement: 0,
+                maxEngagement: 0
             };
         }
 
@@ -133,6 +135,11 @@ class AnalyticsEngine {
         const totalLikes = videos.reduce((a, b) => a + (b.likes || 0), 0);
         const totalComments = videos.reduce((a, b) => a + (b.comments || 0), 0);
 
+        // Calculate engagement for each video
+        const engagements = videos.map(v => (v.likes || 0) + (v.comments || 0));
+        const medianEngagement = this._calculateMedian(engagements);
+        const maxEngagement = engagements.length > 0 ? Math.max(...engagements) : 0;
+
         return {
             totalViews,
             totalLikes,
@@ -140,7 +147,9 @@ class AnalyticsEngine {
             medianViews: this._calculateMedian(views),
             averageViews: Math.round(totalViews / videos.length),
             engagementRate: totalViews > 0 ? 
-                Math.round(((totalLikes + totalComments) / totalViews) * 100) / 100 : 0
+                Math.round(((totalLikes + totalComments) / totalViews) * 100) / 100 : 0,
+            medianEngagement,
+            maxEngagement
         };
     }
 
@@ -172,7 +181,8 @@ class AnalyticsEngine {
             viewsChange: calculateChange(current.totalViews, previous.totalViews),
             medianViewsChange: calculateChange(current.medianViews, previous.medianViews),
             likesChange: calculateChange(current.totalLikes, previous.totalLikes),
-            commentsChange: calculateChange(current.totalComments, previous.totalComments)
+            commentsChange: calculateChange(current.totalComments, previous.totalComments),
+            medianEngagementChange: calculateChange(current.medianEngagement, previous.medianEngagement)
         };
     }
 

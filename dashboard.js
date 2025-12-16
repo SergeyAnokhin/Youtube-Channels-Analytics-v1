@@ -230,6 +230,13 @@ class Dashboard {
                     valB = medianKpisB.currentPeriod.medianViews;
                     return this.sortDirection === 'asc' ? valA - valB : valB - valA;
                 
+                case 'engagement':
+                    const engagementKpisA = analyticsEngine.calculateChannelKPIs(a, this.currentPeriod);
+                    const engagementKpisB = analyticsEngine.calculateChannelKPIs(b, this.currentPeriod);
+                    valA = engagementKpisA.currentPeriod.medianEngagement;
+                    valB = engagementKpisB.currentPeriod.medianEngagement;
+                    return this.sortDirection === 'asc' ? valA - valB : valB - valA;
+                
                 case 'frequency':
                     const freqKpisA = analyticsEngine.calculateChannelKPIs(a, this.currentPeriod);
                     const freqKpisB = analyticsEngine.calculateChannelKPIs(b, this.currentPeriod);
@@ -352,6 +359,12 @@ class Dashboard {
             const medianColor = this.calculateHeatmapColor(medianCount, ranges.median.min, ranges.median.max);
             const medianStyleStr = `color: ${medianColor}; font-weight: 600;`;
 
+            // Engagement: Heatmap color
+            const engagementMedian = currentPeriod.medianEngagement || 0;
+            const engagementMax = currentPeriod.maxEngagement || 0;
+            const engagementColor = this.calculateHeatmapColor(engagementMedian, ranges.engagement.min, ranges.engagement.max);
+            const engagementStyleStr = `color: ${engagementColor}; font-weight: 600;`;
+
             // Frequency: Heatmap color
             const frequencyValue = parseFloat(analyticsEngine.calculateVideosPerWeek(currentPeriod.videoCount, this.currentPeriod));
             const frequencyColor = this.calculateHeatmapColor(frequencyValue, ranges.frequency.min, ranges.frequency.max);
@@ -410,6 +423,20 @@ class Dashboard {
                         ${this._renderChangeIndicator(comparison.medianViewsChange, 'medianViews', isNewChannel, currentPeriod.medianViews, previousPeriod.medianViews)}
                     </div>
                 </td>
+                <td class="col-engagement" data-tooltip="engagement">
+                    <div class="kpi-cell">
+                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px;">
+                            <div style="display: flex; align-items: center; gap: 4px;">
+                                <span style="font-size: 0.75rem; color: #94a3b8;">❤️</span>
+                                <span class="kpi-value" style="${engagementStyleStr}">${analyticsEngine.formatNumber(engagementMedian)}</span>
+                            </div>
+                            <div style="font-size: 0.8rem; color: #94a3b8;">
+                                Max: ${analyticsEngine.formatNumber(engagementMax)}
+                            </div>
+                        </div>
+                        ${this._renderChangeIndicator(comparison.medianEngagementChange, 'engagement', isNewChannel, currentPeriod.medianEngagement, previousPeriod.medianEngagement)}
+                    </div>
+                </td>
                 <td class="col-frequency" data-tooltip="frequency">
                     <div class="kpi-cell">
                         <span class="kpi-value" style="${frequencyStyleStr}">${analyticsEngine.calculateVideosPerWeek(currentPeriod.videoCount, this.currentPeriod)}</span>
@@ -461,6 +488,13 @@ class Dashboard {
             }
         });
 
+        document.querySelectorAll('[data-tooltip="engagement"]').forEach((cell, index) => {
+            const channel = this.channels[index];
+            if (channel) {
+                tooltipManager.attachTooltipHandlers(cell, 'engagement', channel, this.currentPeriod);
+            }
+        });
+
         document.querySelectorAll('[data-tooltip="frequency"]').forEach((cell, index) => {
             const channel = this.channels[index];
             if (channel) {
@@ -479,8 +513,17 @@ class Dashboard {
 
         const status = analyticsEngine.getChangeStatus(change, kpiType);
         const changeText = analyticsEngine.formatChange(change);
-        const curr = analyticsEngine.formatNumber(currentValue || 0);
-        const prev = analyticsEngine.formatNumber(previousValue || 0);
+        
+        // For videos, show exact numbers in tooltip
+        let curr, prev;
+        if (kpiType === 'videos') {
+            curr = currentValue || 0;
+            prev = previousValue || 0;
+        } else {
+            curr = analyticsEngine.formatNumber(currentValue || 0);
+            prev = analyticsEngine.formatNumber(previousValue || 0);
+        }
+        
         const title = `Было: ${prev} → Стало: ${curr}`;
 
         return `<span class="kpi-change ${status}" title="${title}">${changeText}</span>`;
@@ -1289,6 +1332,7 @@ class Dashboard {
             videos: { min: Infinity, max: -Infinity },
             views: { min: Infinity, max: -Infinity },
             median: { min: Infinity, max: -Infinity },
+            engagement: { min: Infinity, max: -Infinity },
             frequency: { min: Infinity, max: -Infinity }
         };
 
@@ -1310,6 +1354,11 @@ class Dashboard {
             const median = current.medianViews || 0;
             ranges.median.min = Math.min(ranges.median.min, median);
             ranges.median.max = Math.max(ranges.median.max, median);
+            
+            // Engagement
+            const engagement = current.medianEngagement || 0;
+            ranges.engagement.min = Math.min(ranges.engagement.min, engagement);
+            ranges.engagement.max = Math.max(ranges.engagement.max, engagement);
             
             // Frequency
             const frequency = parseFloat(analyticsEngine.calculateVideosPerWeek(current.videoCount, this.currentPeriod));

@@ -421,6 +421,63 @@ class UITooltipManager {
     }
 
     /**
+     * Показать тултип для колонки "Engagement" (Топ-5 по вовлеченности)
+     */
+    showEngagementTooltip(channel, period, targetElement) {
+        const videos = channel.videos || [];
+        
+        // Получить видео за период
+        const { startDate, endDate } = analyticsEngine.getPeriodDates(period);
+        const periodVideos = videos.filter(v => {
+            const videoDate = new Date(v.published_at);
+            return videoDate >= startDate && videoDate <= endDate;
+        });
+
+        if (periodVideos.length === 0) {
+            const content = `
+                <div class="custom-tooltip-title">❤️ Топ по вовлеченности</div>
+                <div class="custom-tooltip-description">Нет видео за выбранный период</div>
+            `;
+            const tooltip = this.createTooltip(content);
+            this.positionTooltip(tooltip, targetElement);
+            return;
+        }
+
+        // Рассчитать вовлеченность и отсортировать
+        const videosWithEngagement = periodVideos.map(v => ({
+            ...v,
+            engagement: (v.likes || 0) + (v.comments || 0)
+        })).sort((a, b) => b.engagement - a.engagement);
+
+        // Взять топ-5
+        const topVideos = videosWithEngagement.slice(0, 5);
+
+        const videosList = topVideos.map((video, index) => `
+            <li>
+                <span class="custom-tooltip-video-title">${index + 1}. ${this.escapeHtml(video.title)}</span>
+                <span class="custom-tooltip-video-views">${analyticsEngine.formatNumber(video.engagement)}</span>
+            </li>
+        `).join('');
+
+        const kpis = analyticsEngine.calculateChannelKPIs(channel, period);
+        const medianEngagement = kpis.currentPeriod.medianEngagement || 0;
+
+        const content = `
+            <div class="custom-tooltip-title">❤️ Топ-${topVideos.length} по вовлеченности</div>
+            <ul class="custom-tooltip-list">
+                ${videosList}
+            </ul>
+            <div class="custom-tooltip-description">
+                Вовлеченность = Лайки + Комментарии<br>
+                Медиана: ${analyticsEngine.formatNumber(medianEngagement)}
+            </div>
+        `;
+
+        const tooltip = this.createTooltip(content);
+        this.positionTooltip(tooltip, targetElement);
+    }
+
+    /**
      * Настроить обработчики событий для ячейки
      */
     attachTooltipHandlers(element, tooltipType, channel, period) {
@@ -441,6 +498,9 @@ class UITooltipManager {
                             break;
                         case 'median':
                             this.showMedianTooltip(channel, period, element);
+                            break;
+                        case 'engagement':
+                            this.showEngagementTooltip(channel, period, element);
                             break;
                         case 'frequency':
                             this.showFrequencyTooltip(channel, period, element);
