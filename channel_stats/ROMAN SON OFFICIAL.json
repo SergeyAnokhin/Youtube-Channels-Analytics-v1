@@ -3,8 +3,8 @@
     "channel_id": "UCtdu9lNaSRwFiwk3XkxcJTw",
     "filter_used": "VIDEO",
     "created_at": "2010-05-28T22:15:03Z",
-    "total_views": 10702213,
-    "subscribers": 43100,
+    "total_views": 11178916,
+    "subscribers": 44500,
     "style": "Ретро-Dance / Кавер-Ремейки",
     "emojis": "🕺📻",
     "emoji": "🪩",
@@ -28,15 +28,51 @@
     },
     "videos": [
         {
+            "video_id": "GYg4_CDGz5U",
+            "title": "Синий Иней ❄️⛄🎅 | Кавер С Новым Куплетом | Танцевальная Версия",
+            "type": "video",
+            "published_at": "2025-12-18T14:00:33Z",
+            "duration": "0:04:14",
+            "duration_sec": 254,
+            "views": 2937,
+            "likes": 265,
+            "comments": 51,
+            "url": "https://www.youtube.com/watch?v=GYg4_CDGz5U"
+        },
+        {
+            "video_id": "iZa3lp3pW8c",
+            "title": "Легендарные Хиты 70-80-х В Новом Звучании 🎤🎧✨ | Кавер-Сборник Для Меломанов | Часть 4",
+            "type": "video",
+            "published_at": "2025-12-17T14:11:00Z",
+            "duration": "0:53:37",
+            "duration_sec": 3217,
+            "views": 11477,
+            "likes": 229,
+            "comments": 40,
+            "url": "https://www.youtube.com/watch?v=iZa3lp3pW8c"
+        },
+        {
+            "video_id": "OoyDBJ270Vw",
+            "title": "Пусть Давно Я Не Вижу Тебя (Вернись) 💋👄👁️ | Кавер На Песню гр. Кристина С Новым Куплетом",
+            "type": "video",
+            "published_at": "2025-12-16T14:00:44Z",
+            "duration": "0:06:58",
+            "duration_sec": 418,
+            "views": 8382,
+            "likes": 367,
+            "comments": 66,
+            "url": "https://www.youtube.com/watch?v=OoyDBJ270Vw"
+        },
+        {
             "video_id": "IJ6TJJJDqCw",
             "title": "В Лесу Родилась Елочка 🎅🎄❄️ | Кавер С Новым Куплетом | Танцевальный Шансон ",
             "type": "video",
             "published_at": "2025-12-15T14:00:30Z",
             "duration": "0:04:07",
             "duration_sec": 247,
-            "views": 3599,
-            "likes": 259,
-            "comments": 58,
+            "views": 8917,
+            "likes": 425,
+            "comments": 80,
             "url": "https://www.youtube.com/watch?v=IJ6TJJJDqCw"
         },
         {
@@ -46,9 +82,9 @@
             "published_at": "2025-12-14T14:00:24Z",
             "duration": "0:05:10",
             "duration_sec": 310,
-            "views": 5711,
-            "likes": 325,
-            "comments": 80,
+            "views": 11749,
+            "likes": 420,
+            "comments": 86,
             "url": "https://www.youtube.com/watch?v=E1--Rb-xOlM"
         },
         {
@@ -58,9 +94,9 @@
             "published_at": "2025-12-13T14:00:54Z",
             "duration": "0:05:49",
             "duration_sec": 349,
-            "views": 3697,
-            "likes": 150,
-            "comments": 75,
+            "views": 4512,
+            "likes": 161,
+            "comments": 85,
             "url": "https://www.youtube.com/watch?v=RES2I8wyPTo"
         },
         {
@@ -70,8 +106,8 @@
             "published_at": "2025-12-12T14:01:44Z",
             "duration": "0:05:27",
             "duration_sec": 327,
-            "views": 4605,
-            "likes": 214,
+            "views": 5457,
+            "likes": 226,
             "comments": 65,
             "url": "https://www.youtube.com/watch?v=upNXd7ri1HM"
         },
@@ -82,9 +118,9 @@
             "published_at": "2025-12-11T14:01:21Z",
             "duration": "0:03:15",
             "duration_sec": 195,
-            "views": 6536,
-            "likes": 267,
-            "comments": 56,
+            "views": 8773,
+            "likes": 301,
+            "comments": 57,
             "url": "https://www.youtube.com/watch?v=gX9Dr-olmRY"
         },
         {
@@ -94,9 +130,9 @@
             "published_at": "2025-12-10T14:01:19Z",
             "duration": "0:06:22",
             "duration_sec": 382,
-            "views": 15476,
-            "likes": 589,
-            "comments": 87,
+            "views": 19335,
+            "likes": 657,
+            "comments": 88,
             "url": "https://www.youtube.com/watch?v=geUtpU_KGUY"
         },
         {
@@ -106,9 +142,9 @@
             "published_at": "2025-12-09T14:00:26Z",
             "duration": "0:55:33",
             "duration_sec": 3333,
-            "views": 83483,
-            "likes": 1437,
-            "comments": 148,
+            "views": 103951,
+            "likes": 1648,
+            "comments": 170,
             "url": "https://www.youtube.com/watch?v=FFkdW4NPjKA"
         },
         {
@@ -118,8 +154,8 @@
             "published_at": "2025-12-08T14:01:18Z",
             "duration": "0:05:06",
             "duration_sec": 306,
-            "views": 4911,
-            "likes": 255,
+            "views": 5444,
+            "likes": 265,
             "comments": 59,
             "url": "https://www.youtube.com/watch?v=lZXEZmUNEt8"
         },
@@ -130,9 +166,9 @@
             "published_at": "2025-12-07T14:01:39Z",
             "duration": "0:05:24",
             "duration_sec": 324,
-            "views": 3947,
-            "likes": 141,
-            "comments": 40,
+            "views": 4162,
+            "likes": 145,
+            "comments": 41,
             "url": "https://www.youtube.com/watch?v=yXF6lPosACA"
         },
         {
@@ -142,9 +178,9 @@
             "published_at": "2025-12-06T14:00:38Z",
             "duration": "0:05:16",
             "duration_sec": 316,
-            "views": 40175,
-            "likes": 1104,
-            "comments": 132,
+            "views": 51468,
+            "likes": 1240,
+            "comments": 135,
             "url": "https://www.youtube.com/watch?v=KEaQG7XQKW0"
         },
         {
@@ -154,9 +190,9 @@
             "published_at": "2025-12-05T14:01:23Z",
             "duration": "1:05:42",
             "duration_sec": 3942,
-            "views": 85731,
-            "likes": 1784,
-            "comments": 224,
+            "views": 101381,
+            "likes": 2000,
+            "comments": 233,
             "url": "https://www.youtube.com/watch?v=cg6O_xxlRaY"
         },
         {
@@ -166,8 +202,8 @@
             "published_at": "2025-12-04T14:00:19Z",
             "duration": "0:05:40",
             "duration_sec": 340,
-            "views": 9755,
-            "likes": 323,
+            "views": 10667,
+            "likes": 339,
             "comments": 52,
             "url": "https://www.youtube.com/watch?v=CH97hBx2WyE"
         },
@@ -178,9 +214,9 @@
             "published_at": "2025-12-03T14:17:22Z",
             "duration": "0:05:48",
             "duration_sec": 348,
-            "views": 51672,
-            "likes": 1221,
-            "comments": 142,
+            "views": 59611,
+            "likes": 1311,
+            "comments": 148,
             "url": "https://www.youtube.com/watch?v=xmvzDvp9NBY"
         },
         {
@@ -190,8 +226,8 @@
             "published_at": "2025-12-02T14:00:57Z",
             "duration": "0:05:50",
             "duration_sec": 350,
-            "views": 8660,
-            "likes": 391,
+            "views": 9195,
+            "likes": 399,
             "comments": 83,
             "url": "https://www.youtube.com/watch?v=TuZHzeqjlRI"
         },
@@ -202,9 +238,9 @@
             "published_at": "2025-11-29T14:01:38Z",
             "duration": "0:06:56",
             "duration_sec": 416,
-            "views": 285479,
-            "likes": 2986,
-            "comments": 209,
+            "views": 321875,
+            "likes": 3212,
+            "comments": 213,
             "url": "https://www.youtube.com/watch?v=w5UbNIOXoY4"
         },
         {
@@ -214,9 +250,9 @@
             "published_at": "2025-11-28T14:01:06Z",
             "duration": "0:07:26",
             "duration_sec": 446,
-            "views": 14630,
-            "likes": 775,
-            "comments": 132,
+            "views": 17881,
+            "likes": 956,
+            "comments": 147,
             "url": "https://www.youtube.com/watch?v=Zk3jq4H3UjI"
         },
         {
@@ -226,9 +262,9 @@
             "published_at": "2025-11-27T14:11:25Z",
             "duration": "0:04:36",
             "duration_sec": 276,
-            "views": 27139,
-            "likes": 780,
-            "comments": 97,
+            "views": 29899,
+            "likes": 827,
+            "comments": 99,
             "url": "https://www.youtube.com/watch?v=sk--7uoHeYU"
         },
         {
@@ -238,8 +274,8 @@
             "published_at": "2025-11-26T14:00:06Z",
             "duration": "0:04:21",
             "duration_sec": 261,
-            "views": 13404,
-            "likes": 277,
+            "views": 13841,
+            "likes": 280,
             "comments": 49,
             "url": "https://www.youtube.com/watch?v=4GgIIjFCTYw"
         },
@@ -250,8 +286,8 @@
             "published_at": "2025-11-25T15:01:16Z",
             "duration": "0:05:39",
             "duration_sec": 339,
-            "views": 8770,
-            "likes": 359,
+            "views": 9429,
+            "likes": 367,
             "comments": 92,
             "url": "https://www.youtube.com/watch?v=bdmoez4YzcE"
         },
@@ -262,9 +298,9 @@
             "published_at": "2025-11-23T16:04:19Z",
             "duration": "1:06:43",
             "duration_sec": 4003,
-            "views": 264954,
-            "likes": 5442,
-            "comments": 607,
+            "views": 297877,
+            "likes": 5903,
+            "comments": 657,
             "url": "https://www.youtube.com/watch?v=qinNOTmgM2k"
         },
         {
@@ -274,8 +310,8 @@
             "published_at": "2025-11-22T14:01:42Z",
             "duration": "0:05:20",
             "duration_sec": 320,
-            "views": 12019,
-            "likes": 395,
+            "views": 12922,
+            "likes": 403,
             "comments": 66,
             "url": "https://www.youtube.com/watch?v=wTf6mf5jgrQ"
         },
@@ -286,8 +322,8 @@
             "published_at": "2025-11-21T14:00:43Z",
             "duration": "0:05:57",
             "duration_sec": 357,
-            "views": 9223,
-            "likes": 146,
+            "views": 9742,
+            "likes": 149,
             "comments": 38,
             "url": "https://www.youtube.com/watch?v=N3idd7b0kAA"
         },
@@ -298,9 +334,9 @@
             "published_at": "2025-11-20T14:01:38Z",
             "duration": "0:07:58",
             "duration_sec": 478,
-            "views": 54029,
-            "likes": 1128,
-            "comments": 148,
+            "views": 58565,
+            "likes": 1196,
+            "comments": 150,
             "url": "https://www.youtube.com/watch?v=u2kpsqif2K4"
         },
         {
@@ -310,9 +346,9 @@
             "published_at": "2025-11-19T14:00:42Z",
             "duration": "0:04:51",
             "duration_sec": 291,
-            "views": 8854,
-            "likes": 295,
-            "comments": 76,
+            "views": 9104,
+            "likes": 299,
+            "comments": 78,
             "url": "https://www.youtube.com/watch?v=OOhtyVH4O00"
         },
         {
@@ -322,8 +358,8 @@
             "published_at": "2025-11-18T14:01:05Z",
             "duration": "0:06:26",
             "duration_sec": 386,
-            "views": 4343,
-            "likes": 165,
+            "views": 4411,
+            "likes": 168,
             "comments": 38,
             "url": "https://www.youtube.com/watch?v=cYQP5f8NJkU"
         },
@@ -334,9 +370,9 @@
             "published_at": "2025-11-16T14:00:51Z",
             "duration": "0:05:51",
             "duration_sec": 351,
-            "views": 17823,
-            "likes": 441,
-            "comments": 73,
+            "views": 21286,
+            "likes": 455,
+            "comments": 74,
             "url": "https://www.youtube.com/watch?v=S4iPaDuyPeo"
         },
         {
@@ -346,8 +382,8 @@
             "published_at": "2025-11-15T14:01:00Z",
             "duration": "0:07:31",
             "duration_sec": 451,
-            "views": 30172,
-            "likes": 896,
+            "views": 31337,
+            "likes": 910,
             "comments": 153,
             "url": "https://www.youtube.com/watch?v=VFtqK95VkVQ"
         },
@@ -358,9 +394,9 @@
             "published_at": "2025-11-14T14:01:11Z",
             "duration": "0:06:30",
             "duration_sec": 390,
-            "views": 21301,
-            "likes": 436,
-            "comments": 70,
+            "views": 22945,
+            "likes": 448,
+            "comments": 71,
             "url": "https://www.youtube.com/watch?v=d6OJ1t4Imio"
         },
         {
@@ -370,9 +406,9 @@
             "published_at": "2025-11-13T14:01:37Z",
             "duration": "0:07:02",
             "duration_sec": 422,
-            "views": 96006,
-            "likes": 1802,
-            "comments": 176,
+            "views": 105618,
+            "likes": 1886,
+            "comments": 178,
             "url": "https://www.youtube.com/watch?v=tWRUxKqub8U"
         },
         {
@@ -382,9 +418,9 @@
             "published_at": "2025-11-12T14:00:24Z",
             "duration": "0:07:09",
             "duration_sec": 429,
-            "views": 10179,
-            "likes": 313,
-            "comments": 114,
+            "views": 10634,
+            "likes": 317,
+            "comments": 116,
             "url": "https://www.youtube.com/watch?v=AuGxd1z2Ze4"
         },
         {
@@ -394,8 +430,8 @@
             "published_at": "2025-11-11T14:01:42Z",
             "duration": "0:04:14",
             "duration_sec": 254,
-            "views": 58340,
-            "likes": 1582,
+            "views": 61068,
+            "likes": 1633,
             "comments": 153,
             "url": "https://www.youtube.com/watch?v=v_8bxBitkHs"
         },
@@ -406,9 +442,9 @@
             "published_at": "2025-11-09T14:01:24Z",
             "duration": "0:04:30",
             "duration_sec": 270,
-            "views": 8166,
-            "likes": 288,
-            "comments": 65,
+            "views": 8406,
+            "likes": 292,
+            "comments": 66,
             "url": "https://www.youtube.com/watch?v=lQM_hcE1o4g"
         },
         {
@@ -418,9 +454,9 @@
             "published_at": "2025-11-08T14:00:07Z",
             "duration": "0:05:36",
             "duration_sec": 336,
-            "views": 44761,
-            "likes": 930,
-            "comments": 132,
+            "views": 50986,
+            "likes": 1017,
+            "comments": 137,
             "url": "https://www.youtube.com/watch?v=fabFhm-_gAY"
         },
         {
@@ -430,9 +466,9 @@
             "published_at": "2025-11-07T14:01:29Z",
             "duration": "0:05:24",
             "duration_sec": 324,
-            "views": 217088,
-            "likes": 10702,
-            "comments": 2125,
+            "views": 225332,
+            "likes": 10937,
+            "comments": 2150,
             "url": "https://www.youtube.com/watch?v=nOFsYyOcLe4"
         },
         {
@@ -442,8 +478,8 @@
             "published_at": "2025-11-06T14:00:11Z",
             "duration": "0:05:54",
             "duration_sec": 354,
-            "views": 39516,
-            "likes": 568,
+            "views": 44289,
+            "likes": 593,
             "comments": 90,
             "url": "https://www.youtube.com/watch?v=2SEsbUnwQn4"
         },
@@ -454,9 +490,9 @@
             "published_at": "2025-11-05T14:01:27Z",
             "duration": "0:05:20",
             "duration_sec": 320,
-            "views": 4627,
-            "likes": 108,
-            "comments": 14,
+            "views": 4811,
+            "likes": 110,
+            "comments": 15,
             "url": "https://www.youtube.com/watch?v=jwuXjNn64Aw"
         },
         {
@@ -466,7 +502,7 @@
             "published_at": "2025-11-05T11:11:34Z",
             "duration": "0:02:55",
             "duration_sec": 175,
-            "views": 1591,
+            "views": 1608,
             "likes": 84,
             "comments": 24,
             "url": "https://www.youtube.com/watch?v=evFG6pOKz_A"
@@ -478,9 +514,9 @@
             "published_at": "2025-11-04T14:01:08Z",
             "duration": "0:05:28",
             "duration_sec": 328,
-            "views": 42251,
-            "likes": 893,
-            "comments": 94,
+            "views": 44722,
+            "likes": 912,
+            "comments": 96,
             "url": "https://www.youtube.com/watch?v=bpWudvTsOQU"
         },
         {
@@ -490,9 +526,9 @@
             "published_at": "2025-11-02T14:00:18Z",
             "duration": "0:05:01",
             "duration_sec": 301,
-            "views": 64273,
-            "likes": 999,
-            "comments": 108,
+            "views": 69576,
+            "likes": 1026,
+            "comments": 109,
             "url": "https://www.youtube.com/watch?v=Bil0Tkoqnww"
         },
         {
@@ -502,8 +538,8 @@
             "published_at": "2025-11-01T14:00:44Z",
             "duration": "0:06:38",
             "duration_sec": 398,
-            "views": 31111,
-            "likes": 667,
+            "views": 33538,
+            "likes": 677,
             "comments": 87,
             "url": "https://www.youtube.com/watch?v=NBWcFH_tm6U"
         },
@@ -514,8 +550,8 @@
             "published_at": "2025-10-31T14:00:30Z",
             "duration": "0:08:32",
             "duration_sec": 512,
-            "views": 184967,
-            "likes": 2639,
+            "views": 197712,
+            "likes": 2704,
             "comments": 254,
             "url": "https://www.youtube.com/watch?v=I1na064ggM4"
         },
@@ -526,8 +562,8 @@
             "published_at": "2025-10-30T14:01:04Z",
             "duration": "0:04:15",
             "duration_sec": 255,
-            "views": 7473,
-            "likes": 233,
+            "views": 7795,
+            "likes": 235,
             "comments": 43,
             "url": "https://www.youtube.com/watch?v=_eLt6RDo8p8"
         },
@@ -538,8 +574,8 @@
             "published_at": "2025-10-29T14:00:53Z",
             "duration": "0:06:06",
             "duration_sec": 366,
-            "views": 14387,
-            "likes": 469,
+            "views": 14619,
+            "likes": 476,
             "comments": 54,
             "url": "https://www.youtube.com/watch?v=WQWEtxcw808"
         },
@@ -550,8 +586,8 @@
             "published_at": "2025-10-28T14:00:23Z",
             "duration": "0:06:26",
             "duration_sec": 386,
-            "views": 133625,
-            "likes": 1250,
+            "views": 152299,
+            "likes": 1311,
             "comments": 114,
             "url": "https://www.youtube.com/watch?v=EsWBWGGO7ZI"
         },
@@ -562,9 +598,9 @@
             "published_at": "2025-10-26T14:01:05Z",
             "duration": "0:05:55",
             "duration_sec": 355,
-            "views": 589347,
-            "likes": 3995,
-            "comments": 253,
+            "views": 616400,
+            "likes": 4091,
+            "comments": 255,
             "url": "https://www.youtube.com/watch?v=fab-7bJUS7k"
         },
         {
@@ -574,9 +610,9 @@
             "published_at": "2025-10-25T14:01:39Z",
             "duration": "0:06:54",
             "duration_sec": 414,
-            "views": 859948,
-            "likes": 11997,
-            "comments": 910,
+            "views": 906907,
+            "likes": 12169,
+            "comments": 923,
             "url": "https://www.youtube.com/watch?v=w7iZR_pfNQo"
         },
         {
@@ -586,7 +622,7 @@
             "published_at": "2025-10-25T09:31:00Z",
             "duration": "0:02:22",
             "duration_sec": 142,
-            "views": 2366,
+            "views": 2400,
             "likes": 92,
             "comments": 16,
             "url": "https://www.youtube.com/watch?v=_itLb7yI3UQ"
@@ -598,9 +634,9 @@
             "published_at": "2025-10-24T14:00:06Z",
             "duration": "0:07:09",
             "duration_sec": 429,
-            "views": 381137,
-            "likes": 4604,
-            "comments": 393,
+            "views": 392709,
+            "likes": 4670,
+            "comments": 399,
             "url": "https://www.youtube.com/watch?v=5ZXd4X_S80o"
         },
         {
@@ -610,7 +646,7 @@
             "published_at": "2025-10-22T10:10:18Z",
             "duration": "0:04:45",
             "duration_sec": 285,
-            "views": 9736,
+            "views": 9851,
             "likes": 206,
             "comments": 23,
             "url": "https://www.youtube.com/watch?v=aFIA72RtHxw"
@@ -622,8 +658,8 @@
             "published_at": "2025-10-21T09:32:01Z",
             "duration": "0:05:43",
             "duration_sec": 343,
-            "views": 26281,
-            "likes": 797,
+            "views": 26796,
+            "likes": 807,
             "comments": 63,
             "url": "https://www.youtube.com/watch?v=ddN8rU_w5BY"
         },
@@ -634,9 +670,9 @@
             "published_at": "2025-10-19T09:31:00Z",
             "duration": "0:05:59",
             "duration_sec": 359,
-            "views": 52304,
-            "likes": 1136,
-            "comments": 143,
+            "views": 53576,
+            "likes": 1142,
+            "comments": 146,
             "url": "https://www.youtube.com/watch?v=UgdmLTYGFVk"
         },
         {
@@ -646,9 +682,9 @@
             "published_at": "2025-10-18T09:31:00Z",
             "duration": "0:07:35",
             "duration_sec": 455,
-            "views": 159991,
-            "likes": 3655,
-            "comments": 348,
+            "views": 196107,
+            "likes": 4438,
+            "comments": 399,
             "url": "https://www.youtube.com/watch?v=VoEzpNldVsQ"
         },
         {
@@ -658,9 +694,9 @@
             "published_at": "2025-10-17T09:32:00Z",
             "duration": "0:04:51",
             "duration_sec": 291,
-            "views": 386044,
-            "likes": 5493,
-            "comments": 354,
+            "views": 402462,
+            "likes": 5586,
+            "comments": 357,
             "url": "https://www.youtube.com/watch?v=BJFPrMPlAvo"
         },
         {
@@ -670,9 +706,9 @@
             "published_at": "2025-10-16T10:10:56Z",
             "duration": "0:06:24",
             "duration_sec": 384,
-            "views": 3578,
+            "views": 3662,
             "likes": 114,
-            "comments": 40,
+            "comments": 42,
             "url": "https://www.youtube.com/watch?v=dXABB0Ublck"
         },
         {
@@ -682,8 +718,8 @@
             "published_at": "2025-10-15T11:55:00Z",
             "duration": "0:06:09",
             "duration_sec": 369,
-            "views": 8432,
-            "likes": 312,
+            "views": 8522,
+            "likes": 313,
             "comments": 80,
             "url": "https://www.youtube.com/watch?v=wfqJqh3LPQw"
         },
@@ -694,7 +730,7 @@
             "published_at": "2025-10-14T10:59:18Z",
             "duration": "0:03:38",
             "duration_sec": 218,
-            "views": 4299,
+            "views": 4354,
             "likes": 117,
             "comments": 38,
             "url": "https://www.youtube.com/watch?v=YlcKVBUO6bE"
@@ -706,7 +742,7 @@
             "published_at": "2025-10-12T10:21:33Z",
             "duration": "0:03:55",
             "duration_sec": 235,
-            "views": 4587,
+            "views": 4619,
             "likes": 114,
             "comments": 25,
             "url": "https://www.youtube.com/watch?v=AuMoeqqxv94"
@@ -718,8 +754,8 @@
             "published_at": "2025-10-11T11:11:00Z",
             "duration": "0:06:31",
             "duration_sec": 391,
-            "views": 99624,
-            "likes": 1848,
+            "views": 102844,
+            "likes": 1880,
             "comments": 127,
             "url": "https://www.youtube.com/watch?v=qg-ziuJMAdE"
         },
@@ -730,8 +766,8 @@
             "published_at": "2025-10-10T15:54:42Z",
             "duration": "0:07:38",
             "duration_sec": 458,
-            "views": 7825,
-            "likes": 226,
+            "views": 7952,
+            "likes": 229,
             "comments": 39,
             "url": "https://www.youtube.com/watch?v=5V2J-6DFAjA"
         },
@@ -742,8 +778,8 @@
             "published_at": "2025-10-08T11:11:00Z",
             "duration": "0:03:45",
             "duration_sec": 225,
-            "views": 5441,
-            "likes": 171,
+            "views": 5546,
+            "likes": 172,
             "comments": 37,
             "url": "https://www.youtube.com/watch?v=eicVw1vhZlM"
         },
@@ -754,9 +790,9 @@
             "published_at": "2025-10-06T14:20:23Z",
             "duration": "0:05:44",
             "duration_sec": 344,
-            "views": 40810,
-            "likes": 725,
-            "comments": 90,
+            "views": 41096,
+            "likes": 728,
+            "comments": 95,
             "url": "https://www.youtube.com/watch?v=lzxWrmkOx3g"
         },
         {
@@ -766,9 +802,9 @@
             "published_at": "2025-10-04T12:19:00Z",
             "duration": "0:03:54",
             "duration_sec": 234,
-            "views": 18435,
-            "likes": 400,
-            "comments": 98,
+            "views": 18962,
+            "likes": 407,
+            "comments": 97,
             "url": "https://www.youtube.com/watch?v=8lsS_RUhxg8"
         },
         {
@@ -778,7 +814,7 @@
             "published_at": "2025-10-03T09:10:26Z",
             "duration": "0:04:19",
             "duration_sec": 259,
-            "views": 16281,
+            "views": 16471,
             "likes": 487,
             "comments": 70,
             "url": "https://www.youtube.com/watch?v=uF2Gju3KILc"
@@ -790,7 +826,7 @@
             "published_at": "2025-10-02T17:34:44Z",
             "duration": "0:01:57",
             "duration_sec": 117,
-            "views": 808,
+            "views": 817,
             "likes": 47,
             "comments": 23,
             "url": "https://www.youtube.com/watch?v=Q8LCh-F1r1U"
@@ -802,8 +838,8 @@
             "published_at": "2025-10-02T11:01:10Z",
             "duration": "0:08:43",
             "duration_sec": 523,
-            "views": 14291,
-            "likes": 498,
+            "views": 14599,
+            "likes": 502,
             "comments": 89,
             "url": "https://www.youtube.com/watch?v=FItkll00UUk"
         },
@@ -814,7 +850,7 @@
             "published_at": "2025-10-01T11:11:00Z",
             "duration": "0:05:21",
             "duration_sec": 321,
-            "views": 3253,
+            "views": 3288,
             "likes": 123,
             "comments": 24,
             "url": "https://www.youtube.com/watch?v=IlHRy5bpZsU"
@@ -826,8 +862,8 @@
             "published_at": "2025-09-30T09:57:59Z",
             "duration": "0:05:14",
             "duration_sec": 314,
-            "views": 15308,
-            "likes": 469,
+            "views": 15583,
+            "likes": 468,
             "comments": 104,
             "url": "https://www.youtube.com/watch?v=GkW7qCmUhHE"
         },
@@ -838,8 +874,8 @@
             "published_at": "2025-09-29T15:38:16Z",
             "duration": "0:06:04",
             "duration_sec": 364,
-            "views": 60027,
-            "likes": 1513,
+            "views": 61548,
+            "likes": 1524,
             "comments": 241,
             "url": "https://www.youtube.com/watch?v=FU5Ncstei8A"
         },
@@ -850,9 +886,9 @@
             "published_at": "2025-09-28T12:50:49Z",
             "duration": "0:04:38",
             "duration_sec": 278,
-            "views": 12331,
-            "likes": 484,
-            "comments": 92,
+            "views": 12754,
+            "likes": 492,
+            "comments": 93,
             "url": "https://www.youtube.com/watch?v=6JzSSVkUw9Y"
         },
         {
@@ -862,8 +898,8 @@
             "published_at": "2025-09-27T08:48:14Z",
             "duration": "0:06:45",
             "duration_sec": 405,
-            "views": 1834,
-            "likes": 81,
+            "views": 1856,
+            "likes": 82,
             "comments": 58,
             "url": "https://www.youtube.com/watch?v=jFWx5xYcru8"
         },
@@ -874,8 +910,8 @@
             "published_at": "2025-09-26T15:22:00Z",
             "duration": "0:06:27",
             "duration_sec": 387,
-            "views": 10049,
-            "likes": 276,
+            "views": 10205,
+            "likes": 281,
             "comments": 29,
             "url": "https://www.youtube.com/watch?v=PIfOxKryi5g"
         },
@@ -886,7 +922,7 @@
             "published_at": "2025-09-25T15:22:39Z",
             "duration": "0:05:55",
             "duration_sec": 355,
-            "views": 11561,
+            "views": 11643,
             "likes": 376,
             "comments": 72,
             "url": "https://www.youtube.com/watch?v=w79_R06wWTM"
@@ -898,7 +934,7 @@
             "published_at": "2025-09-24T09:27:35Z",
             "duration": "0:03:55",
             "duration_sec": 235,
-            "views": 5751,
+            "views": 5865,
             "likes": 234,
             "comments": 45,
             "url": "https://www.youtube.com/watch?v=p-W6dXHWrj0"
@@ -910,7 +946,7 @@
             "published_at": "2025-09-23T09:41:31Z",
             "duration": "0:09:07",
             "duration_sec": 547,
-            "views": 4329,
+            "views": 4384,
             "likes": 130,
             "comments": 34,
             "url": "https://www.youtube.com/watch?v=wNrZg7KtAVg"
@@ -922,9 +958,9 @@
             "published_at": "2025-09-22T08:32:14Z",
             "duration": "0:06:32",
             "duration_sec": 392,
-            "views": 12124,
-            "likes": 378,
-            "comments": 46,
+            "views": 12919,
+            "likes": 399,
+            "comments": 48,
             "url": "https://www.youtube.com/watch?v=1f4gIu1uWrE"
         },
         {
@@ -934,8 +970,8 @@
             "published_at": "2025-09-21T08:32:30Z",
             "duration": "0:04:54",
             "duration_sec": 294,
-            "views": 22729,
-            "likes": 649,
+            "views": 23873,
+            "likes": 659,
             "comments": 89,
             "url": "https://www.youtube.com/watch?v=rVyveoCIgL0"
         },
@@ -946,9 +982,9 @@
             "published_at": "2025-09-20T08:32:30Z",
             "duration": "0:04:56",
             "duration_sec": 296,
-            "views": 236868,
-            "likes": 3342,
-            "comments": 267,
+            "views": 246254,
+            "likes": 3395,
+            "comments": 269,
             "url": "https://www.youtube.com/watch?v=_D6aYBv-l_M"
         },
         {
@@ -958,8 +994,8 @@
             "published_at": "2025-09-19T08:32:34Z",
             "duration": "0:04:59",
             "duration_sec": 299,
-            "views": 10061,
-            "likes": 310,
+            "views": 10416,
+            "likes": 317,
             "comments": 89,
             "url": "https://www.youtube.com/watch?v=cfndOx2_u4E"
         },
@@ -970,8 +1006,8 @@
             "published_at": "2025-09-18T09:44:31Z",
             "duration": "0:05:49",
             "duration_sec": 349,
-            "views": 16831,
-            "likes": 580,
+            "views": 17034,
+            "likes": 582,
             "comments": 110,
             "url": "https://www.youtube.com/watch?v=Hj4uh1JjpPo"
         },
@@ -982,9 +1018,9 @@
             "published_at": "2025-09-17T13:02:34Z",
             "duration": "0:05:52",
             "duration_sec": 352,
-            "views": 29048,
-            "likes": 384,
-            "comments": 66,
+            "views": 30596,
+            "likes": 393,
+            "comments": 62,
             "url": "https://www.youtube.com/watch?v=dRrbKYeEAnU"
         },
         {
@@ -994,8 +1030,8 @@
             "published_at": "2025-09-16T08:32:07Z",
             "duration": "0:06:39",
             "duration_sec": 399,
-            "views": 49041,
-            "likes": 440,
+            "views": 53548,
+            "likes": 453,
             "comments": 61,
             "url": "https://www.youtube.com/watch?v=884FxAUHCpM"
         },
@@ -1006,7 +1042,7 @@
             "published_at": "2025-09-15T08:25:29Z",
             "duration": "0:04:59",
             "duration_sec": 299,
-            "views": 4065,
+            "views": 4121,
             "likes": 174,
             "comments": 35,
             "url": "https://www.youtube.com/watch?v=jQFl2-uvueE"
@@ -1018,8 +1054,8 @@
             "published_at": "2025-09-13T09:11:59Z",
             "duration": "0:04:01",
             "duration_sec": 241,
-            "views": 13336,
-            "likes": 425,
+            "views": 13688,
+            "likes": 427,
             "comments": 87,
             "url": "https://www.youtube.com/watch?v=SNhN4QVB4-o"
         },
@@ -1030,9 +1066,9 @@
             "published_at": "2025-09-12T06:53:01Z",
             "duration": "0:05:47",
             "duration_sec": 347,
-            "views": 18372,
+            "views": 18609,
             "likes": 578,
-            "comments": 123,
+            "comments": 125,
             "url": "https://www.youtube.com/watch?v=KHgm-wY5GK0"
         },
         {
@@ -1042,7 +1078,7 @@
             "published_at": "2025-09-11T08:32:46Z",
             "duration": "0:04:58",
             "duration_sec": 298,
-            "views": 4513,
+            "views": 4547,
             "likes": 130,
             "comments": 33,
             "url": "https://www.youtube.com/watch?v=wwfZmlA92LQ"
@@ -1054,8 +1090,8 @@
             "published_at": "2025-09-10T08:32:00Z",
             "duration": "0:05:10",
             "duration_sec": 310,
-            "views": 76850,
-            "likes": 1290,
+            "views": 77758,
+            "likes": 1296,
             "comments": 125,
             "url": "https://www.youtube.com/watch?v=CTFvkAfBdsQ"
         },
@@ -1066,9 +1102,9 @@
             "published_at": "2025-09-09T10:51:04Z",
             "duration": "0:05:44",
             "duration_sec": 344,
-            "views": 214568,
-            "likes": 5013,
-            "comments": 516,
+            "views": 218071,
+            "likes": 5044,
+            "comments": 520,
             "url": "https://www.youtube.com/watch?v=usLFCwwYW_Q"
         },
         {
@@ -1078,8 +1114,8 @@
             "published_at": "2025-09-08T08:32:54Z",
             "duration": "0:05:36",
             "duration_sec": 336,
-            "views": 7247,
-            "likes": 218,
+            "views": 7434,
+            "likes": 224,
             "comments": 46,
             "url": "https://www.youtube.com/watch?v=D563z-kKEGc"
         },
@@ -1090,8 +1126,8 @@
             "published_at": "2025-09-06T10:49:22Z",
             "duration": "0:03:21",
             "duration_sec": 201,
-            "views": 58073,
-            "likes": 736,
+            "views": 59389,
+            "likes": 746,
             "comments": 34,
             "url": "https://www.youtube.com/watch?v=L8K1_i9qbVQ"
         },
@@ -1102,9 +1138,9 @@
             "published_at": "2025-09-05T08:32:57Z",
             "duration": "0:06:10",
             "duration_sec": 370,
-            "views": 194752,
-            "likes": 4086,
-            "comments": 311,
+            "views": 197629,
+            "likes": 4106,
+            "comments": 313,
             "url": "https://www.youtube.com/watch?v=IqmGxk3yel8"
         },
         {
@@ -1114,9 +1150,9 @@
             "published_at": "2025-09-03T09:35:13Z",
             "duration": "0:09:19",
             "duration_sec": 559,
-            "views": 20729,
-            "likes": 590,
-            "comments": 121,
+            "views": 21204,
+            "likes": 596,
+            "comments": 125,
             "url": "https://www.youtube.com/watch?v=ROQyiDfXexk"
         },
         {
@@ -1126,8 +1162,8 @@
             "published_at": "2025-09-02T08:32:31Z",
             "duration": "0:05:13",
             "duration_sec": 313,
-            "views": 1313280,
-            "likes": 2939,
+            "views": 1321919,
+            "likes": 2958,
             "comments": 153,
             "url": "https://www.youtube.com/watch?v=gvbWt5rNpYA"
         },
@@ -1138,8 +1174,8 @@
             "published_at": "2025-09-01T08:32:57Z",
             "duration": "0:05:03",
             "duration_sec": 303,
-            "views": 47026,
-            "likes": 137,
+            "views": 48667,
+            "likes": 140,
             "comments": 31,
             "url": "https://www.youtube.com/watch?v=h1HhqUQH--s"
         },
@@ -1150,9 +1186,9 @@
             "published_at": "2025-08-30T09:29:37Z",
             "duration": "0:05:32",
             "duration_sec": 332,
-            "views": 404083,
-            "likes": 4289,
-            "comments": 259,
+            "views": 413291,
+            "likes": 4386,
+            "comments": 265,
             "url": "https://www.youtube.com/watch?v=9U9wTTBikv4"
         },
         {
@@ -1162,8 +1198,8 @@
             "published_at": "2025-08-29T08:32:54Z",
             "duration": "0:05:06",
             "duration_sec": 306,
-            "views": 20697,
-            "likes": 414,
+            "views": 20948,
+            "likes": 416,
             "comments": 53,
             "url": "https://www.youtube.com/watch?v=08vqdPFqTk8"
         },
@@ -1174,9 +1210,9 @@
             "published_at": "2025-08-26T08:32:27Z",
             "duration": "0:05:01",
             "duration_sec": 301,
-            "views": 1766191,
-            "likes": 5264,
-            "comments": 388,
+            "views": 1817083,
+            "likes": 5549,
+            "comments": 411,
             "url": "https://www.youtube.com/watch?v=oaxqZFlltxw"
         },
         {
@@ -1186,7 +1222,7 @@
             "published_at": "2025-08-23T08:32:33Z",
             "duration": "0:04:51",
             "duration_sec": 291,
-            "views": 3659,
+            "views": 3706,
             "likes": 97,
             "comments": 25,
             "url": "https://www.youtube.com/watch?v=Qdp8l1V2WE0"
@@ -1198,7 +1234,7 @@
             "published_at": "2025-08-22T08:33:00Z",
             "duration": "0:05:50",
             "duration_sec": 350,
-            "views": 2143,
+            "views": 2170,
             "likes": 44,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=9bNNK-IN480"
@@ -1210,9 +1246,9 @@
             "published_at": "2025-08-21T08:32:39Z",
             "duration": "0:06:00",
             "duration_sec": 360,
-            "views": 15976,
-            "likes": 444,
-            "comments": 117,
+            "views": 17041,
+            "likes": 465,
+            "comments": 118,
             "url": "https://www.youtube.com/watch?v=5PCHn9JlDKE"
         },
         {
@@ -1222,8 +1258,8 @@
             "published_at": "2025-08-20T08:33:04Z",
             "duration": "0:04:47",
             "duration_sec": 287,
-            "views": 19706,
-            "likes": 321,
+            "views": 19853,
+            "likes": 323,
             "comments": 37,
             "url": "https://www.youtube.com/watch?v=0dZu3Eegkbs"
         },
@@ -1234,8 +1270,8 @@
             "published_at": "2025-08-19T08:32:09Z",
             "duration": "0:04:58",
             "duration_sec": 298,
-            "views": 14123,
-            "likes": 276,
+            "views": 14199,
+            "likes": 280,
             "comments": 31,
             "url": "https://www.youtube.com/watch?v=yLe2BDiz1k4"
         },
@@ -1246,8 +1282,8 @@
             "published_at": "2025-08-16T08:33:22Z",
             "duration": "0:04:41",
             "duration_sec": 281,
-            "views": 12210,
-            "likes": 243,
+            "views": 12379,
+            "likes": 245,
             "comments": 26,
             "url": "https://www.youtube.com/watch?v=ur9QZkyBrhY"
         },
@@ -1258,9 +1294,9 @@
             "published_at": "2025-08-15T08:33:22Z",
             "duration": "0:05:18",
             "duration_sec": 318,
-            "views": 300624,
-            "likes": 3497,
-            "comments": 283,
+            "views": 301947,
+            "likes": 3512,
+            "comments": 285,
             "url": "https://www.youtube.com/watch?v=C-iyI8SL1Nw"
         },
         {
@@ -1270,9 +1306,9 @@
             "published_at": "2025-08-11T07:04:48Z",
             "duration": "0:05:42",
             "duration_sec": 342,
-            "views": 50051,
-            "likes": 839,
-            "comments": 92,
+            "views": 51721,
+            "likes": 858,
+            "comments": 93,
             "url": "https://www.youtube.com/watch?v=dGMeeQTI13k"
         },
         {
@@ -1282,9 +1318,9 @@
             "published_at": "2025-08-07T13:18:24Z",
             "duration": "0:15:56",
             "duration_sec": 956,
-            "views": 5944,
-            "likes": 120,
-            "comments": 54,
+            "views": 5999,
+            "likes": 122,
+            "comments": 56,
             "url": "https://www.youtube.com/watch?v=JJ1q4V-Myg8"
         },
         {
@@ -1294,9 +1330,9 @@
             "published_at": "2025-08-01T12:41:00Z",
             "duration": "0:05:48",
             "duration_sec": 348,
-            "views": 46493,
-            "likes": 702,
-            "comments": 85,
+            "views": 47443,
+            "likes": 705,
+            "comments": 87,
             "url": "https://www.youtube.com/watch?v=fUKM7G0Dc5U"
         },
         {
@@ -1306,7 +1342,7 @@
             "published_at": "2025-07-29T11:01:41Z",
             "duration": "0:09:52",
             "duration_sec": 592,
-            "views": 11199,
+            "views": 11299,
             "likes": 273,
             "comments": 82,
             "url": "https://www.youtube.com/watch?v=l8W2agtfMWc"
@@ -1318,7 +1354,7 @@
             "published_at": "2025-07-26T06:45:53Z",
             "duration": "0:03:30",
             "duration_sec": 210,
-            "views": 4217,
+            "views": 4258,
             "likes": 81,
             "comments": 13,
             "url": "https://www.youtube.com/watch?v=FJhZ6W9xPUQ"
@@ -1330,8 +1366,8 @@
             "published_at": "2025-07-25T17:14:48Z",
             "duration": "0:06:55",
             "duration_sec": 415,
-            "views": 197815,
-            "likes": 712,
+            "views": 200127,
+            "likes": 716,
             "comments": 73,
             "url": "https://www.youtube.com/watch?v=EntvosyV4hk"
         },
@@ -1342,7 +1378,7 @@
             "published_at": "2025-07-24T07:59:02Z",
             "duration": "0:05:04",
             "duration_sec": 304,
-            "views": 3563,
+            "views": 3626,
             "likes": 58,
             "comments": 14,
             "url": "https://www.youtube.com/watch?v=LARqascrZ-M"
@@ -1354,8 +1390,8 @@
             "published_at": "2025-07-23T06:14:00Z",
             "duration": "0:06:55",
             "duration_sec": 415,
-            "views": 3912,
-            "likes": 99,
+            "views": 3971,
+            "likes": 100,
             "comments": 21,
             "url": "https://www.youtube.com/watch?v=oxiuPxz2IwA"
         },
@@ -1366,7 +1402,7 @@
             "published_at": "2025-07-22T07:48:33Z",
             "duration": "0:03:35",
             "duration_sec": 215,
-            "views": 2171,
+            "views": 2204,
             "likes": 35,
             "comments": 11,
             "url": "https://www.youtube.com/watch?v=jSJRWMiSBVA"
@@ -1378,8 +1414,8 @@
             "published_at": "2025-07-21T07:51:26Z",
             "duration": "0:07:05",
             "duration_sec": 425,
-            "views": 28134,
-            "likes": 402,
+            "views": 36882,
+            "likes": 447,
             "comments": 70,
             "url": "https://www.youtube.com/watch?v=55Tm7we2BOQ"
         },
@@ -1390,7 +1426,7 @@
             "published_at": "2025-07-19T07:01:26Z",
             "duration": "0:04:43",
             "duration_sec": 283,
-            "views": 1973,
+            "views": 2003,
             "likes": 56,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=mamL2-ydx3Q"
@@ -1402,21 +1438,21 @@
             "published_at": "2025-07-18T16:00:06Z",
             "duration": "0:04:14",
             "duration_sec": 254,
-            "views": 3024,
+            "views": 3040,
             "likes": 48,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=qynBKO6PJ2g"
         },
         {
             "video_id": "MhE0eXkSfp4",
-            "title": "БЕЛЫМ СНЕГОМ 2025 - Кавер В Новом Танцевальном Стиле, С Новым Текстом #музыка",
+            "title": "БЕЛЫМ СНЕГОМ 2025 - Кавер В Новом Танцевальном Стиле, С Новым Текстом",
             "type": "video",
             "published_at": "2025-07-16T07:53:54Z",
             "duration": "0:06:40",
             "duration_sec": 400,
-            "views": 4741,
-            "likes": 159,
-            "comments": 33,
+            "views": 4850,
+            "likes": 162,
+            "comments": 34,
             "url": "https://www.youtube.com/watch?v=MhE0eXkSfp4"
         },
         {
@@ -1426,7 +1462,7 @@
             "published_at": "2025-07-13T10:22:34Z",
             "duration": "0:04:43",
             "duration_sec": 283,
-            "views": 2298,
+            "views": 2320,
             "likes": 59,
             "comments": 18,
             "url": "https://www.youtube.com/watch?v=e76juL7UNto"
@@ -1438,7 +1474,7 @@
             "published_at": "2025-07-10T07:19:53Z",
             "duration": "0:16:36",
             "duration_sec": 996,
-            "views": 1435,
+            "views": 1454,
             "likes": 28,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=2B52WTulgVk"
@@ -1450,7 +1486,7 @@
             "published_at": "2025-07-09T06:10:57Z",
             "duration": "0:07:41",
             "duration_sec": 461,
-            "views": 918,
+            "views": 931,
             "likes": 25,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=ddYNQwWK2z0"
@@ -1462,7 +1498,7 @@
             "published_at": "2025-07-08T14:00:38Z",
             "duration": "0:02:10",
             "duration_sec": 130,
-            "views": 1098,
+            "views": 1102,
             "likes": 17,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=KK13sLE9RB0"
@@ -1474,9 +1510,9 @@
             "published_at": "2025-07-08T07:10:50Z",
             "duration": "0:05:57",
             "duration_sec": 357,
-            "views": 3812,
-            "likes": 147,
-            "comments": 61,
+            "views": 3971,
+            "likes": 149,
+            "comments": 63,
             "url": "https://www.youtube.com/watch?v=nFC1rqKjkqA"
         },
         {
@@ -1486,9 +1522,9 @@
             "published_at": "2025-07-05T07:37:00Z",
             "duration": "0:11:53",
             "duration_sec": 713,
-            "views": 1212,
-            "likes": 43,
-            "comments": 22,
+            "views": 1221,
+            "likes": 44,
+            "comments": 24,
             "url": "https://www.youtube.com/watch?v=OdBchMTAGEg"
         },
         {
@@ -1498,7 +1534,7 @@
             "published_at": "2025-07-04T07:32:30Z",
             "duration": "0:03:46",
             "duration_sec": 226,
-            "views": 519,
+            "views": 522,
             "likes": 20,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=S6GjntSF1O4"
@@ -1510,7 +1546,7 @@
             "published_at": "2025-07-03T07:33:04Z",
             "duration": "0:04:09",
             "duration_sec": 249,
-            "views": 698,
+            "views": 707,
             "likes": 18,
             "comments": 3,
             "url": "https://www.youtube.com/watch?v=UsSeowDRmiQ"
@@ -1522,7 +1558,7 @@
             "published_at": "2025-07-02T07:03:40Z",
             "duration": "0:04:47",
             "duration_sec": 287,
-            "views": 1186,
+            "views": 1197,
             "likes": 29,
             "comments": 14,
             "url": "https://www.youtube.com/watch?v=I3dI-Mn2sBg"
@@ -1534,58 +1570,10 @@
             "published_at": "2025-07-01T07:33:28Z",
             "duration": "0:05:23",
             "duration_sec": 323,
-            "views": 11494,
-            "likes": 198,
+            "views": 11555,
+            "likes": 201,
             "comments": 30,
             "url": "https://www.youtube.com/watch?v=-AmB13QIPXg"
-        },
-        {
-            "video_id": "Nt_PAjxG2-Y",
-            "title": "Matrix Bees (Long Version) / 2025 I Для Руслана...",
-            "type": "video",
-            "published_at": "2025-06-30T13:02:12Z",
-            "duration": "0:07:23",
-            "duration_sec": 443,
-            "views": 396,
-            "likes": 12,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=Nt_PAjxG2-Y"
-        },
-        {
-            "video_id": "DbcS0zXKRBE",
-            "title": "Биоэнергетический видеоклип с открытым кодом. Можно визуализировать желания и др. #лечебнаямузыка",
-            "type": "video",
-            "published_at": "2025-06-30T13:01:36Z",
-            "duration": "0:03:40",
-            "duration_sec": 220,
-            "views": 907,
-            "likes": 13,
-            "comments": 1,
-            "url": "https://www.youtube.com/watch?v=DbcS0zXKRBE"
-        },
-        {
-            "video_id": "KRru4AG4jhg",
-            "title": "Восстановление Ауры и Энергетического Поля. Биоэнергетика. #лечебнаямузыка",
-            "type": "video",
-            "published_at": "2025-06-30T12:59:53Z",
-            "duration": "0:04:27",
-            "duration_sec": 267,
-            "views": 305,
-            "likes": 11,
-            "comments": 1,
-            "url": "https://www.youtube.com/watch?v=KRru4AG4jhg"
-        },
-        {
-            "video_id": "ah_deASnd6U",
-            "title": "Улучшение Биоэнергетики,  укрепление связи с вибрационным полем.",
-            "type": "video",
-            "published_at": "2025-06-30T12:58:52Z",
-            "duration": "0:02:01",
-            "duration_sec": 121,
-            "views": 434,
-            "likes": 0,
-            "comments": 0,
-            "url": "https://www.youtube.com/watch?v=ah_deASnd6U"
         },
         {
             "video_id": "2AokZxys6b4",
@@ -1594,7 +1582,7 @@
             "published_at": "2025-06-30T07:04:00Z",
             "duration": "0:04:53",
             "duration_sec": 293,
-            "views": 1339,
+            "views": 1349,
             "likes": 15,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=2AokZxys6b4"
@@ -1606,20 +1594,20 @@
             "published_at": "2025-06-28T07:39:58Z",
             "duration": "0:06:27",
             "duration_sec": 387,
-            "views": 1033,
-            "likes": 39,
+            "views": 1101,
+            "likes": 38,
             "comments": 20,
             "url": "https://www.youtube.com/watch?v=RMUcWRk9iSw"
         },
         {
             "video_id": "XwyTrb8-QMU",
-            "title": "Прьемьера! Не Бойся 2025 | Трибьют Шатунову | Рок Версия | На Русском и Английском #шатунов #музыка",
+            "title": "Не Бойся 2025 | Трибьют Шатунову | Рок Версия | На Русском и Английском",
             "type": "video",
             "published_at": "2025-06-27T13:11:00Z",
             "duration": "0:07:08",
             "duration_sec": 428,
-            "views": 1637,
-            "likes": 46,
+            "views": 1662,
+            "likes": 45,
             "comments": 18,
             "url": "https://www.youtube.com/watch?v=XwyTrb8-QMU"
         },
@@ -1630,7 +1618,7 @@
             "published_at": "2025-06-26T08:04:53Z",
             "duration": "0:04:31",
             "duration_sec": 271,
-            "views": 726,
+            "views": 735,
             "likes": 12,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=JzV51dUZOIQ"
@@ -1642,7 +1630,7 @@
             "published_at": "2025-06-25T09:45:04Z",
             "duration": "0:03:33",
             "duration_sec": 213,
-            "views": 902,
+            "views": 905,
             "likes": 16,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=a-e6CsTmLJg"
@@ -1654,8 +1642,8 @@
             "published_at": "2025-06-24T08:03:00Z",
             "duration": "0:06:15",
             "duration_sec": 375,
-            "views": 1036,
-            "likes": 24,
+            "views": 1043,
+            "likes": 25,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=dTw54Nu7Vqk"
         },
@@ -1666,9 +1654,9 @@
             "published_at": "2025-06-23T06:51:39Z",
             "duration": "0:04:37",
             "duration_sec": 277,
-            "views": 4707,
-            "likes": 76,
-            "comments": 25,
+            "views": 5107,
+            "likes": 81,
+            "comments": 37,
             "url": "https://www.youtube.com/watch?v=ZKINVQs4XdQ"
         },
         {
@@ -1678,8 +1666,8 @@
             "published_at": "2025-06-20T13:38:14Z",
             "duration": "0:07:08",
             "duration_sec": 428,
-            "views": 687,
-            "likes": 17,
+            "views": 699,
+            "likes": 18,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=Q8NtFaEJdAo"
         },
@@ -1690,7 +1678,7 @@
             "published_at": "2025-06-19T07:02:00Z",
             "duration": "0:08:28",
             "duration_sec": 508,
-            "views": 1283,
+            "views": 1326,
             "likes": 27,
             "comments": 20,
             "url": "https://www.youtube.com/watch?v=ErhZA2su7g0"
@@ -1702,7 +1690,7 @@
             "published_at": "2025-06-17T09:02:00Z",
             "duration": "0:03:22",
             "duration_sec": 202,
-            "views": 1918,
+            "views": 1930,
             "likes": 22,
             "comments": 3,
             "url": "https://www.youtube.com/watch?v=MmGm3a2kXOs"
@@ -1714,8 +1702,8 @@
             "published_at": "2025-06-16T07:02:00Z",
             "duration": "0:05:36",
             "duration_sec": 336,
-            "views": 3758,
-            "likes": 94,
+            "views": 3907,
+            "likes": 93,
             "comments": 31,
             "url": "https://www.youtube.com/watch?v=1Fx3xW0n4N4"
         },
@@ -1726,7 +1714,7 @@
             "published_at": "2025-06-15T07:13:17Z",
             "duration": "0:03:29",
             "duration_sec": 209,
-            "views": 628,
+            "views": 637,
             "likes": 7,
             "comments": 3,
             "url": "https://www.youtube.com/watch?v=MOHFKDxVL4Y"
@@ -1738,7 +1726,7 @@
             "published_at": "2025-06-14T10:37:04Z",
             "duration": "0:04:51",
             "duration_sec": 291,
-            "views": 690,
+            "views": 699,
             "likes": 13,
             "comments": 2,
             "url": "https://www.youtube.com/watch?v=w95l4cUBIXA"
@@ -1750,8 +1738,8 @@
             "published_at": "2025-06-13T08:05:00Z",
             "duration": "0:04:22",
             "duration_sec": 262,
-            "views": 2405,
-            "likes": 30,
+            "views": 2427,
+            "likes": 31,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=8owBBncs5jg"
         },
@@ -1762,7 +1750,7 @@
             "published_at": "2025-06-12T13:17:24Z",
             "duration": "0:03:56",
             "duration_sec": 236,
-            "views": 1814,
+            "views": 1825,
             "likes": 25,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=9nC_3nDhdmY"
@@ -1774,7 +1762,7 @@
             "published_at": "2025-06-12T05:15:05Z",
             "duration": "0:13:09",
             "duration_sec": 789,
-            "views": 855,
+            "views": 867,
             "likes": 19,
             "comments": 11,
             "url": "https://www.youtube.com/watch?v=zIKgh27dmaU"
@@ -1786,8 +1774,8 @@
             "published_at": "2025-06-10T06:22:59Z",
             "duration": "0:04:13",
             "duration_sec": 253,
-            "views": 38720,
-            "likes": 218,
+            "views": 39234,
+            "likes": 220,
             "comments": 32,
             "url": "https://www.youtube.com/watch?v=_JzqSYCamSw"
         },
@@ -1798,7 +1786,7 @@
             "published_at": "2025-06-09T08:59:44Z",
             "duration": "0:04:02",
             "duration_sec": 242,
-            "views": 1216,
+            "views": 1220,
             "likes": 17,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=qknh96AgMC8"
@@ -1810,7 +1798,7 @@
             "published_at": "2025-06-07T07:45:29Z",
             "duration": "0:04:09",
             "duration_sec": 249,
-            "views": 776,
+            "views": 779,
             "likes": 13,
             "comments": 3,
             "url": "https://www.youtube.com/watch?v=-MsD3Zrl9Cs"
@@ -1822,7 +1810,7 @@
             "published_at": "2025-06-05T07:05:31Z",
             "duration": "0:06:02",
             "duration_sec": 362,
-            "views": 1633,
+            "views": 1649,
             "likes": 24,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=q67kjwmRtJA"
@@ -1834,7 +1822,7 @@
             "published_at": "2025-06-03T09:43:11Z",
             "duration": "0:03:39",
             "duration_sec": 219,
-            "views": 781,
+            "views": 790,
             "likes": 21,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=3P6NE3MKeqo"
@@ -1846,7 +1834,7 @@
             "published_at": "2025-06-01T15:35:20Z",
             "duration": "0:07:50",
             "duration_sec": 470,
-            "views": 1084,
+            "views": 1096,
             "likes": 15,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=UlYwPI9mJ4M"
@@ -1858,22 +1846,10 @@
             "published_at": "2025-06-01T06:59:05Z",
             "duration": "0:03:26",
             "duration_sec": 206,
-            "views": 341,
+            "views": 344,
             "likes": 11,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=UyhJf13K9BA"
-        },
-        {
-            "video_id": "q2xWC9G3MLU",
-            "title": "🪐 2025 Trance Progressive Psychedelic Trance - Flight in Vibration #trance #music  #музыка #romanson",
-            "type": "video",
-            "published_at": "2025-05-31T06:57:49Z",
-            "duration": "0:07:08",
-            "duration_sec": 428,
-            "views": 196,
-            "likes": 10,
-            "comments": 6,
-            "url": "https://www.youtube.com/watch?v=q2xWC9G3MLU"
         },
         {
             "video_id": "5Lwv8BIBsUw",
@@ -1882,8 +1858,8 @@
             "published_at": "2025-05-30T07:05:00Z",
             "duration": "0:39:23",
             "duration_sec": 2363,
-            "views": 962,
-            "likes": 29,
+            "views": 977,
+            "likes": 30,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=5Lwv8BIBsUw"
         },
@@ -1894,7 +1870,7 @@
             "published_at": "2025-05-29T05:15:00Z",
             "duration": "0:03:18",
             "duration_sec": 198,
-            "views": 1059,
+            "views": 1078,
             "likes": 20,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=FiVigpTPO7g"
@@ -1906,7 +1882,7 @@
             "published_at": "2025-05-26T06:15:02Z",
             "duration": "0:03:20",
             "duration_sec": 200,
-            "views": 410,
+            "views": 411,
             "likes": 15,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=o4_htnZeKHE"
@@ -1918,8 +1894,8 @@
             "published_at": "2025-05-24T05:10:57Z",
             "duration": "0:04:28",
             "duration_sec": 268,
-            "views": 512,
-            "likes": 13,
+            "views": 523,
+            "likes": 14,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=pAZ2GfvgJ6E"
         },
@@ -1930,8 +1906,8 @@
             "published_at": "2025-05-23T07:46:35Z",
             "duration": "0:27:20",
             "duration_sec": 1640,
-            "views": 705,
-            "likes": 29,
+            "views": 716,
+            "likes": 30,
             "comments": 16,
             "url": "https://www.youtube.com/watch?v=VAUmVORXz0A"
         },
@@ -1942,7 +1918,7 @@
             "published_at": "2025-05-21T05:05:01Z",
             "duration": "0:03:45",
             "duration_sec": 225,
-            "views": 653,
+            "views": 663,
             "likes": 12,
             "comments": 2,
             "url": "https://www.youtube.com/watch?v=OP0RfPCjIz8"
@@ -1954,7 +1930,7 @@
             "published_at": "2025-05-20T05:52:06Z",
             "duration": "0:03:41",
             "duration_sec": 221,
-            "views": 875,
+            "views": 881,
             "likes": 22,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=xs0b98ma1PA"
@@ -1966,7 +1942,7 @@
             "published_at": "2025-05-19T10:06:46Z",
             "duration": "0:05:30",
             "duration_sec": 330,
-            "views": 603,
+            "views": 609,
             "likes": 15,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=mKkyVUstsEc"
@@ -1978,7 +1954,7 @@
             "published_at": "2025-05-18T10:13:34Z",
             "duration": "0:26:26",
             "duration_sec": 1586,
-            "views": 563,
+            "views": 569,
             "likes": 18,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=GNNhn5jsh1E"
@@ -1990,7 +1966,7 @@
             "published_at": "2025-05-15T16:40:26Z",
             "duration": "0:06:21",
             "duration_sec": 381,
-            "views": 769,
+            "views": 775,
             "likes": 22,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=ujZKlm8wo2k"
@@ -2002,7 +1978,7 @@
             "published_at": "2025-05-14T07:54:24Z",
             "duration": "0:04:45",
             "duration_sec": 285,
-            "views": 341,
+            "views": 343,
             "likes": 11,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=ThYdMiI8nNA"
@@ -2014,7 +1990,7 @@
             "published_at": "2025-05-12T14:28:29Z",
             "duration": "0:03:13",
             "duration_sec": 193,
-            "views": 1205,
+            "views": 1211,
             "likes": 25,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=BMRFVFtIpB8"
@@ -2026,7 +2002,7 @@
             "published_at": "2025-05-10T06:13:52Z",
             "duration": "0:05:35",
             "duration_sec": 335,
-            "views": 565,
+            "views": 572,
             "likes": 18,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=wjRAGknw9xg"
@@ -2038,8 +2014,8 @@
             "published_at": "2025-05-07T05:42:01Z",
             "duration": "0:04:33",
             "duration_sec": 273,
-            "views": 1603,
-            "likes": 38,
+            "views": 1621,
+            "likes": 39,
             "comments": 29,
             "url": "https://www.youtube.com/watch?v=Bbcbtk2OmAI"
         },
@@ -2050,7 +2026,7 @@
             "published_at": "2025-05-03T10:13:12Z",
             "duration": "0:06:51",
             "duration_sec": 411,
-            "views": 598,
+            "views": 602,
             "likes": 16,
             "comments": 3,
             "url": "https://www.youtube.com/watch?v=R3XkqTGMTbs"
@@ -2062,7 +2038,7 @@
             "published_at": "2025-05-01T05:54:37Z",
             "duration": "0:05:30",
             "duration_sec": 330,
-            "views": 1343,
+            "views": 1354,
             "likes": 52,
             "comments": 11,
             "url": "https://www.youtube.com/watch?v=7Cb0gRH4aBo"
@@ -2074,7 +2050,7 @@
             "published_at": "2025-04-30T09:02:37Z",
             "duration": "1:56:05",
             "duration_sec": 6965,
-            "views": 981,
+            "views": 1104,
             "likes": 23,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=j7oqK2bpCnk"
@@ -2086,8 +2062,8 @@
             "published_at": "2025-04-28T05:00:21Z",
             "duration": "0:04:17",
             "duration_sec": 257,
-            "views": 1990,
-            "likes": 42,
+            "views": 2013,
+            "likes": 43,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=QxQ_4GTr1x0"
         },
@@ -2098,7 +2074,7 @@
             "published_at": "2025-04-24T05:00:07Z",
             "duration": "0:06:35",
             "duration_sec": 395,
-            "views": 917,
+            "views": 936,
             "likes": 22,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=78HYYUaUsoU"
@@ -2110,7 +2086,7 @@
             "published_at": "2025-04-23T05:00:54Z",
             "duration": "1:04:33",
             "duration_sec": 3873,
-            "views": 215,
+            "views": 220,
             "likes": 13,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=vP5FHXPDH6Y"
@@ -2122,8 +2098,8 @@
             "published_at": "2025-04-22T05:00:56Z",
             "duration": "0:04:39",
             "duration_sec": 279,
-            "views": 2138,
-            "likes": 78,
+            "views": 2169,
+            "likes": 79,
             "comments": 13,
             "url": "https://www.youtube.com/watch?v=w4QFwOhCo54"
         },
@@ -2134,19 +2110,19 @@
             "published_at": "2025-04-21T08:00:35Z",
             "duration": "0:04:07",
             "duration_sec": 247,
-            "views": 1823,
+            "views": 1855,
             "likes": 44,
             "comments": 28,
             "url": "https://www.youtube.com/watch?v=ROrgvKo_wsM"
         },
         {
             "video_id": "JtFMbrDE6c8",
-            "title": "Танцевальная Инструментальная Музыка | для Вечеринки и Настроения | Роман Сон #romansonmusic #танцы",
+            "title": "Диско Симфония Времени | Танцевальная Инструментальная Музыка | для Вечеринки и Настроения ",
             "type": "video",
             "published_at": "2025-04-19T08:00:23Z",
             "duration": "0:09:00",
             "duration_sec": 540,
-            "views": 639,
+            "views": 653,
             "likes": 19,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=JtFMbrDE6c8"
@@ -2158,8 +2134,8 @@
             "published_at": "2025-04-18T08:38:45Z",
             "duration": "0:03:46",
             "duration_sec": 226,
-            "views": 1510,
-            "likes": 37,
+            "views": 1522,
+            "likes": 38,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=hXY53zG7rmc"
         },
@@ -2170,7 +2146,7 @@
             "published_at": "2025-04-16T08:00:25Z",
             "duration": "0:04:43",
             "duration_sec": 283,
-            "views": 1215,
+            "views": 1224,
             "likes": 21,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=NlAdcZjSmQY"
@@ -2182,8 +2158,8 @@
             "published_at": "2025-04-14T11:58:15Z",
             "duration": "2:12:06",
             "duration_sec": 7926,
-            "views": 3425,
-            "likes": 90,
+            "views": 3587,
+            "likes": 95,
             "comments": 17,
             "url": "https://www.youtube.com/watch?v=jbbGPmJXCGY"
         },
@@ -2194,7 +2170,7 @@
             "published_at": "2025-04-13T08:00:29Z",
             "duration": "0:04:39",
             "duration_sec": 279,
-            "views": 656,
+            "views": 663,
             "likes": 23,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=SwIlOBdnjBQ"
@@ -2206,7 +2182,7 @@
             "published_at": "2025-04-10T10:59:56Z",
             "duration": "0:06:27",
             "duration_sec": 387,
-            "views": 2992,
+            "views": 3024,
             "likes": 62,
             "comments": 26,
             "url": "https://www.youtube.com/watch?v=uPKQcGyEfyA"
@@ -2218,7 +2194,7 @@
             "published_at": "2025-04-09T08:06:56Z",
             "duration": "0:06:24",
             "duration_sec": 384,
-            "views": 610,
+            "views": 614,
             "likes": 31,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=2kU7nA_ATjg"
@@ -2230,7 +2206,7 @@
             "published_at": "2025-04-08T09:10:12Z",
             "duration": "0:03:34",
             "duration_sec": 214,
-            "views": 572,
+            "views": 582,
             "likes": 24,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=VAUC-0F-Ebs"
@@ -2242,7 +2218,7 @@
             "published_at": "2025-04-07T05:08:22Z",
             "duration": "0:06:51",
             "duration_sec": 411,
-            "views": 907,
+            "views": 909,
             "likes": 26,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=GA5wH6mTQqE"
@@ -2254,7 +2230,7 @@
             "published_at": "2025-04-05T04:55:42Z",
             "duration": "0:04:50",
             "duration_sec": 290,
-            "views": 780,
+            "views": 785,
             "likes": 30,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=jnT8JHBJbzA"
@@ -2266,7 +2242,7 @@
             "published_at": "2025-04-04T05:00:29Z",
             "duration": "0:04:21",
             "duration_sec": 261,
-            "views": 331,
+            "views": 333,
             "likes": 14,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=fDndLq8m5Ss"
@@ -2278,7 +2254,7 @@
             "published_at": "2025-04-03T05:05:52Z",
             "duration": "0:04:07",
             "duration_sec": 247,
-            "views": 1224,
+            "views": 1234,
             "likes": 40,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=4x2-MvWPMx0"
@@ -2290,7 +2266,7 @@
             "published_at": "2025-04-02T06:00:22Z",
             "duration": "0:04:25",
             "duration_sec": 265,
-            "views": 363,
+            "views": 366,
             "likes": 14,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=Mz0ev7iDLhY"
@@ -2302,7 +2278,7 @@
             "published_at": "2025-04-01T06:11:40Z",
             "duration": "0:07:15",
             "duration_sec": 435,
-            "views": 630,
+            "views": 638,
             "likes": 35,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=TQesyInIcD8"
@@ -2314,7 +2290,7 @@
             "published_at": "2025-03-31T08:00:00Z",
             "duration": "0:03:45",
             "duration_sec": 225,
-            "views": 912,
+            "views": 922,
             "likes": 39,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=-cvt_Bo3tRQ"
@@ -2326,7 +2302,7 @@
             "published_at": "2025-03-30T17:00:00Z",
             "duration": "0:03:27",
             "duration_sec": 207,
-            "views": 1208,
+            "views": 1230,
             "likes": 30,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=-CTSi56yGJw"
@@ -2338,7 +2314,7 @@
             "published_at": "2025-03-30T05:00:46Z",
             "duration": "0:04:36",
             "duration_sec": 276,
-            "views": 535,
+            "views": 542,
             "likes": 24,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=zTAkB779GHQ"
@@ -2350,7 +2326,7 @@
             "published_at": "2025-03-29T05:00:13Z",
             "duration": "0:48:31",
             "duration_sec": 2911,
-            "views": 1700,
+            "views": 1753,
             "likes": 36,
             "comments": 13,
             "url": "https://www.youtube.com/watch?v=PiSVpMCVD6g"
@@ -2362,7 +2338,7 @@
             "published_at": "2025-03-28T05:00:31Z",
             "duration": "0:04:43",
             "duration_sec": 283,
-            "views": 923,
+            "views": 929,
             "likes": 23,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=UDPSszj86-Q"
@@ -2374,7 +2350,7 @@
             "published_at": "2025-03-27T05:00:31Z",
             "duration": "0:05:48",
             "duration_sec": 348,
-            "views": 1045,
+            "views": 1055,
             "likes": 34,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=bE7eanB2o8s"
@@ -2386,7 +2362,7 @@
             "published_at": "2025-03-26T06:43:39Z",
             "duration": "0:04:34",
             "duration_sec": 274,
-            "views": 972,
+            "views": 980,
             "likes": 51,
             "comments": 15,
             "url": "https://www.youtube.com/watch?v=A2ZY3fPbPN8"
@@ -2398,7 +2374,7 @@
             "published_at": "2025-03-24T10:31:33Z",
             "duration": "0:05:36",
             "duration_sec": 336,
-            "views": 1336,
+            "views": 1347,
             "likes": 37,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=ku-VlSm50A0"
@@ -2410,7 +2386,7 @@
             "published_at": "2025-03-22T05:00:04Z",
             "duration": "0:05:20",
             "duration_sec": 320,
-            "views": 423,
+            "views": 426,
             "likes": 22,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=63CHs0wG154"
@@ -2422,7 +2398,7 @@
             "published_at": "2025-03-21T12:27:00Z",
             "duration": "0:05:19",
             "duration_sec": 319,
-            "views": 344,
+            "views": 347,
             "likes": 15,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=wHvIpE1hp9k"
@@ -2434,8 +2410,8 @@
             "published_at": "2025-03-20T09:53:02Z",
             "duration": "0:04:29",
             "duration_sec": 269,
-            "views": 423,
-            "likes": 17,
+            "views": 432,
+            "likes": 18,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=YYVG9NIyG9c"
         },
@@ -2446,7 +2422,7 @@
             "published_at": "2025-03-19T07:16:32Z",
             "duration": "0:06:51",
             "duration_sec": 411,
-            "views": 664,
+            "views": 665,
             "likes": 24,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=Hm4dLWIgVSw"
@@ -2458,7 +2434,7 @@
             "published_at": "2025-03-18T05:00:21Z",
             "duration": "0:05:31",
             "duration_sec": 331,
-            "views": 250,
+            "views": 251,
             "likes": 16,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=UDfIdnTS7S0"
@@ -2482,7 +2458,7 @@
             "published_at": "2025-03-15T05:00:02Z",
             "duration": "0:04:34",
             "duration_sec": 274,
-            "views": 627,
+            "views": 629,
             "likes": 21,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=angRj8bkq_U"
@@ -2494,7 +2470,7 @@
             "published_at": "2025-03-14T05:00:40Z",
             "duration": "0:08:35",
             "duration_sec": 515,
-            "views": 363,
+            "views": 367,
             "likes": 13,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=jor6LPI9mhs"
@@ -2506,7 +2482,7 @@
             "published_at": "2025-03-13T05:00:42Z",
             "duration": "0:05:55",
             "duration_sec": 355,
-            "views": 2806,
+            "views": 2822,
             "likes": 62,
             "comments": 13,
             "url": "https://www.youtube.com/watch?v=qLpNUnD0cHU"
@@ -2518,7 +2494,7 @@
             "published_at": "2025-03-12T05:00:37Z",
             "duration": "0:05:15",
             "duration_sec": 315,
-            "views": 1439,
+            "views": 1449,
             "likes": 48,
             "comments": 13,
             "url": "https://www.youtube.com/watch?v=juK_hwhrfsA"
@@ -2554,7 +2530,7 @@
             "published_at": "2025-03-10T04:11:08Z",
             "duration": "0:04:42",
             "duration_sec": 282,
-            "views": 3899,
+            "views": 3918,
             "likes": 56,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=mJv8b3v8HM0"
@@ -2566,7 +2542,7 @@
             "published_at": "2025-03-09T05:00:06Z",
             "duration": "0:04:13",
             "duration_sec": 253,
-            "views": 1721,
+            "views": 1726,
             "likes": 37,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=4y1TrjjR34o"
@@ -2578,20 +2554,20 @@
             "published_at": "2025-03-08T03:43:00Z",
             "duration": "0:05:33",
             "duration_sec": 333,
-            "views": 4156,
+            "views": 4194,
             "likes": 52,
             "comments": 20,
             "url": "https://www.youtube.com/watch?v=LOuOynD9XkA"
         },
         {
             "video_id": "cXk4wPBd7t4",
-            "title": "Лучшая Кавер-Версия - Зеленоглазое Такси 2025 I Роман Сон #romansonmusic #зеленоглазоетакси",
+            "title": "Зеленоглазое Такси 2025 🚕🛣️🚦I Кавер Танцевальный Шансон ",
             "type": "video",
             "published_at": "2025-03-06T09:08:15Z",
             "duration": "0:05:06",
             "duration_sec": 306,
-            "views": 185381,
-            "likes": 786,
+            "views": 188923,
+            "likes": 791,
             "comments": 23,
             "url": "https://www.youtube.com/watch?v=cXk4wPBd7t4"
         },
@@ -2602,7 +2578,7 @@
             "published_at": "2025-03-04T05:00:47Z",
             "duration": "0:04:53",
             "duration_sec": 293,
-            "views": 1282,
+            "views": 1287,
             "likes": 23,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=vhdrvY8mvlo"
@@ -2614,7 +2590,7 @@
             "published_at": "2025-03-03T11:16:08Z",
             "duration": "0:04:01",
             "duration_sec": 241,
-            "views": 1111,
+            "views": 1113,
             "likes": 22,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=3XKXe7m_QaY"
@@ -2638,7 +2614,7 @@
             "published_at": "2025-03-01T05:00:28Z",
             "duration": "0:04:08",
             "duration_sec": 248,
-            "views": 1434,
+            "views": 1437,
             "likes": 23,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=_FKswMXkJNc"
@@ -2650,7 +2626,7 @@
             "published_at": "2025-02-28T05:00:59Z",
             "duration": "0:04:05",
             "duration_sec": 245,
-            "views": 1198,
+            "views": 1203,
             "likes": 33,
             "comments": 3,
             "url": "https://www.youtube.com/watch?v=rbvTo_mZBhE"
@@ -2662,7 +2638,7 @@
             "published_at": "2025-02-26T05:00:03Z",
             "duration": "0:05:39",
             "duration_sec": 339,
-            "views": 1311,
+            "views": 1316,
             "likes": 28,
             "comments": 7,
             "url": "https://www.youtube.com/watch?v=4F1H-Z0Om9Y"
@@ -2674,7 +2650,7 @@
             "published_at": "2025-02-25T14:43:28Z",
             "duration": "0:03:52",
             "duration_sec": 232,
-            "views": 2102,
+            "views": 2110,
             "likes": 55,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=eSzSphQFi7k"
@@ -2686,7 +2662,7 @@
             "published_at": "2025-02-25T05:00:38Z",
             "duration": "0:05:01",
             "duration_sec": 301,
-            "views": 713,
+            "views": 715,
             "likes": 19,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=fhGuU9CMJOQ"
@@ -2698,8 +2674,8 @@
             "published_at": "2025-02-24T08:00:06Z",
             "duration": "0:03:46",
             "duration_sec": 226,
-            "views": 25119,
-            "likes": 462,
+            "views": 25190,
+            "likes": 464,
             "comments": 47,
             "url": "https://www.youtube.com/watch?v=92uefUNQNbk"
         },
@@ -2710,7 +2686,7 @@
             "published_at": "2025-02-23T05:00:33Z",
             "duration": "0:04:10",
             "duration_sec": 250,
-            "views": 318,
+            "views": 319,
             "likes": 15,
             "comments": 11,
             "url": "https://www.youtube.com/watch?v=Z0qvWOxmw8w"
@@ -2722,7 +2698,7 @@
             "published_at": "2025-02-22T05:00:24Z",
             "duration": "0:06:29",
             "duration_sec": 389,
-            "views": 418,
+            "views": 419,
             "likes": 10,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=JEwD7mFZlCE"
@@ -2734,7 +2710,7 @@
             "published_at": "2025-02-21T05:00:41Z",
             "duration": "0:05:50",
             "duration_sec": 350,
-            "views": 1157,
+            "views": 1165,
             "likes": 31,
             "comments": 13,
             "url": "https://www.youtube.com/watch?v=gc7qAJAPRf8"
@@ -2746,7 +2722,7 @@
             "published_at": "2025-02-20T05:00:47Z",
             "duration": "0:04:40",
             "duration_sec": 280,
-            "views": 3543,
+            "views": 3552,
             "likes": 55,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=sf1Up7ocI0w"
@@ -2758,7 +2734,7 @@
             "published_at": "2025-02-19T05:00:38Z",
             "duration": "0:04:11",
             "duration_sec": 251,
-            "views": 2363,
+            "views": 2379,
             "likes": 37,
             "comments": 8,
             "url": "https://www.youtube.com/watch?v=eZ83m3wSELY"
@@ -2770,7 +2746,7 @@
             "published_at": "2025-02-18T05:00:03Z",
             "duration": "0:04:10",
             "duration_sec": 250,
-            "views": 3968,
+            "views": 3987,
             "likes": 66,
             "comments": 11,
             "url": "https://www.youtube.com/watch?v=475inwXZr7s"
@@ -2782,7 +2758,7 @@
             "published_at": "2025-02-17T14:00:15Z",
             "duration": "0:03:10",
             "duration_sec": 190,
-            "views": 1496,
+            "views": 1502,
             "likes": 32,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=Nj-QJkxQkA0"
@@ -2806,7 +2782,7 @@
             "published_at": "2025-02-14T05:00:11Z",
             "duration": "0:06:24",
             "duration_sec": 384,
-            "views": 2997,
+            "views": 3001,
             "likes": 31,
             "comments": 11,
             "url": "https://www.youtube.com/watch?v=BzAMLgi5s_0"
@@ -2818,7 +2794,7 @@
             "published_at": "2025-02-13T05:00:06Z",
             "duration": "0:07:02",
             "duration_sec": 422,
-            "views": 1318,
+            "views": 1322,
             "likes": 33,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=FHNufo7QeSI"
@@ -2830,7 +2806,7 @@
             "published_at": "2025-02-12T05:00:31Z",
             "duration": "0:04:53",
             "duration_sec": 293,
-            "views": 1459,
+            "views": 1521,
             "likes": 21,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=P-5sGTuMiHc"
@@ -2842,7 +2818,7 @@
             "published_at": "2025-02-11T05:00:12Z",
             "duration": "0:05:15",
             "duration_sec": 315,
-            "views": 13197,
+            "views": 13208,
             "likes": 116,
             "comments": 13,
             "url": "https://www.youtube.com/watch?v=AID6wnGWjew"
@@ -2854,7 +2830,7 @@
             "published_at": "2025-02-10T06:51:08Z",
             "duration": "0:06:01",
             "duration_sec": 361,
-            "views": 543,
+            "views": 549,
             "likes": 19,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=cg6DL2_xHe4"
@@ -2866,7 +2842,7 @@
             "published_at": "2025-02-08T06:59:04Z",
             "duration": "0:04:16",
             "duration_sec": 256,
-            "views": 302,
+            "views": 310,
             "likes": 8,
             "comments": 3,
             "url": "https://www.youtube.com/watch?v=oco4JHG8cM8"
@@ -2878,7 +2854,7 @@
             "published_at": "2025-02-08T05:00:31Z",
             "duration": "0:04:18",
             "duration_sec": 258,
-            "views": 276,
+            "views": 279,
             "likes": 10,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=W0a-ayLAA48"
@@ -2890,7 +2866,7 @@
             "published_at": "2025-02-07T05:00:24Z",
             "duration": "0:04:53",
             "duration_sec": 293,
-            "views": 371,
+            "views": 373,
             "likes": 15,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=U_lm9XXkfys"
@@ -2902,7 +2878,7 @@
             "published_at": "2025-02-05T08:23:31Z",
             "duration": "0:04:15",
             "duration_sec": 255,
-            "views": 273,
+            "views": 274,
             "likes": 11,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=zQihTL0sJK4"
@@ -2914,7 +2890,7 @@
             "published_at": "2025-02-05T08:00:08Z",
             "duration": "0:04:15",
             "duration_sec": 255,
-            "views": 125,
+            "views": 126,
             "likes": 5,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=451tMQWmH5s"
@@ -2926,7 +2902,7 @@
             "published_at": "2025-02-02T12:29:10Z",
             "duration": "0:03:48",
             "duration_sec": 228,
-            "views": 559,
+            "views": 566,
             "likes": 19,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=4XWsfZx_rwQ"
@@ -2938,7 +2914,7 @@
             "published_at": "2025-01-27T09:50:36Z",
             "duration": "0:29:11",
             "duration_sec": 1751,
-            "views": 233,
+            "views": 238,
             "likes": 11,
             "comments": 3,
             "url": "https://www.youtube.com/watch?v=vjXalYTmjUE"
@@ -2950,7 +2926,7 @@
             "published_at": "2025-01-24T09:41:49Z",
             "duration": "0:04:14",
             "duration_sec": 254,
-            "views": 394,
+            "views": 397,
             "likes": 19,
             "comments": 3,
             "url": "https://www.youtube.com/watch?v=vgLyZP0ekFk"
@@ -2974,7 +2950,7 @@
             "published_at": "2025-01-22T03:23:57Z",
             "duration": "0:06:29",
             "duration_sec": 389,
-            "views": 398,
+            "views": 405,
             "likes": 17,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=il4B_Pu28n0"
@@ -2986,7 +2962,7 @@
             "published_at": "2025-01-21T04:57:49Z",
             "duration": "0:02:10",
             "duration_sec": 130,
-            "views": 598,
+            "views": 603,
             "likes": 15,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=vLjUlUXzrAk"
@@ -3022,7 +2998,7 @@
             "published_at": "2025-01-16T05:00:38Z",
             "duration": "0:05:57",
             "duration_sec": 357,
-            "views": 774,
+            "views": 782,
             "likes": 35,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=fRGhGORMJiU"
@@ -3034,7 +3010,7 @@
             "published_at": "2025-01-14T09:57:16Z",
             "duration": "0:01:01",
             "duration_sec": 61,
-            "views": 440,
+            "views": 441,
             "likes": 10,
             "comments": 1,
             "url": "https://www.youtube.com/watch?v=POJGr8yNofY"
@@ -3046,7 +3022,7 @@
             "published_at": "2025-01-14T09:52:22Z",
             "duration": "0:31:12",
             "duration_sec": 1872,
-            "views": 244,
+            "views": 246,
             "likes": 10,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=ngw4goqc1rc"
@@ -3070,7 +3046,7 @@
             "published_at": "2025-01-13T05:00:27Z",
             "duration": "0:03:29",
             "duration_sec": 209,
-            "views": 313,
+            "views": 320,
             "likes": 12,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=_elWtbPKuHg"
@@ -3082,7 +3058,7 @@
             "published_at": "2025-01-11T04:44:55Z",
             "duration": "0:03:46",
             "duration_sec": 226,
-            "views": 975,
+            "views": 978,
             "likes": 30,
             "comments": 12,
             "url": "https://www.youtube.com/watch?v=ELsx8XVxnIk"
@@ -3094,7 +3070,7 @@
             "published_at": "2025-01-09T05:11:38Z",
             "duration": "0:01:01",
             "duration_sec": 61,
-            "views": 96,
+            "views": 97,
             "likes": 6,
             "comments": 4,
             "url": "https://www.youtube.com/watch?v=yPKhDrWhtzs"
@@ -3106,7 +3082,7 @@
             "published_at": "2025-01-09T05:00:34Z",
             "duration": "0:07:38",
             "duration_sec": 458,
-            "views": 284,
+            "views": 290,
             "likes": 14,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=h4mW7-26XpE"
@@ -3142,7 +3118,7 @@
             "published_at": "2025-01-05T09:19:15Z",
             "duration": "0:06:51",
             "duration_sec": 411,
-            "views": 527,
+            "views": 532,
             "likes": 23,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=_1FEL3gzTZ8"
@@ -3154,9 +3130,9 @@
             "published_at": "2025-01-04T11:00:07Z",
             "duration": "0:06:03",
             "duration_sec": 363,
-            "views": 4452,
-            "likes": 108,
-            "comments": 23,
+            "views": 4613,
+            "likes": 109,
+            "comments": 24,
             "url": "https://www.youtube.com/watch?v=8TXxiGwlqtU"
         },
         {
@@ -3166,7 +3142,7 @@
             "published_at": "2024-12-31T21:15:04Z",
             "duration": "0:06:56",
             "duration_sec": 416,
-            "views": 1037,
+            "views": 1042,
             "likes": 39,
             "comments": 10,
             "url": "https://www.youtube.com/watch?v=w6Nd3B_riBk"
@@ -3178,22 +3154,10 @@
             "published_at": "2024-12-31T03:45:03Z",
             "duration": "0:02:26",
             "duration_sec": 146,
-            "views": 187,
+            "views": 193,
             "likes": 10,
             "comments": 1,
             "url": "https://www.youtube.com/watch?v=D3bYiY85HU4"
-        },
-        {
-            "video_id": "0XlUFGAc1bc",
-            "title": "Roman Son - New Year's Galaxy of Wishes / ©2025 I Биоэнергетический Клип#romanson #романсон",
-            "type": "video",
-            "published_at": "2024-12-30T08:18:20Z",
-            "duration": "0:07:39",
-            "duration_sec": 459,
-            "views": 135,
-            "likes": 12,
-            "comments": 2,
-            "url": "https://www.youtube.com/watch?v=0XlUFGAc1bc"
         },
         {
             "video_id": "KCzmxJ30SZA",
@@ -3202,7 +3166,7 @@
             "published_at": "2024-12-27T05:00:13Z",
             "duration": "0:31:16",
             "duration_sec": 1876,
-            "views": 439,
+            "views": 449,
             "likes": 17,
             "comments": 9,
             "url": "https://www.youtube.com/watch?v=KCzmxJ30SZA"
@@ -3214,7 +3178,7 @@
             "published_at": "2024-12-25T08:00:28Z",
             "duration": "0:03:03",
             "duration_sec": 183,
-            "views": 216,
+            "views": 218,
             "likes": 5,
             "comments": 5,
             "url": "https://www.youtube.com/watch?v=LrIhFOpnX6M"
@@ -3226,8 +3190,8 @@
             "published_at": "2024-12-25T05:00:22Z",
             "duration": "0:05:10",
             "duration_sec": 310,
-            "views": 1086,
-            "likes": 46,
+            "views": 1102,
+            "likes": 47,
             "comments": 19,
             "url": "https://www.youtube.com/watch?v=OcGkAf4jyHI"
         },
@@ -3238,8 +3202,8 @@
             "published_at": "2024-12-24T05:00:20Z",
             "duration": "0:03:49",
             "duration_sec": 229,
-            "views": 980,
-            "likes": 29,
+            "views": 997,
+            "likes": 28,
             "comments": 18,
             "url": "https://www.youtube.com/watch?v=GNB1YVTkRng"
         },
@@ -3250,8 +3214,8 @@
             "published_at": "2024-12-23T05:00:38Z",
             "duration": "0:04:42",
             "duration_sec": 282,
-            "views": 2865,
-            "likes": 71,
+            "views": 2980,
+            "likes": 73,
             "comments": 19,
             "url": "https://www.youtube.com/watch?v=mR8x0bS4Azw"
         },
@@ -3262,58 +3226,10 @@
             "published_at": "2024-12-19T05:00:44Z",
             "duration": "0:03:29",
             "duration_sec": 209,
-            "views": 216,
+            "views": 219,
             "likes": 12,
             "comments": 6,
             "url": "https://www.youtube.com/watch?v=l5eJsAV2DWQ"
-        },
-        {
-            "video_id": "vt-46efOlhE",
-            "title": "Роман Сон - Джентльмены Удачи (Ремикс Инструментал) / ©2025 I Саундтрек #romanson #романсон",
-            "type": "video",
-            "published_at": "2024-12-18T05:00:44Z",
-            "duration": "0:06:09",
-            "duration_sec": 369,
-            "views": 1498,
-            "likes": 43,
-            "comments": 8,
-            "url": "https://www.youtube.com/watch?v=vt-46efOlhE"
-        },
-        {
-            "video_id": "V8Uj1N4eoYM",
-            "title": "Роман Сон - Джентльмены Удачи (Кавер Саундтрек) / Remastered #romanson #романсон",
-            "type": "video",
-            "published_at": "2024-12-18T05:00:22Z",
-            "duration": "0:03:31",
-            "duration_sec": 211,
-            "views": 686,
-            "likes": 17,
-            "comments": 3,
-            "url": "https://www.youtube.com/watch?v=V8Uj1N4eoYM"
-        },
-        {
-            "video_id": "FnR9mxPMZ9Q",
-            "title": "Роман Сон - Шарик У Энджел (Ремикс) / ©2025 I Italo Disco Style #romanson #романсон",
-            "type": "video",
-            "published_at": "2024-12-17T05:00:08Z",
-            "duration": "0:03:52",
-            "duration_sec": 232,
-            "views": 829,
-            "likes": 21,
-            "comments": 5,
-            "url": "https://www.youtube.com/watch?v=FnR9mxPMZ9Q"
-        },
-        {
-            "video_id": "2Qjfxg50sXs",
-            "title": "Роман Сон - Ты Королева снежная / ©2025 I На всех Музыкальных Площадках #romansonmusic #романсон",
-            "type": "video",
-            "published_at": "2024-12-16T05:00:02Z",
-            "duration": "0:05:53",
-            "duration_sec": 353,
-            "views": 3407,
-            "likes": 89,
-            "comments": 28,
-            "url": "https://www.youtube.com/watch?v=2Qjfxg50sXs"
         }
     ]
 }
