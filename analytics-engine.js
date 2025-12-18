@@ -368,7 +368,7 @@ class AnalyticsEngine {
      * Returns: { labels: [], totalViews: [], videoCount: [], medianViews: [] }
      * Используется для годовых графиков в модальном окне канала
      */
-    getMonthlyStatistics(channel) {
+    getMonthlyStatistics(channel, includeProjection = true) {
         const referenceDate = this.getReferenceDate();
         const endDate = new Date(referenceDate);
         
@@ -401,6 +401,7 @@ class AnalyticsEngine {
         const totalViews = [];
         const videoCount = [];
         const medianViews = [];
+        const isProjection = [];
 
         // Генерируем 12 месяцев назад от referenceDate
         for (let i = 11; i >= 0; i--) {
@@ -416,19 +417,58 @@ class AnalyticsEngine {
             const label = `${monthNamesRu[date.getMonth()]} ${date.getFullYear()}`;
             labels.push(label);
 
-            if (monthlyData[monthKey]) {
-                const data = monthlyData[monthKey];
-                totalViews.push(data.totalViews);
-                videoCount.push(data.videos.length);
+            // Check if this is the current month (i === 0)
+            const isCurrentMonth = i === 0;
+            
+            if (isCurrentMonth && includeProjection) {
+                // Calculate projection for current month using 31-day sliding window
+                const projectionEndDate = new Date(referenceDate);
+                const projectionStartDate = new Date(referenceDate);
                 
-                // Рассчитываем медиану просмотров для месяца
-                const views = data.videos.map(v => v.views || 0);
-                medianViews.push(this._calculateMedian(views));
+                // Get number of days in current month
+                const daysInCurrentMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+                
+                // Calculate start date for sliding window (last N days where N = days in current month)
+                projectionStartDate.setDate(projectionStartDate.getDate() - daysInCurrentMonth + 1);
+                
+                // Get videos in this sliding window
+                const projectionVideos = this.getVideosInPeriod(channel, projectionStartDate, projectionEndDate);
+                
+                // Calculate projection metrics
+                const projectionTotalViews = projectionVideos.reduce((sum, v) => sum + (v.views || 0), 0);
+                const projectionVideoCount = projectionVideos.length;
+                const projectionViews = projectionVideos.map(v => v.views || 0);
+                const projectionMedian = this._calculateMedian(projectionViews);
+                
+                totalViews.push(projectionTotalViews);
+                videoCount.push(projectionVideoCount);
+                medianViews.push(projectionMedian);
+                isProjection.push(true);
+                
+                // Store projection date range for tooltip
+                if (!this.projectionDateRange) {
+                    this.projectionDateRange = {
+                        start: projectionStartDate,
+                        end: projectionEndDate
+                    };
+                }
             } else {
-                // Месяц без видео
-                totalViews.push(0);
-                videoCount.push(0);
-                medianViews.push(0);
+                // Regular historical data
+                if (monthlyData[monthKey]) {
+                    const data = monthlyData[monthKey];
+                    totalViews.push(data.totalViews);
+                    videoCount.push(data.videos.length);
+                    
+                    // Рассчитываем медиану просмотров для месяца
+                    const views = data.videos.map(v => v.views || 0);
+                    medianViews.push(this._calculateMedian(views));
+                } else {
+                    // Месяц без видео
+                    totalViews.push(0);
+                    videoCount.push(0);
+                    medianViews.push(0);
+                }
+                isProjection.push(false);
             }
         }
 
@@ -436,7 +476,8 @@ class AnalyticsEngine {
             labels,
             totalViews,
             videoCount,
-            medianViews
+            medianViews,
+            isProjection
         };
     }
 }

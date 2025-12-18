@@ -104,6 +104,26 @@ class Dashboard {
                 this.switchTab(tabName);
             });
         });
+
+        // Projection checkbox
+        const projectionCheckbox = document.getElementById('projectionCheckbox');
+        if (projectionCheckbox) {
+            projectionCheckbox.addEventListener('change', () => {
+                // Re-render analytics charts when projection setting changes
+                const modal = document.getElementById('channelModal');
+                if (modal && modal.classList.contains('active')) {
+                    // Find current channel
+                    const channelName = document.getElementById('modalChannelName')?.textContent;
+                    if (channelName) {
+                        const channel = this.channels.find(ch => ch.channel_name === channelName);
+                        if (channel) {
+                            this.renderModalVolumeActivityChart(channel);
+                            this.renderModalContentQualityChart(channel);
+                        }
+                    }
+                }
+            });
+        }
     }
     
     /**
@@ -1167,13 +1187,25 @@ class Dashboard {
      * Render "Объем и Активность" chart (Combo: bars + line) за 12 месяцев
      */
     renderModalVolumeActivityChart(channel) {
-        const monthlyStats = analyticsEngine.getMonthlyStatistics(channel);
+        const projectionEnabled = document.getElementById('projectionCheckbox')?.checked ?? true;
+        const monthlyStats = analyticsEngine.getMonthlyStatistics(channel, projectionEnabled);
         
         const ctx = document.getElementById('modalVolumeActivityChart').getContext('2d');
         
         if (this.charts.modalVolumeActivityChart) {
             this.charts.modalVolumeActivityChart.destroy();
         }
+
+        // Prepare styling for bars based on projection status
+        const barBackgroundColors = monthlyStats.videoCount.map((_, i) => 
+            monthlyStats.isProjection[i] ? 'rgba(168, 85, 247, 0.4)' : 'rgba(168, 85, 247, 0.7)'
+        );
+        const barBorderColors = monthlyStats.videoCount.map((_, i) => 
+            'rgba(168, 85, 247, 1)'
+        );
+        const barBorderDash = monthlyStats.videoCount.map((_, i) => 
+            monthlyStats.isProjection[i] ? [5, 5] : []
+        );
 
         this.charts.modalVolumeActivityChart = new Chart(ctx, {
             type: 'bar',
@@ -1183,11 +1215,12 @@ class Dashboard {
                     {
                         label: 'Количество видео',
                         data: monthlyStats.videoCount,
-                        backgroundColor: 'rgba(168, 85, 247, 0.7)',
-                        borderColor: 'rgba(168, 85, 247, 1)',
+                        backgroundColor: barBackgroundColors,
+                        borderColor: barBorderColors,
                         borderWidth: 2,
                         yAxisID: 'y',
-                        type: 'bar'
+                        type: 'bar',
+                        borderDash: barBorderDash
                     },
                     {
                         label: 'Общее количество просмотров',
@@ -1198,7 +1231,16 @@ class Dashboard {
                         tension: 0.4,
                         yAxisID: 'y1',
                         type: 'line',
-                        fill: false
+                        fill: false,
+                        segment: {
+                            borderDash: ctx => {
+                                const idx = ctx.p0DataIndex;
+                                if (monthlyStats.isProjection[idx] || monthlyStats.isProjection[idx + 1]) {
+                                    return [5, 5];
+                                }
+                                return [];
+                            }
+                        }
                     }
                 ]
             },
@@ -1229,12 +1271,27 @@ class Dashboard {
                                 if (context.parsed.y !== null) {
                                     // Show raw integer for video count, formatted number for views
                                     if (context.dataset.label === 'Количество видео') {
-                                        label += Math.round(context.parsed.y);
+                                        label += monthlyStats.isProjection[context.dataIndex] 
+                                            ? context.parsed.y.toFixed(1) 
+                                            : Math.round(context.parsed.y);
                                     } else {
                                         label += analyticsEngine.formatNumber(context.parsed.y);
                                     }
                                 }
                                 return label;
+                            },
+                            afterLabel: function(context) {
+                                if (monthlyStats.isProjection[context.dataIndex] && analyticsEngine.projectionDateRange) {
+                                    const startDate = analyticsEngine.projectionDateRange.start;
+                                    const endDate = analyticsEngine.projectionDateRange.end;
+                                    const formatDate = (d) => {
+                                        const day = d.getDate();
+                                        const monthNames = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+                                        return `${day} ${monthNames[d.getMonth()]}`;
+                                    };
+                                    return `Прогноз (оценка)\nна основе данных с ${formatDate(startDate)} по ${formatDate(endDate)}`;
+                                }
+                                return '';
                             }
                         }
                     }
@@ -1298,7 +1355,8 @@ class Dashboard {
      * Render "Качество Контента" chart (Line: median views) за 12 месяцев
      */
     renderModalContentQualityChart(channel) {
-        const monthlyStats = analyticsEngine.getMonthlyStatistics(channel);
+        const projectionEnabled = document.getElementById('projectionCheckbox')?.checked ?? true;
+        const monthlyStats = analyticsEngine.getMonthlyStatistics(channel, projectionEnabled);
         
         const ctx = document.getElementById('modalContentQualityChart').getContext('2d');
         
@@ -1323,7 +1381,16 @@ class Dashboard {
                         pointHoverRadius: 6,
                         pointBackgroundColor: 'rgba(16, 185, 129, 1)',
                         pointBorderColor: '#1e293b',
-                        pointBorderWidth: 2
+                        pointBorderWidth: 2,
+                        segment: {
+                            borderDash: ctx => {
+                                const idx = ctx.p0DataIndex;
+                                if (monthlyStats.isProjection[idx] || monthlyStats.isProjection[idx + 1]) {
+                                    return [5, 5];
+                                }
+                                return [];
+                            }
+                        }
                     }
                 ]
             },
@@ -1355,6 +1422,19 @@ class Dashboard {
                                     label += analyticsEngine.formatNumber(context.parsed.y);
                                 }
                                 return label;
+                            },
+                            afterLabel: function(context) {
+                                if (monthlyStats.isProjection[context.dataIndex] && analyticsEngine.projectionDateRange) {
+                                    const startDate = analyticsEngine.projectionDateRange.start;
+                                    const endDate = analyticsEngine.projectionDateRange.end;
+                                    const formatDate = (d) => {
+                                        const day = d.getDate();
+                                        const monthNames = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+                                        return `${day} ${monthNames[d.getMonth()]}`;
+                                    };
+                                    return `Прогноз (оценка)\nна основе данных с ${formatDate(startDate)} по ${formatDate(endDate)}`;
+                                }
+                                return '';
                             }
                         }
                     }
