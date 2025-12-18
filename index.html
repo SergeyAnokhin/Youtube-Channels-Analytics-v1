@@ -141,8 +141,8 @@
             <div class="modal-body">
                 <div class="channel-header">
                     <h2 id="modalChannelName"></h2>
-                    <p id="modalChannelEmojis" class="emojis"></p>
-                    <p id="modalChannelId" class="channel-id"></p>
+                    <span id="modalChannelEmojis" class="emojis"></span>
+                    <span id="modalChannelId" class="channel-id"></span>
                     <a id="modalChannelLink" href="#" target="_blank" class="youtube-link">
                         <span>🔗 Visit on YouTube</span>
                     </a>
@@ -213,21 +213,23 @@
 
                     <!-- Analytics Tab -->
                     <div class="tab-content" data-tab="analytics">
-                        <!-- Projection Control -->
-                        <div class="projection-control" style="margin-bottom: 1.5rem; padding: 1rem; background: rgba(168, 85, 247, 0.1); border-radius: 8px; border: 1px solid rgba(168, 85, 247, 0.2);">
-                            <label style="display: flex; align-items: center; cursor: pointer; user-select: none;">
-                                <input type="checkbox" id="projectionCheckbox" checked style="margin-right: 0.5rem; cursor: pointer; width: 18px; height: 18px;">
-                                <span style="font-weight: 500; color: var(--text-primary);" data-tooltip="Оценка текущего месяца на основе данных за последние 31 день. Позволяет увидеть потенциальный результат месяца при сохранении текущего темпа.">
-                                    Показать прогноз на текущий месяц
-                                </span>
-                            </label>
-                        </div>
-                        
                         <div class="analytics-section">
-                            <h3>📈 Объем и Активность (последние 12 месяцев)</h3>
-                            <p style="color: var(--text-tertiary); font-size: 0.9rem; margin-bottom: 1rem;">
-                                Корреляция между частотой публикаций и общим трафиком
-                            </p>
+                            <div class="chart-header-with-control">
+                                <div>
+                                    <h3>📈 Объем и Активность (последние 12 месяцев)</h3>
+                                    <p style="color: var(--text-tertiary); font-size: 0.9rem; margin-bottom: 1rem;">
+                                        Корреляция между частотой публикаций и общим трафиком
+                                    </p>
+                                </div>
+                                <div class="projection-checkbox-wrapper">
+                                    <label class="projection-checkbox-label">
+                                        <input type="checkbox" id="projectionCheckbox" checked>
+                                        <span data-tooltip="Оценка текущего месяца на основе данных за последние 31 день. Позволяет увидеть потенциальный результат месяца при сохранении текущего темпа.">
+                                            Показать прогноз
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
                             <canvas id="modalVolumeActivityChart" style="max-height: 350px;"></canvas>
                         </div>
                         <div class="analytics-section">
