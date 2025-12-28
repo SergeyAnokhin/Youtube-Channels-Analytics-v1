@@ -1,0 +1,235 @@
+{
+    "channel_name": "AIRushV",
+    "channel_id": "UCujohSPaG-BkYIGDm9E3lTQ",
+    "filter_used": "VIDEO",
+    "created_at": "2020-12-07T20:04:21.772909Z",
+    "total_views": 11565879,
+    "subscribers": 34500,
+    "style": "Нейро-Ностальгия / Трибьют Легенд",
+    "emojis": "🎸🧟",
+    "emoji": "🤘",
+    "description": "🎸AiRushV — независимый музыкальный проект нового поколения, работающий на стыке нейросетевого рока, постпанка и советского андерграунда.\nАвтор использует искусственный интеллект для создания песен, вдохновлённых духом Виктора Цоя, Михаила Горшенёва, Егора Летова и Юрия Хоя — легенд русского рока. В творчестве AiRushV живые гитары, вокал и цифровой продакшн соединяются в новую форму звучания, сохраняя энергию и философию их времени.\nСовокупное число прослушиваний треков AiRushV превышает 100 млн, а аудитория на Яндекс Музыке — более 3 млн слушателей. Музыка проекта звучит в плейлистах Spotify, VK Музыка, Apple Music, YouTube и TikTok, доказывая, что искусственный интеллект способен не заменить, а продолжить живое рок-наследие легенд. \n⚠️Все видео — художественный вымысел, созданный нейросетями ради развлечения. \n👉Подписывайся и погружайся в мир AI-музыки и визуальной ностальгии.\n",
+    "thumbnails": {
+        "default": {
+            "url": "https://yt3.ggpht.com/BLDT86jYdJVLWVQZUsp4ToSwlEGetgYMODdclawY7WnY0Z-lz-1Zbi0JROsQLuOcdJxPeK_rQw=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+        },
+        "medium": {
+            "url": "https://yt3.ggpht.com/BLDT86jYdJVLWVQZUsp4ToSwlEGetgYMODdclawY7WnY0Z-lz-1Zbi0JROsQLuOcdJxPeK_rQw=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+        },
+        "high": {
+            "url": "https://yt3.ggpht.com/BLDT86jYdJVLWVQZUsp4ToSwlEGetgYMODdclawY7WnY0Z-lz-1Zbi0JROsQLuOcdJxPeK_rQw=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+        }
+    },
+    "videos": [
+        {
+            "video_id": "2r0882GZOZo",
+            "title": "Итоги 2025 года | AiRushV — Топ-10 треков (100+ млн прослушиваний)",
+            "type": "video",
+            "published_at": "2025-12-24T14:00:05Z",
+            "duration": "0:02:16",
+            "duration_sec": 136,
+            "views": 8664,
+            "likes": 368,
+            "comments": 42,
+            "url": "https://www.youtube.com/watch?v=2r0882GZOZo"
+        },
+        {
+            "video_id": "fQQt8zBR1Ro",
+            "title": "Тальков вернулся. Клип «Мы встанем»",
+            "type": "video",
+            "published_at": "2025-12-12T13:01:34Z",
+            "duration": "0:04:19",
+            "duration_sec": 259,
+            "views": 173701,
+            "likes": 9589,
+            "comments": 881,
+            "url": "https://www.youtube.com/watch?v=fQQt8zBR1Ro"
+        },
+        {
+            "video_id": "0EAHSVYuNeM",
+            "title": "Сергей Бодров — «Одинокий свет»",
+            "type": "video",
+            "published_at": "2025-11-21T15:30:01Z",
+            "duration": "0:01:01",
+            "duration_sec": 61,
+            "views": 12581,
+            "likes": 368,
+            "comments": 12,
+            "url": "https://www.youtube.com/watch?v=0EAHSVYuNeM"
+        },
+        {
+            "video_id": "GmR0Dg0hLQc",
+            "title": "Клип Одинокий свет» посвящён памяти Сергея Бодрова",
+            "type": "video",
+            "published_at": "2025-11-15T14:20:32Z",
+            "duration": "0:01:01",
+            "duration_sec": 61,
+            "views": 14729,
+            "likes": 440,
+            "comments": 13,
+            "url": "https://www.youtube.com/watch?v=GmR0Dg0hLQc"
+        },
+        {
+            "video_id": "smLq0ubqiyM",
+            "title": "Памяти Сергея Бодрова: AiRushV — «Одинокий свет»",
+            "type": "video",
+            "published_at": "2025-11-14T14:01:38Z",
+            "duration": "0:02:42",
+            "duration_sec": 162,
+            "views": 108598,
+            "likes": 3595,
+            "comments": 206,
+            "url": "https://www.youtube.com/watch?v=smLq0ubqiyM"
+        },
+        {
+            "video_id": "R8PwI0vebBQ",
+            "title": "Цой, Хой, Горшенёв и Высоцкий вернулись — смотри клип “Ты с нами”!",
+            "type": "video",
+            "published_at": "2025-10-24T13:00:59Z",
+            "duration": "0:03:16",
+            "duration_sec": 196,
+            "views": 2271004,
+            "likes": 53151,
+            "comments": 3235,
+            "url": "https://www.youtube.com/watch?v=R8PwI0vebBQ"
+        },
+        {
+            "video_id": "ddTFwdeu0UA",
+            "title": "Виктор Цой сквозь года ожившие фото.",
+            "type": "video",
+            "published_at": "2025-10-04T14:01:05Z",
+            "duration": "0:01:17",
+            "duration_sec": 77,
+            "views": 69005,
+            "likes": 2015,
+            "comments": 96,
+            "url": "https://www.youtube.com/watch?v=ddTFwdeu0UA"
+        },
+        {
+            "video_id": "iawlLBOBF2Y",
+            "title": "Ленинград от ИИ: трэш-сатира «Лайкни меня»",
+            "type": "video",
+            "published_at": "2025-08-30T05:30:31Z",
+            "duration": "0:03:21",
+            "duration_sec": 201,
+            "views": 127767,
+            "likes": 1770,
+            "comments": 135,
+            "url": "https://www.youtube.com/watch?v=iawlLBOBF2Y"
+        },
+        {
+            "video_id": "uzkN1C3AcSE",
+            "title": "Что если Цой выжил? Клип к 35-й годовщине трагедии",
+            "type": "video",
+            "published_at": "2025-08-08T15:15:20Z",
+            "duration": "0:01:05",
+            "duration_sec": 65,
+            "views": 16666,
+            "likes": 351,
+            "comments": 17,
+            "url": "https://www.youtube.com/watch?v=uzkN1C3AcSE"
+        },
+        {
+            "video_id": "WqLe7DY4f98",
+            "title": "Клип к 35-й годовщине трагедии гибели Виктора Цоя.",
+            "type": "video",
+            "published_at": "2025-08-06T13:00:06Z",
+            "duration": "0:03:37",
+            "duration_sec": 217,
+            "views": 296449,
+            "likes": 5273,
+            "comments": 533,
+            "url": "https://www.youtube.com/watch?v=WqLe7DY4f98"
+        },
+        {
+            "video_id": "-XWIcZUldxM",
+            "title": "«Король и Шут» — я загрузил все песни КиШ в нейросеть, и вот что получилось.",
+            "type": "video",
+            "published_at": "2025-07-16T18:10:50Z",
+            "duration": "0:03:15",
+            "duration_sec": 195,
+            "views": 75683,
+            "likes": 1609,
+            "comments": 189,
+            "url": "https://www.youtube.com/watch?v=-XWIcZUldxM"
+        },
+        {
+            "video_id": "zBtmJ-2gVPo",
+            "title": "Что бы спел Цой, если бы был жив? — “Я живой”",
+            "type": "video",
+            "published_at": "2025-07-09T17:08:14Z",
+            "duration": "0:03:26",
+            "duration_sec": 206,
+            "views": 72145,
+            "likes": 1620,
+            "comments": 214,
+            "url": "https://www.youtube.com/watch?v=zBtmJ-2gVPo"
+        },
+        {
+            "video_id": "WinbXliMQ9M",
+            "title": "Что, если Летов и Цой снялись вместе? Клип «Слишком глупый план»",
+            "type": "video",
+            "published_at": "2025-07-01T21:05:43Z",
+            "duration": "0:03:13",
+            "duration_sec": 193,
+            "views": 426641,
+            "likes": 7064,
+            "comments": 1004,
+            "url": "https://www.youtube.com/watch?v=WinbXliMQ9M"
+        },
+        {
+            "video_id": "FOkM4MURu3Y",
+            "title": "Цой в 2025-м | “Тишина” — новая песня, созданная нейросетью",
+            "type": "video",
+            "published_at": "2025-06-19T12:04:55Z",
+            "duration": "0:02:59",
+            "duration_sec": 179,
+            "views": 2313608,
+            "likes": 31684,
+            "comments": 3102,
+            "url": "https://www.youtube.com/watch?v=FOkM4MURu3Y"
+        },
+        {
+            "video_id": "f_gpZ-0W44E",
+            "title": "Я загрузил ВСЕ песни Цоя в ИИ и вот что вышло! «И солнце взойдёт»",
+            "type": "video",
+            "published_at": "2025-06-04T08:47:19Z",
+            "duration": "0:03:03",
+            "duration_sec": 183,
+            "views": 2847964,
+            "likes": 65637,
+            "comments": 6594,
+            "url": "https://www.youtube.com/watch?v=f_gpZ-0W44E"
+        },
+        {
+            "video_id": "NgatzqwjUCk",
+            "title": "Голливуд на охоте: баня, водка и балалайка | Рок-баллада без цензуры",
+            "type": "video",
+            "published_at": "2025-05-27T16:29:57Z",
+            "duration": "0:03:24",
+            "duration_sec": 204,
+            "views": 73518,
+            "likes": 1300,
+            "comments": 108,
+            "url": "https://www.youtube.com/watch?v=NgatzqwjUCk"
+        },
+        {
+            "video_id": "DnhBbCrBvdI",
+            "title": "Джентльмены удачи по-голливудски в стиле Балабанова | Клип, сгенерированный нейросетью",
+            "type": "video",
+            "published_at": "2025-05-22T10:31:52Z",
+            "duration": "0:02:55",
+            "duration_sec": 175,
+            "views": 96647,
+            "likes": 1617,
+            "comments": 127,
+            "url": "https://www.youtube.com/watch?v=DnhBbCrBvdI"
+        }
+    ]
+}
