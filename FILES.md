@@ -4,8 +4,6 @@ Complete file listing for the YouTube Channel Analytics Dashboard project.
 
 ## 📁 Project Root Directory
 
-
-
 ```
 stat-gemini-4o/
 ├── Core Files (Code)
